@@ -1,0 +1,202 @@
+<registers>
+        <register>
+          <name>COMP1_CSR</name>
+          <displayName>COMP1_CSR</displayName>
+          <description>Comparator 1 control and status
+          register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>COMP1_LOCK</name>
+              <description>COMP1_CSR register lock
+              bit</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>COMP1_VALUE</name>
+              <description>Comparator 1 output status
+              bit</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>COMP1_SCALEN</name>
+              <description>Voltage scaler enable bit</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP1_BRGEN</name>
+              <description>Scaler bridge enable</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP1_BLANKING</name>
+              <description>Comparator 1 blanking source selection
+              bits</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP1_HYST</name>
+              <description>Comparator 1 hysteresis selection
+              bits</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP1_POLARITY</name>
+              <description>Comparator 1 polarity selection
+              bit</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP1_INPSEL</name>
+              <description>Comparator1 input plus selection
+              bit</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP1_INMSEL</name>
+              <description>Comparator 1 Input Minus connection
+              configuration bit</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP1_PWRMODE</name>
+              <description>Power Mode of the comparator
+              1</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP1_EN</name>
+              <description>Comparator 1 enable bit</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>COMP2_CSR</name>
+          <displayName>COMP2_CSR</displayName>
+          <description>Comparator 2 control and status
+          register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>COMP2_LOCK</name>
+              <description>COMP2_CSR register lock
+              bit</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>COMP2_VALUE</name>
+              <description>Comparator 2 output status
+              bit</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>COMP2_SCALEN</name>
+              <description>Voltage scaler enable bit</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP2_BRGEN</name>
+              <description>Scaler bridge enable</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP2_BLANKING</name>
+              <description>Comparator 2 blanking source selection
+              bits</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP2_HYST</name>
+              <description>Comparator 2 hysteresis selection
+              bits</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP2_POLARITY</name>
+              <description>Comparator 2 polarity selection
+              bit</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP2_WINMODE</name>
+              <description>Windows mode selection bit</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP2_INPSEL</name>
+              <description>Comparator 2 Input Plus connection
+              configuration bit</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP2_INMSEL</name>
+              <description>Comparator 2 Input Minus connection
+              configuration bit</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP2_PWRMODE</name>
+              <description>Power Mode of the comparator
+              2</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP2_EN</name>
+              <description>Comparator 2 enable bit</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

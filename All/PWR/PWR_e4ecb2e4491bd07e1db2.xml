@@ -1,0 +1,2176 @@
+<registers>
+        <register>
+          <name>CR1</name>
+          <displayName>CR1</displayName>
+          <description>Power control register 1</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000200</resetValue>
+          <fields>
+            <field>
+              <name>LPR</name>
+              <description>Low-power run</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>VOS</name>
+              <description>Voltage scaling range
+              selection</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>DBP</name>
+              <description>Disable backup domain write
+              protection</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LPMS</name>
+              <description>Low-power mode selection</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CR2</name>
+          <displayName>CR2</displayName>
+          <description>Power control register 2</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>USV</name>
+              <description>VDDUSB USB supply valid</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IOSV</name>
+              <description>VDDIO2 Independent I/Os supply
+              valid</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PVME4</name>
+              <description>Peripheral voltage monitoring 4 enable:
+              VDDA vs. 2.2V</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PVME3</name>
+              <description>Peripheral voltage monitoring 3 enable:
+              VDDA vs. 1.62V</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PVME2</name>
+              <description>Peripheral voltage monitoring 2 enable:
+              VDDIO2 vs. 0.9V</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PVME1</name>
+              <description>Peripheral voltage monitoring 1 enable:
+              VDDUSB vs. 1.2V</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PLS</name>
+              <description>Power voltage detector level
+              selection</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>PVDE</name>
+              <description>Power voltage detector
+              enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CR3</name>
+          <displayName>CR3</displayName>
+          <description>Power control register 3</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0X00008000</resetValue>
+          <fields>
+            <field>
+              <name>EWF</name>
+              <description>Enable internal wakeup
+              line</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>APC</name>
+              <description>Apply pull-up and pull-down
+              configuration</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RRS</name>
+              <description>SRAM2 retention in Standby
+              mode</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EWUP5</name>
+              <description>Enable Wakeup pin WKUP5</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EWUP4</name>
+              <description>Enable Wakeup pin WKUP4</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EWUP3</name>
+              <description>Enable Wakeup pin WKUP3</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EWUP2</name>
+              <description>Enable Wakeup pin WKUP2</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EWUP1</name>
+              <description>Enable Wakeup pin WKUP1</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CR4</name>
+          <displayName>CR4</displayName>
+          <description>Power control register 4</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>VBRS</name>
+              <description>VBAT battery charging resistor
+              selection</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>VBE</name>
+              <description>VBAT battery charging
+              enable</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WP5</name>
+              <description>Wakeup pin WKUP5 polarity</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WP4</name>
+              <description>Wakeup pin WKUP4 polarity</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WP3</name>
+              <description>Wakeup pin WKUP3 polarity</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WP2</name>
+              <description>Wakeup pin WKUP2 polarity</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WP1</name>
+              <description>Wakeup pin WKUP1 polarity</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SR1</name>
+          <displayName>SR1</displayName>
+          <description>Power status register 1</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>WUFI</name>
+              <description>Wakeup flag internal</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CSBF</name>
+              <description>Standby flag</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CWUF5</name>
+              <description>Wakeup flag 5</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CWUF4</name>
+              <description>Wakeup flag 4</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CWUF3</name>
+              <description>Wakeup flag 3</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CWUF2</name>
+              <description>Wakeup flag 2</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CWUF1</name>
+              <description>Wakeup flag 1</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SR2</name>
+          <displayName>SR2</displayName>
+          <description>Power status register 2</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PVMO4</name>
+              <description>Peripheral voltage monitoring output:
+              VDDA vs. 2.2 V</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PVMO3</name>
+              <description>Peripheral voltage monitoring output:
+              VDDA vs. 1.62 V</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PVMO2</name>
+              <description>Peripheral voltage monitoring output:
+              VDDIO2 vs. 0.9 V</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PVMO1</name>
+              <description>Peripheral voltage monitoring output:
+              VDDUSB vs. 1.2 V</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PVDO</name>
+              <description>Power voltage detector
+              output</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>VOSF</name>
+              <description>Voltage scaling flag</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>REGLPF</name>
+              <description>Low-power regulator flag</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>REGLPS</name>
+              <description>Low-power regulator
+              started</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SCR</name>
+          <displayName>SCR</displayName>
+          <description>Power status clear register</description>
+          <addressOffset>0x18</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>SBF</name>
+              <description>Clear standby flag</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WUF5</name>
+              <description>Clear wakeup flag 5</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WUF4</name>
+              <description>Clear wakeup flag 4</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WUF3</name>
+              <description>Clear wakeup flag 3</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WUF2</name>
+              <description>Clear wakeup flag 2</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WUF1</name>
+              <description>Clear wakeup flag 1</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PUCRA</name>
+          <displayName>PUCRA</displayName>
+          <description>Power Port A pull-up control
+          register</description>
+          <addressOffset>0x20</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PU15</name>
+              <description>Port A pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU14</name>
+              <description>Port A pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU13</name>
+              <description>Port A pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU12</name>
+              <description>Port A pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU11</name>
+              <description>Port A pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU10</name>
+              <description>Port A pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU9</name>
+              <description>Port A pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU8</name>
+              <description>Port A pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU7</name>
+              <description>Port A pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU6</name>
+              <description>Port A pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU5</name>
+              <description>Port A pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU4</name>
+              <description>Port A pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU3</name>
+              <description>Port A pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU2</name>
+              <description>Port A pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU1</name>
+              <description>Port A pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU0</name>
+              <description>Port A pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PDCRA</name>
+          <displayName>PDCRA</displayName>
+          <description>Power Port A pull-down control
+          register</description>
+          <addressOffset>0x24</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PD15</name>
+              <description>Port A pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD14</name>
+              <description>Port A pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD13</name>
+              <description>Port A pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD12</name>
+              <description>Port A pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD11</name>
+              <description>Port A pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD10</name>
+              <description>Port A pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD9</name>
+              <description>Port A pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD8</name>
+              <description>Port A pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD7</name>
+              <description>Port A pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD6</name>
+              <description>Port A pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD5</name>
+              <description>Port A pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD4</name>
+              <description>Port A pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD3</name>
+              <description>Port A pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD2</name>
+              <description>Port A pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD1</name>
+              <description>Port A pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD0</name>
+              <description>Port A pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PUCRB</name>
+          <displayName>PUCRB</displayName>
+          <description>Power Port B pull-up control
+          register</description>
+          <addressOffset>0x28</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PU15</name>
+              <description>Port B pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU14</name>
+              <description>Port B pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU13</name>
+              <description>Port B pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU12</name>
+              <description>Port B pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU11</name>
+              <description>Port B pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU10</name>
+              <description>Port B pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU9</name>
+              <description>Port B pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU8</name>
+              <description>Port B pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU7</name>
+              <description>Port B pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU6</name>
+              <description>Port B pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU5</name>
+              <description>Port B pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU4</name>
+              <description>Port B pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU3</name>
+              <description>Port B pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU2</name>
+              <description>Port B pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU1</name>
+              <description>Port B pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU0</name>
+              <description>Port B pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PDCRB</name>
+          <displayName>PDCRB</displayName>
+          <description>Power Port B pull-down control
+          register</description>
+          <addressOffset>0x2C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PD15</name>
+              <description>Port B pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD14</name>
+              <description>Port B pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD13</name>
+              <description>Port B pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD12</name>
+              <description>Port B pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD11</name>
+              <description>Port B pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD10</name>
+              <description>Port B pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD9</name>
+              <description>Port B pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD8</name>
+              <description>Port B pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD7</name>
+              <description>Port B pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD6</name>
+              <description>Port B pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD5</name>
+              <description>Port B pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD4</name>
+              <description>Port B pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD3</name>
+              <description>Port B pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD2</name>
+              <description>Port B pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD1</name>
+              <description>Port B pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD0</name>
+              <description>Port B pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PUCRC</name>
+          <displayName>PUCRC</displayName>
+          <description>Power Port C pull-up control
+          register</description>
+          <addressOffset>0x30</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PU15</name>
+              <description>Port C pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU14</name>
+              <description>Port C pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU13</name>
+              <description>Port C pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU12</name>
+              <description>Port C pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU11</name>
+              <description>Port C pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU10</name>
+              <description>Port C pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU9</name>
+              <description>Port C pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU8</name>
+              <description>Port C pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU7</name>
+              <description>Port C pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU6</name>
+              <description>Port C pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU5</name>
+              <description>Port C pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU4</name>
+              <description>Port C pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU3</name>
+              <description>Port C pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU2</name>
+              <description>Port C pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU1</name>
+              <description>Port C pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU0</name>
+              <description>Port C pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PDCRC</name>
+          <displayName>PDCRC</displayName>
+          <description>Power Port C pull-down control
+          register</description>
+          <addressOffset>0x34</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PD15</name>
+              <description>Port C pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD14</name>
+              <description>Port C pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD13</name>
+              <description>Port C pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD12</name>
+              <description>Port C pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD11</name>
+              <description>Port C pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD10</name>
+              <description>Port C pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD9</name>
+              <description>Port C pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD8</name>
+              <description>Port C pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD7</name>
+              <description>Port C pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD6</name>
+              <description>Port C pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD5</name>
+              <description>Port C pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD4</name>
+              <description>Port C pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD3</name>
+              <description>Port C pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD2</name>
+              <description>Port C pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD1</name>
+              <description>Port C pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD0</name>
+              <description>Port C pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PUCRD</name>
+          <displayName>PUCRD</displayName>
+          <description>Power Port D pull-up control
+          register</description>
+          <addressOffset>0x38</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PU15</name>
+              <description>Port D pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU14</name>
+              <description>Port D pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU13</name>
+              <description>Port D pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU12</name>
+              <description>Port D pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU11</name>
+              <description>Port D pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU10</name>
+              <description>Port D pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU9</name>
+              <description>Port D pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU8</name>
+              <description>Port D pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU7</name>
+              <description>Port D pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU6</name>
+              <description>Port D pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU5</name>
+              <description>Port D pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU4</name>
+              <description>Port D pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU3</name>
+              <description>Port D pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU2</name>
+              <description>Port D pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU1</name>
+              <description>Port D pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU0</name>
+              <description>Port D pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PDCRD</name>
+          <displayName>PDCRD</displayName>
+          <description>Power Port D pull-down control
+          register</description>
+          <addressOffset>0x3C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PD15</name>
+              <description>Port D pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD14</name>
+              <description>Port D pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD13</name>
+              <description>Port D pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD12</name>
+              <description>Port D pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD11</name>
+              <description>Port D pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD10</name>
+              <description>Port D pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD9</name>
+              <description>Port D pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD8</name>
+              <description>Port D pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD7</name>
+              <description>Port D pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD6</name>
+              <description>Port D pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD5</name>
+              <description>Port D pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD4</name>
+              <description>Port D pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD3</name>
+              <description>Port D pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD2</name>
+              <description>Port D pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD1</name>
+              <description>Port D pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD0</name>
+              <description>Port D pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PUCRE</name>
+          <displayName>PUCRE</displayName>
+          <description>Power Port E pull-up control
+          register</description>
+          <addressOffset>0x40</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PU15</name>
+              <description>Port E pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU14</name>
+              <description>Port E pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU13</name>
+              <description>Port E pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU12</name>
+              <description>Port E pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU11</name>
+              <description>Port E pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU10</name>
+              <description>Port E pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU9</name>
+              <description>Port E pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU8</name>
+              <description>Port E pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU7</name>
+              <description>Port E pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU6</name>
+              <description>Port E pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU5</name>
+              <description>Port E pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU4</name>
+              <description>Port E pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU3</name>
+              <description>Port E pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU2</name>
+              <description>Port E pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU1</name>
+              <description>Port E pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU0</name>
+              <description>Port E pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PDCRE</name>
+          <displayName>PDCRE</displayName>
+          <description>Power Port E pull-down control
+          register</description>
+          <addressOffset>0x44</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PD15</name>
+              <description>Port E pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD14</name>
+              <description>Port E pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD13</name>
+              <description>Port E pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD12</name>
+              <description>Port E pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD11</name>
+              <description>Port E pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD10</name>
+              <description>Port E pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD9</name>
+              <description>Port E pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD8</name>
+              <description>Port E pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD7</name>
+              <description>Port E pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD6</name>
+              <description>Port E pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD5</name>
+              <description>Port E pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD4</name>
+              <description>Port E pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD3</name>
+              <description>Port E pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD2</name>
+              <description>Port E pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD1</name>
+              <description>Port E pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD0</name>
+              <description>Port E pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PUCRF</name>
+          <displayName>PUCRF</displayName>
+          <description>Power Port F pull-up control
+          register</description>
+          <addressOffset>0x48</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PU15</name>
+              <description>Port F pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU14</name>
+              <description>Port F pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU13</name>
+              <description>Port F pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU12</name>
+              <description>Port F pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU11</name>
+              <description>Port F pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU10</name>
+              <description>Port F pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU9</name>
+              <description>Port F pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU8</name>
+              <description>Port F pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU7</name>
+              <description>Port F pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU6</name>
+              <description>Port F pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU5</name>
+              <description>Port F pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU4</name>
+              <description>Port F pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU3</name>
+              <description>Port F pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU2</name>
+              <description>Port F pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU1</name>
+              <description>Port F pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU0</name>
+              <description>Port F pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PDCRF</name>
+          <displayName>PDCRF</displayName>
+          <description>Power Port F pull-down control
+          register</description>
+          <addressOffset>0x4C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PD15</name>
+              <description>Port F pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD14</name>
+              <description>Port F pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD13</name>
+              <description>Port F pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD12</name>
+              <description>Port F pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD11</name>
+              <description>Port F pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD10</name>
+              <description>Port F pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD9</name>
+              <description>Port F pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD8</name>
+              <description>Port F pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD7</name>
+              <description>Port F pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD6</name>
+              <description>Port F pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD5</name>
+              <description>Port F pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD4</name>
+              <description>Port F pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD3</name>
+              <description>Port F pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD2</name>
+              <description>Port F pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD1</name>
+              <description>Port F pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD0</name>
+              <description>Port F pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PUCRG</name>
+          <displayName>PUCRG</displayName>
+          <description>Power Port G pull-up control
+          register</description>
+          <addressOffset>0x50</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PU15</name>
+              <description>Port G pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU14</name>
+              <description>Port G pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU13</name>
+              <description>Port G pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU12</name>
+              <description>Port G pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU11</name>
+              <description>Port G pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU10</name>
+              <description>Port G pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU9</name>
+              <description>Port G pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU8</name>
+              <description>Port G pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU7</name>
+              <description>Port G pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU6</name>
+              <description>Port G pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU5</name>
+              <description>Port G pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU4</name>
+              <description>Port G pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU3</name>
+              <description>Port G pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU2</name>
+              <description>Port G pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU1</name>
+              <description>Port G pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU0</name>
+              <description>Port G pull-up bit y
+              (y=0..15)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PDCRG</name>
+          <displayName>PDCRG</displayName>
+          <description>Power Port G pull-down control
+          register</description>
+          <addressOffset>0x54</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PD15</name>
+              <description>Port G pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD14</name>
+              <description>Port G pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD13</name>
+              <description>Port G pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD12</name>
+              <description>Port G pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD11</name>
+              <description>Port G pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD10</name>
+              <description>Port G pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD9</name>
+              <description>Port G pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD8</name>
+              <description>Port G pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD7</name>
+              <description>Port G pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD6</name>
+              <description>Port G pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD5</name>
+              <description>Port G pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD4</name>
+              <description>Port G pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD3</name>
+              <description>Port G pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD2</name>
+              <description>Port G pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD1</name>
+              <description>Port G pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD0</name>
+              <description>Port G pull-down bit y
+              (y=0..15)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PUCRH</name>
+          <displayName>PUCRH</displayName>
+          <description>Power Port H pull-up control
+          register</description>
+          <addressOffset>0x58</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PU1</name>
+              <description>Port H pull-up bit y
+              (y=0..1)</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PU0</name>
+              <description>Port H pull-up bit y
+              (y=0..1)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PDCRH</name>
+          <displayName>PDCRH</displayName>
+          <description>Power Port H pull-down control
+          register</description>
+          <addressOffset>0x5C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PD1</name>
+              <description>Port H pull-down bit y
+              (y=0..1)</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PD0</name>
+              <description>Port H pull-down bit y
+              (y=0..1)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

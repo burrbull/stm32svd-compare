@@ -1,0 +1,374 @@
+<registers>
+        <register>
+          <name>CR</name>
+          <displayName>CR</displayName>
+          <description>control register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>ALGOMODE3</name>
+              <description>ALGOMODE</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>GCM_CCMPH</name>
+              <description>GCM_CCMPH</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CRYPEN</name>
+              <description>Cryptographic processor
+              enable</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FFLUSH</name>
+              <description>FIFO flush</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>KEYSIZE</name>
+              <description>Key size selection (AES mode
+              only)</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DATATYPE</name>
+              <description>Data type selection</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ALGOMODE0</name>
+              <description>Algorithm mode</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ALGODIR</name>
+              <description>Algorithm direction</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SR</name>
+          <displayName>SR</displayName>
+          <description>status register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000003</resetValue>
+          <fields>
+            <field>
+              <name>BUSY</name>
+              <description>Busy bit</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OFFU</name>
+              <description>Output FIFO full</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OFNE</name>
+              <description>Output FIFO not empty</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IFNF</name>
+              <description>Input FIFO not full</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IFEM</name>
+              <description>Input FIFO empty</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DIN</name>
+          <displayName>DIN</displayName>
+          <description>data input register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DATAIN</name>
+              <description>Data input</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DOUT</name>
+          <displayName>DOUT</displayName>
+          <description>data output register</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DATAOUT</name>
+              <description>Data output</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DMACR</name>
+          <displayName>DMACR</displayName>
+          <description>DMA control register</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DOEN</name>
+              <description>DMA output enable</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DIEN</name>
+              <description>DMA input enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>IMSCR</name>
+          <displayName>IMSCR</displayName>
+          <description>interrupt mask set/clear
+          register</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>OUTIM</name>
+              <description>Output FIFO service interrupt
+              mask</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>INIM</name>
+              <description>Input FIFO service interrupt
+              mask</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>RISR</name>
+          <displayName>RISR</displayName>
+          <description>raw interrupt status register</description>
+          <addressOffset>0x18</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000001</resetValue>
+          <fields>
+            <field>
+              <name>OUTRIS</name>
+              <description>Output FIFO service raw interrupt
+              status</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>INRIS</name>
+              <description>Input FIFO service raw interrupt
+              status</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MISR</name>
+          <displayName>MISR</displayName>
+          <description>masked interrupt status
+          register</description>
+          <addressOffset>0x1C</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>OUTMIS</name>
+              <description>Output FIFO service masked interrupt
+              status</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>INMIS</name>
+              <description>Input FIFO service masked interrupt
+              status</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <cluster>
+          <name>KEY%s</name>
+          <displayName>KEYx</displayName>
+          <dim>4</dim>
+          <dimIndex>0-3</dimIndex>
+          <dimIncrement>0x8</dimIncrement>
+          <description>Key cluster</description>
+          <addressOffset>0x20</addressOffset>
+          <register>
+            <name>KLR</name>
+            <displayName>KxLR</displayName>
+            <description>key registers</description>
+            <addressOffset>0x00</addressOffset>
+            <size>0x20</size>
+            <access>write-only</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>KLR</name>
+                <description>KxLR</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>32</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>KRR</name>
+            <displayName>KxRR</displayName>
+            <description>key registers</description>
+            <addressOffset>0x4</addressOffset>
+            <size>0x20</size>
+            <access>write-only</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>KRR</name>
+                <description>KxRR</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>32</bitWidth>
+              </field>
+            </fields>
+          </register>
+        </cluster>
+        <cluster>
+          <name>INIT%s</name>
+          <displayName>INITx</displayName>
+          <dim>2</dim>
+          <dimIndex>0-1</dimIndex>
+          <dimIncrement>0x8</dimIncrement>
+          <description>Initialization vector</description>
+          <addressOffset>0x40</addressOffset>
+          <register>
+            <name>IVLR</name>
+            <displayName>IVxLR</displayName>
+            <description>initialization vector
+            registers</description>
+            <addressOffset>0x0</addressOffset>
+            <size>0x20</size>
+            <access>read-write</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>IVLR</name>
+                <description>IVxLR</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>32</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>IVRR</name>
+            <displayName>IVxRR</displayName>
+            <description>initialization vector
+            registers</description>
+            <addressOffset>0x4</addressOffset>
+            <size>0x20</size>
+            <access>read-write</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>IVRR</name>
+                <description>IVxRR</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>32</bitWidth>
+              </field>
+            </fields>
+          </register>
+        </cluster>
+        <register>
+          <name>CSGCMCCMR%s</name>
+          <displayName>CSGCMCCMxR</displayName>
+          <dim>8</dim>
+          <dimIndex>0-7</dimIndex>
+          <dimIncrement>0x4</dimIncrement>
+          <description>context swap register</description>
+          <addressOffset>0x50</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CSGCMCCMR</name>
+              <description>CSGCMCCMxR</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CSGCMR%s</name>
+          <displayName>CSGCMxR</displayName>
+          <dim>8</dim>
+          <dimIndex>0-7</dimIndex>
+          <dimIncrement>0x4</dimIncrement>
+          <description>context swap register</description>
+          <addressOffset>0x70</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CSGCMR</name>
+              <description>CSGCMxR</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

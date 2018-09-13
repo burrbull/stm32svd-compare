@@ -1,0 +1,61 @@
+<registers>
+        <register>
+          <name>CSR</name>
+          <displayName>CSR</displayName>
+          <description>VREF control and status
+          register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000002</resetValue>
+          <fields>
+            <field>
+              <name>VRR</name>
+              <description>Voltage reference buffer
+              ready</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>VRS</name>
+              <description>Voltage reference scale</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>HIZ</name>
+              <description>High impedance mode</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ENVR</name>
+              <description>Voltage reference buffer
+              enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CCR</name>
+          <displayName>CCR</displayName>
+          <description>calibration control register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>TRIM</name>
+              <description>Trimming code</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

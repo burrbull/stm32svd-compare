@@ -1,0 +1,229 @@
+<registers>
+        <register>
+          <name>CRH</name>
+          <displayName>CRH</displayName>
+          <description>RTC Control Register High</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>OWIE</name>
+              <description>Overflow interrupt Enable</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ALRIE</name>
+              <description>Alarm interrupt Enable</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SECIE</name>
+              <description>Second interrupt Enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CRL</name>
+          <displayName>CRL</displayName>
+          <description>RTC Control Register Low</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000020</resetValue>
+          <fields>
+            <field>
+              <name>RTOFF</name>
+              <description>RTC operation OFF</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>CNF</name>
+              <description>Configuration Flag</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RSF</name>
+              <description>Registers Synchronized
+              Flag</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OWF</name>
+              <description>Overflow Flag</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ALRF</name>
+              <description>Alarm Flag</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SECF</name>
+              <description>Second Flag</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PRLH</name>
+          <displayName>PRLH</displayName>
+          <description>RTC Prescaler Load Register
+          High</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PRLH</name>
+              <description>RTC Prescaler Load Register
+              High</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PRLL</name>
+          <displayName>PRLL</displayName>
+          <description>RTC Prescaler Load Register
+          Low</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00008000</resetValue>
+          <fields>
+            <field>
+              <name>PRLL</name>
+              <description>RTC Prescaler Divider Register
+              Low</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DIVH</name>
+          <displayName>DIVH</displayName>
+          <description>RTC Prescaler Divider Register
+          High</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DIVH</name>
+              <description>RTC prescaler divider register
+              high</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DIVL</name>
+          <displayName>DIVL</displayName>
+          <description>RTC Prescaler Divider Register
+          Low</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00008000</resetValue>
+          <fields>
+            <field>
+              <name>DIVL</name>
+              <description>RTC prescaler divider register
+              Low</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CNTH</name>
+          <displayName>CNTH</displayName>
+          <description>RTC Counter Register High</description>
+          <addressOffset>0x18</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CNTH</name>
+              <description>RTC counter register high</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CNTL</name>
+          <displayName>CNTL</displayName>
+          <description>RTC Counter Register Low</description>
+          <addressOffset>0x1C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CNTL</name>
+              <description>RTC counter register Low</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ALRH</name>
+          <displayName>ALRH</displayName>
+          <description>RTC Alarm Register High</description>
+          <addressOffset>0x20</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x0000FFFF</resetValue>
+          <fields>
+            <field>
+              <name>ALRH</name>
+              <description>RTC alarm register high</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ALRL</name>
+          <displayName>ALRL</displayName>
+          <description>RTC Alarm Register Low</description>
+          <addressOffset>0x24</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x0000FFFF</resetValue>
+          <fields>
+            <field>
+              <name>ALRL</name>
+              <description>RTC alarm register low</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

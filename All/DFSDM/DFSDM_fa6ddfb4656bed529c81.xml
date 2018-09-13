@@ -1,0 +1,796 @@
+<registers>
+        <cluster>
+          <name>CH%s</name>
+          <displayName>CHx</displayName>
+          <dim>8</dim>
+          <dimIndex>0-7</dimIndex>
+          <dimIncrement>0x20</dimIncrement>
+          <description>DFSDM channel X</description>
+          <addressOffset>0x0</addressOffset>
+          <register>
+            <name>CFGR1</name>
+            <displayName>CHxCFGR1</displayName>
+            <description>DFSDM channel configuration X register
+            1</description>
+            <addressOffset>0x0</addressOffset>
+            <size>0x20</size>
+            <access>read-write</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>DFSDMEN</name>
+                <description>Global enable for DFSDM
+                interface</description>
+                <bitOffset>31</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>CKOUTSRC</name>
+                <description>Output serial clock source
+                selection</description>
+                <bitOffset>30</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>CKOUTDIV</name>
+                <description>Output serial clock
+                divider</description>
+                <bitOffset>16</bitOffset>
+                <bitWidth>8</bitWidth>
+              </field>
+              <field>
+                <name>DATPACK</name>
+                <description>Data packing mode in CHxDATINR
+                register</description>
+                <bitOffset>14</bitOffset>
+                <bitWidth>2</bitWidth>
+              </field>
+              <field>
+                <name>DATMPX</name>
+                <description>Input data multiplexer for channel
+                X</description>
+                <bitOffset>12</bitOffset>
+                <bitWidth>2</bitWidth>
+              </field>
+              <field>
+                <name>CHINSEL</name>
+                <description>Channel inputs selection</description>
+                <bitOffset>8</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>CHEN</name>
+                <description>Channel X enable</description>
+                <bitOffset>7</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>CKABEN</name>
+                <description>Clock absence detector enable on channel
+                X</description>
+                <bitOffset>6</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>SCDEN</name>
+                <description>Short-circuit detector enable on channel
+                X</description>
+                <bitOffset>5</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>SPICKSEL</name>
+                <description>SPI clock select for channel
+                X</description>
+                <bitOffset>2</bitOffset>
+                <bitWidth>2</bitWidth>
+              </field>
+              <field>
+                <name>SITP</name>
+                <description>Serial interface type for channel
+                X</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>2</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>CFGR2</name>
+            <displayName>CHxCFGR2</displayName>
+            <description>DFSDM channel configuration X register
+            2</description>
+            <addressOffset>0x4</addressOffset>
+            <size>0x20</size>
+            <access>read-write</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>OFFSET</name>
+                <description>24-bit calibration offset for channel
+                X</description>
+                <bitOffset>8</bitOffset>
+                <bitWidth>24</bitWidth>
+              </field>
+              <field>
+                <name>DTRBS</name>
+                <description>Data right bit-shift for channel
+                X</description>
+                <bitOffset>3</bitOffset>
+                <bitWidth>5</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>AWSCDR</name>
+            <displayName>CHxAWSCDR</displayName>
+            <description>DFSDM analog watchdog and short-circuit
+            detector register</description>
+            <addressOffset>0x8</addressOffset>
+            <size>0x20</size>
+            <access>read-write</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>AWFORD</name>
+                <description>Analog watchdog Sinc filter order on
+                channel X</description>
+                <bitOffset>22</bitOffset>
+                <bitWidth>2</bitWidth>
+              </field>
+              <field>
+                <name>AWFOSR</name>
+                <description>Analog watchdog filter oversampling
+                ratio (decimation rate) on channel X</description>
+                <bitOffset>16</bitOffset>
+                <bitWidth>5</bitWidth>
+              </field>
+              <field>
+                <name>BKSCD</name>
+                <description>Break signal assignment for
+                short-circuit detector on channel X</description>
+                <bitOffset>12</bitOffset>
+                <bitWidth>4</bitWidth>
+              </field>
+              <field>
+                <name>SCDT</name>
+                <description>short-circuit detector threshold for
+                channel X</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>8</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>WDATR</name>
+            <displayName>CHxWDATR</displayName>
+            <description>DFSDM channel watchdog filter data
+            register</description>
+            <addressOffset>0xC</addressOffset>
+            <size>0x20</size>
+            <access>read-write</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>WDATA</name>
+                <description>Input channel y watchdog
+                data</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>16</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>DATINR</name>
+            <displayName>CHxDATINR</displayName>
+            <description>DFSDM channel data input
+            register</description>
+            <addressOffset>0x10</addressOffset>
+            <size>0x20</size>
+            <access>read-write</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>INDAT1</name>
+                <description>Input data for channel 1</description>
+                <bitOffset>16</bitOffset>
+                <bitWidth>16</bitWidth>
+              </field>
+              <field>
+                <name>INDAT0</name>
+                <description>Input data for channel 0</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>16</bitWidth>
+              </field>
+            </fields>
+          </register>
+        </cluster>
+        <cluster>
+          <name>FLT%s</name>
+          <displayName>FLTx</displayName>
+          <dim>4</dim>
+          <dimIndex>0-3</dimIndex>
+          <dimIncrement>0x100</dimIncrement>
+          <description>DFSDM filter X</description>
+          <addressOffset>0x100</addressOffset>
+          <register>
+            <name>CR1</name>
+            <displayName>FLTxCR1</displayName>
+            <description>DFSDM control register 1</description>
+            <addressOffset>0x0</addressOffset>
+            <size>0x20</size>
+            <access>read-write</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>AWFSEL</name>
+                <description>Analog watchdog fast mode
+                select</description>
+                <bitOffset>30</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FAST</name>
+                <description>Fast conversion mode selection for
+                regular conversions</description>
+                <bitOffset>29</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>RCH</name>
+                <description>Regular channel selection</description>
+                <bitOffset>24</bitOffset>
+                <bitWidth>3</bitWidth>
+              </field>
+              <field>
+                <name>RDMAEN</name>
+                <description>DMA channel enabled to read data for the
+                regular conversion</description>
+                <bitOffset>21</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>RSYNC</name>
+                <description>Launch regular conversion synchronously
+                with DFSDM0</description>
+                <bitOffset>19</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>RCONT</name>
+                <description>Continuous mode selection for regular
+                conversions</description>
+                <bitOffset>18</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>RSWSTART</name>
+                <description>Software start of a conversion on the
+                regular channel</description>
+                <bitOffset>17</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>JEXTEN</name>
+                <description>Trigger enable and trigger edge
+                selection for injected conversions</description>
+                <bitOffset>13</bitOffset>
+                <bitWidth>2</bitWidth>
+              </field>
+              <field>
+                <name>JEXTSEL</name>
+                <description>Trigger signal selection for launching
+                injected conversions</description>
+                <bitOffset>8</bitOffset>
+                <bitWidth>3</bitWidth>
+              </field>
+              <field>
+                <name>JDMAEN</name>
+                <description>DMA channel enabled to read data for the
+                injected channel group</description>
+                <bitOffset>5</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>JSCAN</name>
+                <description>Scanning conversion mode for injected
+                conversions</description>
+                <bitOffset>4</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>JSYNC</name>
+                <description>Launch an injected conversion
+                synchronously with the DFSDM0 JSWSTART
+                trigger</description>
+                <bitOffset>3</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>JSWSTART</name>
+                <description>Start a conversion of the injected group
+                of channels</description>
+                <bitOffset>1</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>DFEN</name>
+                <description>DFSDM enable</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>CR2</name>
+            <displayName>FLTxCR2</displayName>
+            <description>DFSDM control register 2</description>
+            <addressOffset>0x4</addressOffset>
+            <size>0x20</size>
+            <access>read-write</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>AWDCH</name>
+                <description>Analog watchdog channel
+                selection</description>
+                <bitOffset>16</bitOffset>
+                <bitWidth>8</bitWidth>
+              </field>
+              <field>
+                <name>EXCH</name>
+                <description>Extremes detector channel
+                selection</description>
+                <bitOffset>8</bitOffset>
+                <bitWidth>8</bitWidth>
+              </field>
+              <field>
+                <name>CKABIE</name>
+                <description>Clock absence interrupt
+                enable</description>
+                <bitOffset>6</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>SCDIE</name>
+                <description>Short-circuit detector interrupt
+                enable</description>
+                <bitOffset>5</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>AWDIE</name>
+                <description>Analog watchdog interrupt
+                enable</description>
+                <bitOffset>4</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>ROVRIE</name>
+                <description>Regular data overrun interrupt
+                enable</description>
+                <bitOffset>3</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>JOVRIE</name>
+                <description>Injected data overrun interrupt
+                enable</description>
+                <bitOffset>2</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>REOCIE</name>
+                <description>Regular end of conversion interrupt
+                enable</description>
+                <bitOffset>1</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>JEOCIE</name>
+                <description>Injected end of conversion interrupt
+                enable</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>ISR</name>
+            <displayName>FLTxISR</displayName>
+            <description>DFSDM interrupt and status
+            register</description>
+            <addressOffset>0x8</addressOffset>
+            <size>0x20</size>
+            <access>read-only</access>
+            <resetValue>0x00FF0000</resetValue>
+            <fields>
+              <field>
+                <name>SCDF</name>
+                <description>short-circuit detector
+                flag</description>
+                <bitOffset>24</bitOffset>
+                <bitWidth>8</bitWidth>
+              </field>
+              <field>
+                <name>CKABF</name>
+                <description>Clock absence flag</description>
+                <bitOffset>16</bitOffset>
+                <bitWidth>8</bitWidth>
+              </field>
+              <field>
+                <name>RCIP</name>
+                <description>Regular conversion in progress
+                status</description>
+                <bitOffset>14</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>JCIP</name>
+                <description>Injected conversion in progress
+                status</description>
+                <bitOffset>13</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>AWDF</name>
+                <description>Analog watchdog</description>
+                <bitOffset>4</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>ROVRF</name>
+                <description>Regular conversion overrun
+                flag</description>
+                <bitOffset>3</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>JOVRF</name>
+                <description>Injected conversion overrun
+                flag</description>
+                <bitOffset>2</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>REOCF</name>
+                <description>End of regular conversion
+                flag</description>
+                <bitOffset>1</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>JEOCF</name>
+                <description>End of injected conversion
+                flag</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>ICR</name>
+            <displayName>FLTxICR</displayName>
+            <description>DFSDM interrupt flag clear
+            register</description>
+            <addressOffset>0xC</addressOffset>
+            <size>0x20</size>
+            <access>read-write</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>CLRSCDF</name>
+                <description>Clear the short-circuit detector
+                flag</description>
+                <bitOffset>24</bitOffset>
+                <bitWidth>8</bitWidth>
+              </field>
+              <field>
+                <name>CLRCKABF</name>
+                <description>Clear the clock absence
+                flag</description>
+                <bitOffset>16</bitOffset>
+                <bitWidth>8</bitWidth>
+              </field>
+              <field>
+                <name>CLRROVRF</name>
+                <description>Clear the regular conversion overrun
+                flag</description>
+                <bitOffset>3</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>CLRJOVRF</name>
+                <description>Clear the injected conversion overrun
+                flag</description>
+                <bitOffset>2</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>JCHGR</name>
+            <displayName>FLTxJCHGR</displayName>
+            <description>DFSDM injected channel group selection
+            register</description>
+            <addressOffset>0x10</addressOffset>
+            <size>0x20</size>
+            <access>read-write</access>
+            <resetValue>0x00000001</resetValue>
+            <fields>
+              <field>
+                <name>JCHG</name>
+                <description>Injected channel group
+                selection</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>8</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>FCR</name>
+            <displayName>FLTxFCR</displayName>
+            <description>DFSDM filter control register</description>
+            <addressOffset>0x14</addressOffset>
+            <size>0x20</size>
+            <access>read-write</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>FORD</name>
+                <description>Sinc filter order</description>
+                <bitOffset>29</bitOffset>
+                <bitWidth>3</bitWidth>
+              </field>
+              <field>
+                <name>FOSR</name>
+                <description>Sinc filter oversampling ratio
+                (decimation rate)</description>
+                <bitOffset>16</bitOffset>
+                <bitWidth>10</bitWidth>
+              </field>
+              <field>
+                <name>IOSR</name>
+                <description>Integrator oversampling ratio (averaging
+                length)</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>8</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>JDATAR</name>
+            <displayName>FLTxJDATAR</displayName>
+            <description>DFSDM data register for injected
+            group</description>
+            <addressOffset>0x18</addressOffset>
+            <size>0x20</size>
+            <access>read-only</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>JDATA</name>
+                <description>Injected group conversion
+                data</description>
+                <bitOffset>8</bitOffset>
+                <bitWidth>24</bitWidth>
+              </field>
+              <field>
+                <name>JDATACH</name>
+                <description>Injected channel most recently
+                converted</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>3</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>RDATAR</name>
+            <displayName>FLTxRDATAR</displayName>
+            <description>DFSDM data register for the regular
+            channel</description>
+            <addressOffset>0x1C</addressOffset>
+            <size>0x20</size>
+            <access>read-only</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>RDATA</name>
+                <description>Regular channel conversion
+                data</description>
+                <bitOffset>8</bitOffset>
+                <bitWidth>24</bitWidth>
+              </field>
+              <field>
+                <name>RPEND</name>
+                <description>Regular channel pending
+                data</description>
+                <bitOffset>4</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>RDATACH</name>
+                <description>Regular channel most recently
+                converted</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>3</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>AWHTR</name>
+            <displayName>FLTxAWHTR</displayName>
+            <description>DFSDM analog watchdog high threshold
+            register</description>
+            <addressOffset>0x20</addressOffset>
+            <size>0x20</size>
+            <access>read-write</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>AWHT</name>
+                <description>Analog watchdog high
+                threshold</description>
+                <bitOffset>8</bitOffset>
+                <bitWidth>24</bitWidth>
+              </field>
+              <field>
+                <name>BKAWH</name>
+                <description>Break signal assignment to analog
+                watchdog high threshold event</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>4</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>AWLTR</name>
+            <displayName>FLTxAWLTR</displayName>
+            <description>DFSDM analog watchdog low threshold
+            register</description>
+            <addressOffset>0x24</addressOffset>
+            <size>0x20</size>
+            <access>read-write</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>AWLT</name>
+                <description>Analog watchdog low
+                threshold</description>
+                <bitOffset>8</bitOffset>
+                <bitWidth>24</bitWidth>
+              </field>
+              <field>
+                <name>BKAWL</name>
+                <description>Break signal assignment to analog
+                watchdog low threshold event</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>4</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>AWSR</name>
+            <displayName>FLTxAWSR</displayName>
+            <description>DFSDM analog watchdog status
+            register</description>
+            <addressOffset>0x28</addressOffset>
+            <size>0x20</size>
+            <access>read-only</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>AWHTF</name>
+                <description>Analog watchdog high threshold
+                flag</description>
+                <bitOffset>8</bitOffset>
+                <bitWidth>8</bitWidth>
+              </field>
+              <field>
+                <name>AWLTF</name>
+                <description>Analog watchdog low threshold
+                flag</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>8</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>AWCFR</name>
+            <displayName>FLTxAWCFR</displayName>
+            <description>DFSDM analog watchdog clear flag
+            register</description>
+            <addressOffset>0x2C</addressOffset>
+            <size>0x20</size>
+            <access>read-write</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>CLRAWHTF</name>
+                <description>Clear the analog watchdog high threshold
+                flag</description>
+                <bitOffset>8</bitOffset>
+                <bitWidth>8</bitWidth>
+              </field>
+              <field>
+                <name>CLRAWLTF</name>
+                <description>Clear the analog watchdog low threshold
+                flag</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>8</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>EXMAX</name>
+            <displayName>FLTxEXMAX</displayName>
+            <description>DFSDM Extremes detector maximum
+            register</description>
+            <addressOffset>0x30</addressOffset>
+            <size>0x20</size>
+            <access>read-only</access>
+            <resetValue>0x80000000</resetValue>
+            <fields>
+              <field>
+                <name>EXMAX</name>
+                <description>Extremes detector maximum
+                value</description>
+                <bitOffset>8</bitOffset>
+                <bitWidth>24</bitWidth>
+              </field>
+              <field>
+                <name>EXMAXCH</name>
+                <description>Extremes detector maximum data
+                channel</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>3</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>EXMIN</name>
+            <displayName>FLTxEXMIN</displayName>
+            <description>DFSDM Extremes detector minimum
+            register</description>
+            <addressOffset>0x34</addressOffset>
+            <size>0x20</size>
+            <access>read-only</access>
+            <resetValue>0x7FFFFF00</resetValue>
+            <fields>
+              <field>
+                <name>EXMIN</name>
+                <description>Extremes detector minimum
+                value</description>
+                <bitOffset>8</bitOffset>
+                <bitWidth>24</bitWidth>
+              </field>
+              <field>
+                <name>EXMINCH</name>
+                <description>Extremes detector minimum data
+                channel</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>3</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>CNVTIMR</name>
+            <displayName>FLTxCNVTIMR</displayName>
+            <description>DFSDM conversion timer
+            register</description>
+            <addressOffset>0x38</addressOffset>
+            <size>0x20</size>
+            <access>read-only</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>CNVCNT</name>
+                <description>28-bit timer counting conversion
+                time</description>
+                <bitOffset>4</bitOffset>
+                <bitWidth>28</bitWidth>
+              </field>
+            </fields>
+          </register>
+        </cluster>
+      </registers>
+    

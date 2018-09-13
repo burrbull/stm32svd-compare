@@ -1,0 +1,376 @@
+<registers>
+        <register>
+          <name>ACR</name>
+          <displayName>ACR</displayName>
+          <description>Flash access control register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>RUN_PD</name>
+              <description>Flash mode during Run</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SLEEP_PD</name>
+              <description>Flash mode during Sleep</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ACC64</name>
+              <description>64-bit access</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRFTEN</name>
+              <description>Prefetch enable</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LATENCY</name>
+              <description>Latency</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PECR</name>
+          <displayName>PECR</displayName>
+          <description>Program/erase control register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000007</resetValue>
+          <fields>
+            <field>
+              <name>OBL_LAUNCH</name>
+              <description>Launch the option byte
+              loading</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ERRIE</name>
+              <description>Error interrupt enable</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EOPIE</name>
+              <description>End of programming interrupt
+              enable</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PARALLELBANK</name>
+              <description>Parallel bank mode</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FPRG</name>
+              <description>Half Page/Double Word programming
+              mode</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ERASE</name>
+              <description>Page or Double Word erase
+              mode</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FTDW</name>
+              <description>Fixed time data write for Byte, Half
+              Word and Word programming</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DATA</name>
+              <description>Data EEPROM selection</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PROG</name>
+              <description>Program memory selection</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OPTLOCK</name>
+              <description>Option bytes block lock</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRGLOCK</name>
+              <description>Program memory lock</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PELOCK</name>
+              <description>FLASH_PECR and data EEPROM
+              lock</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PDKEYR</name>
+          <displayName>PDKEYR</displayName>
+          <description>Power down key register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PDKEYR</name>
+              <description>RUN_PD in FLASH_ACR key</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PEKEYR</name>
+          <displayName>PEKEYR</displayName>
+          <description>Program/erase key register</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PEKEYR</name>
+              <description>FLASH_PEC and data EEPROM
+              key</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PRGKEYR</name>
+          <displayName>PRGKEYR</displayName>
+          <description>Program memory key register</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PRGKEYR</name>
+              <description>Program memory key</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>OPTKEYR</name>
+          <displayName>OPTKEYR</displayName>
+          <description>Option byte key register</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>OPTKEYR</name>
+              <description>Option byte key</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SR</name>
+          <displayName>SR</displayName>
+          <description>Status register</description>
+          <addressOffset>0x18</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000004</resetValue>
+          <fields>
+            <field>
+              <name>OPTVERRUSR</name>
+              <description>Option UserValidity Error</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OPTVERR</name>
+              <description>Option validity error</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SIZERR</name>
+              <description>Size error</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PGAERR</name>
+              <description>Programming alignment
+              error</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>WRPERR</name>
+              <description>Write protected error</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>READY</name>
+              <description>Flash memory module ready after low
+              power mode</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>ENDHV</name>
+              <description>End of high voltage</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>EOP</name>
+              <description>End of operation</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>BSY</name>
+              <description>Write/erase operations in
+              progress</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>OBR</name>
+          <displayName>OBR</displayName>
+          <description>Option byte register</description>
+          <addressOffset>0x1C</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00F80000</resetValue>
+          <fields>
+            <field>
+              <name>BFB2</name>
+              <description>Boot From Bank 2</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>nRST_STDBY</name>
+              <description>nRST_STDBY</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>nRTS_STOP</name>
+              <description>nRTS_STOP</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IWDG_SW</name>
+              <description>IWDG_SW</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>BOR_LEV</name>
+              <description>BOR_LEV</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>RDPRT</name>
+              <description>Read protection</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>WRPR1</name>
+          <displayName>WRPR1</displayName>
+          <description>Write protection register</description>
+          <addressOffset>0x20</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>WRP1</name>
+              <description>Write protection</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>WRPR2</name>
+          <displayName>WRPR2</displayName>
+          <description>Write protection register</description>
+          <addressOffset>0x80</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>WRP2</name>
+              <description>WRP2</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>WRPR3</name>
+          <displayName>WRPR3</displayName>
+          <description>Write protection register</description>
+          <addressOffset>0x84</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>WRP3</name>
+              <description>WRP3</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

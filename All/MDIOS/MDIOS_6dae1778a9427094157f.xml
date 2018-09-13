@@ -1,0 +1,225 @@
+<registers>
+        <register>
+          <name>CR</name>
+          <displayName>CR</displayName>
+          <description>MDIOS configuration register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PORT_ADDRESS</name>
+              <description>Slaves's address</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+            <field>
+              <name>DPC</name>
+              <description>Disable Preamble Check</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EIE</name>
+              <description>Error interrupt enable</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RDIE</name>
+              <description>Register Read Interrupt
+              Enable</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WRIE</name>
+              <description>Register write interrupt
+              enable</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EN</name>
+              <description>Peripheral enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>WRFR</name>
+          <displayName>WRFR</displayName>
+          <description>MDIOS write flag register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>WRF</name>
+              <description>Write flags for MDIO registers 0 to
+              31</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CWRFR</name>
+          <displayName>CWRFR</displayName>
+          <description>MDIOS clear write flag
+          register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CWRF</name>
+              <description>Clear the write flag</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>RDFR</name>
+          <displayName>RDFR</displayName>
+          <description>MDIOS read flag register</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>RDF</name>
+              <description>Read flags for MDIO registers 0 to
+              31</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CRDFR</name>
+          <displayName>CRDFR</displayName>
+          <description>MDIOS clear read flag register</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CRDF</name>
+              <description>Clear the read flag</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SR</name>
+          <displayName>SR</displayName>
+          <description>MDIOS status register</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>TERF</name>
+              <description>Turnaround error flag</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SERF</name>
+              <description>Start error flag</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PERF</name>
+              <description>Preamble error flag</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CLRFR</name>
+          <displayName>CLRFR</displayName>
+          <description>MDIOS clear flag register</description>
+          <addressOffset>0x18</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CTERF</name>
+              <description>Clear the turnaround error
+              flag</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CSERF</name>
+              <description>Clear the start error flag</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CPERF</name>
+              <description>Clear the preamble error
+              flag</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DINR%s</name>
+          <displayName>DINRx</displayName>
+          <dim>32</dim>
+          <dimIndex>0-31</dimIndex>
+          <dimIncrement>0x4</dimIncrement>
+          <description>MDIOS input data register X</description>
+          <addressOffset>0x1C</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DIN</name>
+              <description>Input data received from MDIO Master
+              during write frames</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DOUTR%s</name>
+          <displayName>DOUTRx</displayName>
+          <dim>32</dim>
+          <dimIndex>0-31</dimIndex>
+          <dimIncrement>0x4</dimIncrement>
+          <description>MDIOS output data register X</description>
+          <addressOffset>0x9C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DOUT</name>
+              <description>Output data sent to MDIO Master during
+              read frames</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

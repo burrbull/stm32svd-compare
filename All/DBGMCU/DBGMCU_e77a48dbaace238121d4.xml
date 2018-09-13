@@ -1,0 +1,150 @@
+<registers>
+        <register>
+          <name>IDCODE</name>
+          <displayName>IDCODE</displayName>
+          <description>MCU Device ID Code Register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REV_ID</name>
+              <description>Revision Identifier</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+            <field>
+              <name>DEV_ID</name>
+              <description>Device Identifier</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>12</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CR</name>
+          <displayName>CR</displayName>
+          <description>Debug MCU Configuration
+          Register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DBG_STANDBY</name>
+              <description>Debug Standby mode</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DBG_STOP</name>
+              <description>Debug Stop mode</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DBG_SLEEP</name>
+              <description>Debug Sleep mode</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>APB1_FZ</name>
+          <displayName>APB1_FZ</displayName>
+          <description>Debug MCU APB1 freeze
+          register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DBG_LPTIM1_STOP</name>
+              <description>LPTIM1 counter stopped when Core is
+              halted</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DBG_I2C2_STOP</name>
+              <description>I2C2 SMBUS timeout counter stopped when
+              core is halted</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DBG_I2C1_STOP</name>
+              <description>I2C1 SMBUS timeout counter stopped when
+              Core is halted</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DBG_IWDG_STOP</name>
+              <description>Debug Independent Wachdog stopped when
+              Core is halted</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DBG_WWDG_STOP</name>
+              <description>Debug Window Wachdog stopped when Core
+              is halted</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DBG_RTC_STOP</name>
+              <description>Debug RTC stopped when Core is
+              halted</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DBG_TIM6_STOP</name>
+              <description>TIM6 counter stopped when Core is
+              halted</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DBG_TIM2_STOP</name>
+              <description>TIM2 counter stopped when Core is
+              halted</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>APB2_FZ</name>
+          <displayName>APB2_FZ</displayName>
+          <description>Debug MCU APB2 freeze
+          register</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DBG_TIM22_STO</name>
+              <description>TIM22 counter stopped when Core is
+              halted</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DBG_TIM21_STOP</name>
+              <description>TIM21 counter stopped when Core is
+              halted</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

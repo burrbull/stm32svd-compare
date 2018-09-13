@@ -1,0 +1,503 @@
+<registers>
+        <register>
+          <name>CONFR0</name>
+          <displayName>CONFR0</displayName>
+          <description>JPEG codec configuration register
+          0</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>START</name>
+              <description>Start</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CONFR1</name>
+          <displayName>CONFR1</displayName>
+          <description>JPEG codec configuration register
+          1</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>YSIZE</name>
+              <description>Y Size</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+            <field>
+              <name>HDR</name>
+              <description>Header Processing</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>NS</name>
+              <description>Number of components for
+              Scan</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>COLORSPACE</name>
+              <description>Color Space</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>DE</name>
+              <description>Decoding Enable</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>NF</name>
+              <description>Number of color components</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CONFR2</name>
+          <displayName>CONFR2</displayName>
+          <description>JPEG codec configuration register
+          2</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>NMCU</name>
+              <description>Number of MCU</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>26</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CONFR3</name>
+          <displayName>CONFR3</displayName>
+          <description>JPEG codec configuration register
+          3</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>XSIZE</name>
+              <description>X size</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CONFR4</name>
+          <displayName>CONFR4</displayName>
+          <description>JPEG codec configuration register
+          4</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>HSF</name>
+              <description>Horizontal Sampling Factor</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>VSF</name>
+              <description>Vertical Sampling Factor</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>NB</name>
+              <description>Number of Block</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>QT</name>
+              <description>Quantization Table</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>HA</name>
+              <description>Huffman AC</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>HD</name>
+              <description>Huffman DC</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CONFR5</name>
+          <displayName>CONFR5</displayName>
+          <description>JPEG codec configuration register
+          5</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>HSF</name>
+              <description>Horizontal Sampling Factor</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>VSF</name>
+              <description>Vertical Sampling Factor</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>NB</name>
+              <description>Number of Block</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>QT</name>
+              <description>Quantization Table</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>HA</name>
+              <description>Huffman AC</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>HD</name>
+              <description>Huffman DC</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CONFR6</name>
+          <displayName>CONFR6</displayName>
+          <description>JPEG codec configuration register
+          6</description>
+          <addressOffset>0x18</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>HSF</name>
+              <description>Horizontal Sampling Factor</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>VSF</name>
+              <description>Vertical Sampling Factor</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>NB</name>
+              <description>Number of Block</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>QT</name>
+              <description>Quantization Table</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>HA</name>
+              <description>Huffman AC</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>HD</name>
+              <description>Huffman DC</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CONFR7</name>
+          <displayName>CONFR7</displayName>
+          <description>JPEG codec configuration register
+          7</description>
+          <addressOffset>0x1C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>HSF</name>
+              <description>Horizontal Sampling Factor</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>VSF</name>
+              <description>Vertical Sampling Factor</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>NB</name>
+              <description>Number of Block</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>QT</name>
+              <description>Quantization Table</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>HA</name>
+              <description>Huffman AC</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>HD</name>
+              <description>Huffman DC</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CR</name>
+          <displayName>CR</displayName>
+          <description>JPEG control register</description>
+          <addressOffset>0x20</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>OFF</name>
+              <description>Output FIFO Flush</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>IFF</name>
+              <description>Input FIFO Flush</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>ODMAEN</name>
+              <description>Output DMA Enable</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>IDMAEN</name>
+              <description>Input DMA Enable</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>HPDIE</name>
+              <description>Header Parsing Done Interrupt
+              Enable</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EOCIE</name>
+              <description>End of Conversion Interrupt
+              Enable</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OFNEIE</name>
+              <description>Output FIFO Not Empty Interrupt
+              Enable</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OFTIE</name>
+              <description>Output FIFO Threshold Interrupt
+              Enable</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>IFNFIE</name>
+              <description>Input FIFO Not Full Interrupt
+              Enable</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>IFTIE</name>
+              <description>Input FIFO Threshold Interrupt
+              Enable</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>JCEN</name>
+              <description>JPEG Core Enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SR</name>
+          <displayName>SR</displayName>
+          <description>JPEG status register</description>
+          <addressOffset>0x24</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>COF</name>
+              <description>Codec Operation Flag</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>HPDF</name>
+              <description>Header Parsing Done Flag</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EOCF</name>
+              <description>End of Conversion Flag</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OFNEF</name>
+              <description>Output FIFO Not Empty Flag</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OFTF</name>
+              <description>Output FIFO Threshold Flag</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IFNFF</name>
+              <description>Input FIFO Not Full Flag</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IFTF</name>
+              <description>Input FIFO Threshold Flag</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CFR</name>
+          <displayName>CFR</displayName>
+          <description>JPEG clear flag register</description>
+          <addressOffset>0x28</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CHPDF</name>
+              <description>Clear Header Parsing Done
+              Flag</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CEOCF</name>
+              <description>Clear End of Conversion
+              Flag</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DIR</name>
+          <displayName>DIR</displayName>
+          <description>JPEG data input register</description>
+          <addressOffset>0x2C</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DATAIN</name>
+              <description>Data Input FIFO</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DOR</name>
+          <displayName>DOR</displayName>
+          <description>JPEG data output register</description>
+          <addressOffset>0x30</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DATAOUT</name>
+              <description>Data Output FIFO</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

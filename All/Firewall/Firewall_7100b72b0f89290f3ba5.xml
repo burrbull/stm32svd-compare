@@ -1,0 +1,141 @@
+<registers>
+        <register>
+          <name>CSSA</name>
+          <displayName>CSSA</displayName>
+          <description>Code segment start address</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>ADD</name>
+              <description>code segment start address</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CSL</name>
+          <displayName>CSL</displayName>
+          <description>Code segment length</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>LENG</name>
+              <description>code segment length</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>14</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>NVDSSA</name>
+          <displayName>NVDSSA</displayName>
+          <description>Non-volatile data segment start
+          address</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>ADD</name>
+              <description>Non-volatile data segment start
+              address</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>NVDSL</name>
+          <displayName>NVDSL</displayName>
+          <description>Non-volatile data segment
+          length</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>LENG</name>
+              <description>Non-volatile data segment
+              length</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>14</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>VDSSA</name>
+          <displayName>VDSSA</displayName>
+          <description>Volatile data segment start
+          address</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>ADD</name>
+              <description>Volatile data segment start
+              address</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>10</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>VDSL</name>
+          <displayName>VDSL</displayName>
+          <description>Volatile data segment length</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>LENG</name>
+              <description>Non-volatile data segment
+              length</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>10</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CR</name>
+          <displayName>CR</displayName>
+          <description>Configuration register</description>
+          <addressOffset>0x20</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>VDE</name>
+              <description>Volatile data execution</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>VDS</name>
+              <description>Volatile data shared</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FPA</name>
+              <description>Firewall pre alarm</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

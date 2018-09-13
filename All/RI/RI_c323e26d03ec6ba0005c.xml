@@ -1,0 +1,565 @@
+<registers>
+        <register>
+          <name>ICR</name>
+          <displayName>ICR</displayName>
+          <description>RI input capture register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>IC4</name>
+              <description>IC4</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IC3</name>
+              <description>IC3</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IC2</name>
+              <description>IC2</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IC1</name>
+              <description>IC1</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIM</name>
+              <description>Timer select bits</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>IC4IOS</name>
+              <description>Input capture 4 select
+              bits</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>IC3IOS</name>
+              <description>Input capture 3 select
+              bits</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>IC2IOS</name>
+              <description>Input capture 2 select
+              bits</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>IC1IOS</name>
+              <description>Input capture 1 select
+              bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ASCR1</name>
+          <displayName>ASCR1</displayName>
+          <description>RI analog switches control register
+          1</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>SCM</name>
+              <description>Switch control mode</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CH30GR11_4</name>
+              <description>Analog switch control</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CH29GR11_3</name>
+              <description>Analog switch control</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CH28GR11_2</name>
+              <description>Analog switch control</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CH27GR11_1</name>
+              <description>Analog switch control</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>VCOMP</name>
+              <description>ADC analog switch selection for internal
+              node to comparator 1</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CH25</name>
+              <description>Analog I/O switch control of channel
+              CH25</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CH24</name>
+              <description>Analog I/O switch control of channel
+              CH24</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CH23</name>
+              <description>Analog I/O switch control of channel
+              CH23</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CH22</name>
+              <description>Analog I/O switch control of channel
+              CH22</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CH21GR7_4</name>
+              <description>Analog switch control</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CH20GR7_3</name>
+              <description>Analog switch control</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CH19GR7_2</name>
+              <description>Analog switch control</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CH18GR7_1</name>
+              <description>Analog switch control</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CH31GR7_1</name>
+              <description>Analog switch control</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CH15GR9_2</name>
+              <description>Analog switch control</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CH14GR9_1</name>
+              <description>Analog switch control</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CH13GR8_4</name>
+              <description>Analog switch control</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CH12GR8_3</name>
+              <description>Analog switch control</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CH11GR8_2</name>
+              <description>Analog switch control</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CH10GR8_1</name>
+              <description>Analog switch control</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CH9GR3_2</name>
+              <description>Analog switch control</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CH8GR3_1</name>
+              <description>Analog switch control</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CH7GR2_2</name>
+              <description>Analog switch control</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CH6GR2_1</name>
+              <description>Analog switch control</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>COMP1_SW1</name>
+              <description>Comparator 1 analog switch</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CH31GR11_5</name>
+              <description>Analog switch control</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CH3GR1_4</name>
+              <description>Analog switch control</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CH2GR1_3</name>
+              <description>Analog switch control</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CH1GR1_2</name>
+              <description>Analog switch control</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CH0GR1_1</name>
+              <description>Analog switch control</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ASCR2</name>
+          <displayName>ASCR2</displayName>
+          <description>RI analog switches control register
+          2</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>GR5_4</name>
+              <description>GR5_4 analog switch
+              control</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>GR6_4</name>
+              <description>GR6_4 analog switch
+              control</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>GR6_3</name>
+              <description>GR6_3 analog switch
+              control</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>GR7_7</name>
+              <description>GR7_7 analog switch
+              control</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>GR7_6</name>
+              <description>GR7_6 analog switch
+              control</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>GR7_5</name>
+              <description>GR7_5 analog switch
+              control</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>GR2_5</name>
+              <description>GR2_5 analog switch
+              control</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>GR2_4</name>
+              <description>GR2_4 analog switch
+              control</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>GR2_3</name>
+              <description>GR2_3 analog switch
+              control</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>GR9_4</name>
+              <description>GR9_4 analog switch
+              control</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>GR9_3</name>
+              <description>GR9_3 analog switch
+              control</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>GR3_5</name>
+              <description>GR3_5 analog switch
+              control</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>GR3_4</name>
+              <description>GR3_4 analog switch
+              control</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>GR3_3</name>
+              <description>GR3_3 analog switch
+              control</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>GR4_3</name>
+              <description>GR4_3 analog switch
+              control</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>GR4_2</name>
+              <description>GR4_2 analog switch
+              control</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>GR4_1</name>
+              <description>GR4_1 analog switch
+              control</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>GR5_3</name>
+              <description>GR5_3 analog switch
+              control</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>GR5_2</name>
+              <description>GR5_2 analog switch
+              control</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>GR5_1</name>
+              <description>GR5_1 analog switch
+              control</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>GR6_2</name>
+              <description>GR6_2 analog switch
+              control</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>GR6_1</name>
+              <description>GR6_1 analog switch
+              control</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>GR10_4</name>
+              <description>GR10_4 analog switch
+              control</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>GR10_3</name>
+              <description>GR10_3 analog switch
+              control</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>GR10_2</name>
+              <description>GR10_2 analog switch
+              control</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>GR10_1</name>
+              <description>GR10_1 analog switch
+              control</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HYSCR1</name>
+          <displayName>HYSCR1</displayName>
+          <description>RI hysteresis control register
+          1</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PB</name>
+              <description>Port B hysteresis control
+              on/off</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+            <field>
+              <name>PA</name>
+              <description>Port A hysteresis control
+              on/off</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HYSCR2</name>
+          <displayName>HYSCR2</displayName>
+          <description>RI hysteresis control register
+          2</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PD</name>
+              <description>Port D hysteresis control
+              on/off</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+            <field>
+              <name>PC</name>
+              <description>Port C hysteresis control
+              on/off</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HYSCR3</name>
+          <displayName>HYSCR3</displayName>
+          <description>RI hysteresis control register
+          3</description>
+          <addressOffset>0x18</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PF</name>
+              <description>Port F hysteresis control
+              on/off</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+            <field>
+              <name>PE</name>
+              <description>Port E hysteresis control
+              on/off</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HYSCR4</name>
+          <displayName>HYSCR4</displayName>
+          <description>Hysteresis control register</description>
+          <addressOffset>0x1C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PG</name>
+              <description>Port G hysteresis control
+              on/off</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

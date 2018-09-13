@@ -1,0 +1,2484 @@
+<registers>
+        <register>
+          <name>TIMCCR</name>
+          <displayName>TIMCCR</displayName>
+          <description>Timerx Control Register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>UPDGAT</name>
+              <description>Update Gating</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>PREEN</name>
+              <description>Preload enable</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DACSYNC</name>
+              <description>AC Synchronization</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>MSTU</name>
+              <description>Master Timer update</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TEU</name>
+              <description>TEU</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TDU</name>
+              <description>TDU</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TCU</name>
+              <description>TCU</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TBU</name>
+              <description>TBU</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TxRSTU</name>
+              <description>Timerx reset update</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TxREPU</name>
+              <description>Timer x Repetition update</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DELCMP4</name>
+              <description>Delayed CMP4 mode</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>DELCMP2</name>
+              <description>Delayed CMP2 mode</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>SYNCSTRTx</name>
+              <description>Synchronization Starts Timer
+              x</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SYNCRSTx</name>
+              <description>Synchronization Resets Timer
+              x</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PSHPLL</name>
+              <description>Push-Pull mode enable</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>HALF</name>
+              <description>Half mode enable</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RETRIG</name>
+              <description>Re-triggerable mode</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CONT</name>
+              <description>Continuous mode</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CK_PSCx</name>
+              <description>HRTIM Timer x Clock
+              prescaler</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TIMCISR</name>
+          <displayName>TIMCISR</displayName>
+          <description>Timerx Interrupt Status
+          Register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>O2CPY</name>
+              <description>Output 2 Copy</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>O1CPY</name>
+              <description>Output 1 Copy</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>O2STAT</name>
+              <description>Output 2 State</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>O1STAT</name>
+              <description>Output 1 State</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IPPSTAT</name>
+              <description>Idle Push Pull Status</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CPPSTAT</name>
+              <description>Current Push Pull Status</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DLYPRT</name>
+              <description>Delayed Protection Flag</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RST</name>
+              <description>Reset Interrupt Flag</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RSTx2</name>
+              <description>Output 2 Reset Interrupt
+              Flag</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SETx2</name>
+              <description>Output 2 Set Interrupt
+              Flag</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RSTx1</name>
+              <description>Output 1 Reset Interrupt
+              Flag</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SETx1</name>
+              <description>Output 1 Set Interrupt
+              Flag</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CPT2</name>
+              <description>Capture2 Interrupt Flag</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CPT1</name>
+              <description>Capture1 Interrupt Flag</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>UPD</name>
+              <description>Update Interrupt Flag</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>REP</name>
+              <description>Repetition Interrupt Flag</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMP4</name>
+              <description>Compare 4 Interrupt Flag</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMP3</name>
+              <description>Compare 3 Interrupt Flag</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMP2</name>
+              <description>Compare 2 Interrupt Flag</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMP1</name>
+              <description>Compare 1 Interrupt Flag</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TIMCICR</name>
+          <displayName>TIMCICR</displayName>
+          <description>Timerx Interrupt Clear
+          Register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DLYPRTC</name>
+              <description>Delayed Protection Flag
+              Clear</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RSTC</name>
+              <description>Reset Interrupt flag Clear</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RSTx2C</name>
+              <description>Output 2 Reset flag Clear</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SET2xC</name>
+              <description>Output 2 Set flag Clear</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RSTx1C</name>
+              <description>Output 1 Reset flag Clear</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SET1xC</name>
+              <description>Output 1 Set flag Clear</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CPT2C</name>
+              <description>Capture2 Interrupt flag
+              Clear</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CPT1C</name>
+              <description>Capture1 Interrupt flag
+              Clear</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>UPDC</name>
+              <description>Update Interrupt flag
+              Clear</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>REPC</name>
+              <description>Repetition Interrupt flag
+              Clear</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMP4C</name>
+              <description>Compare 4 Interrupt flag
+              Clear</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMP3C</name>
+              <description>Compare 3 Interrupt flag
+              Clear</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMP2C</name>
+              <description>Compare 2 Interrupt flag
+              Clear</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMP1C</name>
+              <description>Compare 1 Interrupt flag
+              Clear</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TIMCDIER5</name>
+          <displayName>TIMCDIER5</displayName>
+          <description>TIMxDIER5</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DLYPRTDE</name>
+              <description>DLYPRTDE</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RSTDE</name>
+              <description>RSTDE</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RSTx2DE</name>
+              <description>RSTx2DE</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SETx2DE</name>
+              <description>SETx2DE</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RSTx1DE</name>
+              <description>RSTx1DE</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SET1xDE</name>
+              <description>SET1xDE</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CPT2DE</name>
+              <description>CPT2DE</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CPT1DE</name>
+              <description>CPT1DE</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>UPDDE</name>
+              <description>UPDDE</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>REPDE</name>
+              <description>REPDE</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMP4DE</name>
+              <description>CMP4DE</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMP3DE</name>
+              <description>CMP3DE</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMP2DE</name>
+              <description>CMP2DE</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMP1DE</name>
+              <description>CMP1DE</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DLYPRTIE</name>
+              <description>DLYPRTIE</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RSTIE</name>
+              <description>RSTIE</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RSTx2IE</name>
+              <description>RSTx2IE</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SETx2IE</name>
+              <description>SETx2IE</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RSTx1IE</name>
+              <description>RSTx1IE</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SET1xIE</name>
+              <description>SET1xIE</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CPT2IE</name>
+              <description>CPT2IE</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CPT1IE</name>
+              <description>CPT1IE</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>UPDIE</name>
+              <description>UPDIE</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>REPIE</name>
+              <description>REPIE</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMP4IE</name>
+              <description>CMP4IE</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMP3IE</name>
+              <description>CMP3IE</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMP2IE</name>
+              <description>CMP2IE</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMP1IE</name>
+              <description>CMP1IE</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CNTCR</name>
+          <displayName>CNTCR</displayName>
+          <description>Timerx Counter Register</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CNTx</name>
+              <description>Timerx Counter value</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PERCR</name>
+          <displayName>PERCR</displayName>
+          <description>Timerx Period Register</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x0000FFFF</resetValue>
+          <fields>
+            <field>
+              <name>PERx</name>
+              <description>Timerx Period value</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>REPCR</name>
+          <displayName>REPCR</displayName>
+          <description>Timerx Repetition Register</description>
+          <addressOffset>0x18</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REPx</name>
+              <description>Timerx Repetition counter
+              value</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CMP1CR</name>
+          <displayName>CMP1CR</displayName>
+          <description>Timerx Compare 1 Register</description>
+          <addressOffset>0x1C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CMP1x</name>
+              <description>Timerx Compare 1 value</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CMP1CCR</name>
+          <displayName>CMP1CCR</displayName>
+          <description>Timerx Compare 1 Compound
+          Register</description>
+          <addressOffset>0x20</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REPx</name>
+              <description>Timerx Repetition value (aliased from
+              HRTIM_REPx register)</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>CMP1x</name>
+              <description>Timerx Compare 1 value</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CMP2CR</name>
+          <displayName>CMP2CR</displayName>
+          <description>Timerx Compare 2 Register</description>
+          <addressOffset>0x24</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CMP2x</name>
+              <description>Timerx Compare 2 value</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CMP3CR</name>
+          <displayName>CMP3CR</displayName>
+          <description>Timerx Compare 3 Register</description>
+          <addressOffset>0x28</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CMP3x</name>
+              <description>Timerx Compare 3 value</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CMP4CR</name>
+          <displayName>CMP4CR</displayName>
+          <description>Timerx Compare 4 Register</description>
+          <addressOffset>0x2C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CMP4x</name>
+              <description>Timerx Compare 4 value</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPT1CR</name>
+          <displayName>CPT1CR</displayName>
+          <description>Timerx Capture 1 Register</description>
+          <addressOffset>0x30</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CPT1x</name>
+              <description>Timerx Capture 1 value</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPT2CR</name>
+          <displayName>CPT2CR</displayName>
+          <description>Timerx Capture 2 Register</description>
+          <addressOffset>0x34</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CPT2x</name>
+              <description>Timerx Capture 2 value</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DTCR</name>
+          <displayName>DTCR</displayName>
+          <description>Timerx Deadtime Register</description>
+          <addressOffset>0x38</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DTFLKx</name>
+              <description>Deadtime Falling Lock</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DTFSLKx</name>
+              <description>Deadtime Falling Sign Lock</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SDTFx</name>
+              <description>Sign Deadtime Falling
+              value</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DTFx</name>
+              <description>Deadtime Falling value</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>9</bitWidth>
+            </field>
+            <field>
+              <name>DTRLKx</name>
+              <description>Deadtime Rising Lock</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DTRSLKx</name>
+              <description>Deadtime Rising Sign Lock</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DTPRSC</name>
+              <description>Deadtime Prescaler</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>SDTRx</name>
+              <description>Sign Deadtime Rising value</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DTRx</name>
+              <description>Deadtime Rising value</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>9</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SETC1R</name>
+          <displayName>SETC1R</displayName>
+          <description>Timerx Output1 Set Register</description>
+          <addressOffset>0x3C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>UPDATE</name>
+              <description>Registers update (transfer preload to
+              active)</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT10</name>
+              <description>External Event 10</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT9</name>
+              <description>External Event 9</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT8</name>
+              <description>External Event 8</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT7</name>
+              <description>External Event 7</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT6</name>
+              <description>External Event 6</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT5</name>
+              <description>External Event 5</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT4</name>
+              <description>External Event 4</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT3</name>
+              <description>External Event 3</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT2</name>
+              <description>External Event 2</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT1</name>
+              <description>External Event 1</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT9</name>
+              <description>Timer Event 9</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT8</name>
+              <description>Timer Event 8</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT7</name>
+              <description>Timer Event 7</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT6</name>
+              <description>Timer Event 6</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT5</name>
+              <description>Timer Event 5</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT4</name>
+              <description>Timer Event 4</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT3</name>
+              <description>Timer Event 3</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT2</name>
+              <description>Timer Event 2</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT1</name>
+              <description>Timer Event 1</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MSTCMP4</name>
+              <description>Master Compare 4</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MSTCMP3</name>
+              <description>Master Compare 3</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MSTCMP2</name>
+              <description>Master Compare 2</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MSTCMP1</name>
+              <description>Master Compare 1</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MSTPER</name>
+              <description>Master Period</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMP4</name>
+              <description>Timer A compare 4</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMP3</name>
+              <description>Timer A compare 3</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMP2</name>
+              <description>Timer A compare 2</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMP1</name>
+              <description>Timer A compare 1</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PER</name>
+              <description>Timer A Period</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RESYNC</name>
+              <description>Timer A resynchronizaton</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SST</name>
+              <description>Software Set trigger</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>RSTC1R</name>
+          <displayName>RSTC1R</displayName>
+          <description>Timerx Output1 Reset Register</description>
+          <addressOffset>0x40</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>UPDATE</name>
+              <description>UPDATE</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT10</name>
+              <description>EXTEVNT10</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT9</name>
+              <description>EXTEVNT9</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT8</name>
+              <description>EXTEVNT8</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT7</name>
+              <description>EXTEVNT7</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT6</name>
+              <description>EXTEVNT6</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT5</name>
+              <description>EXTEVNT5</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT4</name>
+              <description>EXTEVNT4</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT3</name>
+              <description>EXTEVNT3</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT2</name>
+              <description>EXTEVNT2</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT1</name>
+              <description>EXTEVNT1</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT9</name>
+              <description>TIMEVNT9</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT8</name>
+              <description>TIMEVNT8</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT7</name>
+              <description>TIMEVNT7</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT6</name>
+              <description>TIMEVNT6</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT5</name>
+              <description>TIMEVNT5</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT4</name>
+              <description>TIMEVNT4</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT3</name>
+              <description>TIMEVNT3</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT2</name>
+              <description>TIMEVNT2</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT1</name>
+              <description>TIMEVNT1</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MSTCMP4</name>
+              <description>MSTCMP4</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MSTCMP3</name>
+              <description>MSTCMP3</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MSTCMP2</name>
+              <description>MSTCMP2</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MSTCMP1</name>
+              <description>MSTCMP1</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MSTPER</name>
+              <description>MSTPER</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMP4</name>
+              <description>CMP4</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMP3</name>
+              <description>CMP3</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMP2</name>
+              <description>CMP2</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMP1</name>
+              <description>CMP1</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PER</name>
+              <description>PER</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RESYNC</name>
+              <description>RESYNC</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SRT</name>
+              <description>SRT</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SETC2R</name>
+          <displayName>SETC2R</displayName>
+          <description>Timerx Output2 Set Register</description>
+          <addressOffset>0x44</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>UPDATE</name>
+              <description>UPDATE</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT10</name>
+              <description>EXTEVNT10</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT9</name>
+              <description>EXTEVNT9</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT8</name>
+              <description>EXTEVNT8</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT7</name>
+              <description>EXTEVNT7</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT6</name>
+              <description>EXTEVNT6</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT5</name>
+              <description>EXTEVNT5</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT4</name>
+              <description>EXTEVNT4</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT3</name>
+              <description>EXTEVNT3</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT2</name>
+              <description>EXTEVNT2</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT1</name>
+              <description>EXTEVNT1</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT9</name>
+              <description>TIMEVNT9</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT8</name>
+              <description>TIMEVNT8</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT7</name>
+              <description>TIMEVNT7</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT6</name>
+              <description>TIMEVNT6</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT5</name>
+              <description>TIMEVNT5</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT4</name>
+              <description>TIMEVNT4</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT3</name>
+              <description>TIMEVNT3</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT2</name>
+              <description>TIMEVNT2</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT1</name>
+              <description>TIMEVNT1</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MSTCMP4</name>
+              <description>MSTCMP4</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MSTCMP3</name>
+              <description>MSTCMP3</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MSTCMP2</name>
+              <description>MSTCMP2</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MSTCMP1</name>
+              <description>MSTCMP1</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MSTPER</name>
+              <description>MSTPER</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMP4</name>
+              <description>CMP4</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMP3</name>
+              <description>CMP3</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMP2</name>
+              <description>CMP2</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMP1</name>
+              <description>CMP1</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PER</name>
+              <description>PER</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RESYNC</name>
+              <description>RESYNC</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SST</name>
+              <description>SST</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>RSTC2R</name>
+          <displayName>RSTC2R</displayName>
+          <description>Timerx Output2 Reset Register</description>
+          <addressOffset>0x48</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>UPDATE</name>
+              <description>UPDATE</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT10</name>
+              <description>EXTEVNT10</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT9</name>
+              <description>EXTEVNT9</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT8</name>
+              <description>EXTEVNT8</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT7</name>
+              <description>EXTEVNT7</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT6</name>
+              <description>EXTEVNT6</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT5</name>
+              <description>EXTEVNT5</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT4</name>
+              <description>EXTEVNT4</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT3</name>
+              <description>EXTEVNT3</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT2</name>
+              <description>EXTEVNT2</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT1</name>
+              <description>EXTEVNT1</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT9</name>
+              <description>TIMEVNT9</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT8</name>
+              <description>TIMEVNT8</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT7</name>
+              <description>TIMEVNT7</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT6</name>
+              <description>TIMEVNT6</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT5</name>
+              <description>TIMEVNT5</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT4</name>
+              <description>TIMEVNT4</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT3</name>
+              <description>TIMEVNT3</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT2</name>
+              <description>TIMEVNT2</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMEVNT1</name>
+              <description>TIMEVNT1</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MSTCMP4</name>
+              <description>MSTCMP4</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MSTCMP3</name>
+              <description>MSTCMP3</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MSTCMP2</name>
+              <description>MSTCMP2</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MSTCMP1</name>
+              <description>MSTCMP1</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MSTPER</name>
+              <description>MSTPER</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMP4</name>
+              <description>CMP4</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMP3</name>
+              <description>CMP3</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMP2</name>
+              <description>CMP2</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMP1</name>
+              <description>CMP1</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PER</name>
+              <description>PER</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RESYNC</name>
+              <description>RESYNC</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SRT</name>
+              <description>SRT</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>EEFCR1</name>
+          <displayName>EEFCR1</displayName>
+          <description>Timerx External Event Filtering Register
+          1</description>
+          <addressOffset>0x4C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>EE5FLTR</name>
+              <description>External Event 5 filter</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EE5LTCH</name>
+              <description>External Event 5 latch</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EE4FLTR</name>
+              <description>External Event 4 filter</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EE4LTCH</name>
+              <description>External Event 4 latch</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EE3FLTR</name>
+              <description>External Event 3 filter</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EE3LTCH</name>
+              <description>External Event 3 latch</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EE2FLTR</name>
+              <description>External Event 2 filter</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EE2LTCH</name>
+              <description>External Event 2 latch</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EE1FLTR</name>
+              <description>External Event 1 filter</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EE1LTCH</name>
+              <description>External Event 1 latch</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>EEFCR2</name>
+          <displayName>EEFCR2</displayName>
+          <description>Timerx External Event Filtering Register
+          2</description>
+          <addressOffset>0x50</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>EE10FLTR</name>
+              <description>External Event 10 filter</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EE10LTCH</name>
+              <description>External Event 10 latch</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EE9FLTR</name>
+              <description>External Event 9 filter</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EE9LTCH</name>
+              <description>External Event 9 latch</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EE8FLTR</name>
+              <description>External Event 8 filter</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EE8LTCH</name>
+              <description>External Event 8 latch</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EE7FLTR</name>
+              <description>External Event 7 filter</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EE7LTCH</name>
+              <description>External Event 7 latch</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EE6FLTR</name>
+              <description>External Event 6 filter</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EE6LTCH</name>
+              <description>External Event 6 latch</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>RSTCR</name>
+          <displayName>RSTCR</displayName>
+          <description>TimerA Reset Register</description>
+          <addressOffset>0x54</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>TIMECMP4</name>
+              <description>Timer E Compare 4</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMECMP2</name>
+              <description>Timer E Compare 2</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMECMP1</name>
+              <description>Timer E Compare 1</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMDCMP4</name>
+              <description>Timer D Compare 4</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMDCMP2</name>
+              <description>Timer D Compare 2</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMDCMP1</name>
+              <description>Timer D Compare 1</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMBCMP4</name>
+              <description>Timer B Compare 4</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMBCMP2</name>
+              <description>Timer B Compare 2</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMBCMP1</name>
+              <description>Timer B Compare 1</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMACMP4</name>
+              <description>Timer A Compare 4</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMACMP2</name>
+              <description>Timer A Compare 2</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMACMP1</name>
+              <description>Timer A Compare 1</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT10</name>
+              <description>External Event 10</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT9</name>
+              <description>External Event 9</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT8</name>
+              <description>External Event 8</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT7</name>
+              <description>External Event 7</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT6</name>
+              <description>External Event 6</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT5</name>
+              <description>External Event 5</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT4</name>
+              <description>External Event 4</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT3</name>
+              <description>External Event 3</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT2</name>
+              <description>External Event 2</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEVNT1</name>
+              <description>External Event 1</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MSTCMP4</name>
+              <description>Master compare 4</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MSTCMP3</name>
+              <description>Master compare 3</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MSTCMP2</name>
+              <description>Master compare 2</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MSTCMP1</name>
+              <description>Master compare 1</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MSTPER</name>
+              <description>Master timer Period</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMP4</name>
+              <description>Timer A compare 4 reset</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMP2</name>
+              <description>Timer A compare 2 reset</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>UPDT</name>
+              <description>Timer A Update reset</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CHPCR</name>
+          <displayName>CHPCR</displayName>
+          <description>Timerx Chopper Register</description>
+          <addressOffset>0x58</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>STRTPW</name>
+              <description>STRTPW</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>CHPDTY</name>
+              <description>Timerx chopper duty cycle
+              value</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>CHPFRQ</name>
+              <description>Timerx carrier frequency
+              value</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPT1CCR</name>
+          <displayName>CPT1CCR</displayName>
+          <description>Timerx Capture 2 Control
+          Register</description>
+          <addressOffset>0x5C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>TECMP2</name>
+              <description>Timer E Compare 2</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TECMP1</name>
+              <description>Timer E Compare 1</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TE1RST</name>
+              <description>Timer E output 1 Reset</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TE1SET</name>
+              <description>Timer E output 1 Set</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TDCMP2</name>
+              <description>Timer D Compare 2</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TDCMP1</name>
+              <description>Timer D Compare 1</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TD1RST</name>
+              <description>Timer D output 1 Reset</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TD1SET</name>
+              <description>Timer D output 1 Set</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TBCMP2</name>
+              <description>Timer B Compare 2</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TBCMP1</name>
+              <description>Timer B Compare 1</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TB1RST</name>
+              <description>Timer B output 1 Reset</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TB1SET</name>
+              <description>Timer B output 1 Set</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TACMP2</name>
+              <description>Timer A Compare 2</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TACMP1</name>
+              <description>Timer A Compare 1</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TA1RST</name>
+              <description>Timer A output 1 Reset</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TA1SET</name>
+              <description>Timer A output 1 Set</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXEV10CPT</name>
+              <description>External Event 10 Capture</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXEV9CPT</name>
+              <description>External Event 9 Capture</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXEV8CPT</name>
+              <description>External Event 8 Capture</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXEV7CPT</name>
+              <description>External Event 7 Capture</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXEV6CPT</name>
+              <description>External Event 6 Capture</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXEV5CPT</name>
+              <description>External Event 5 Capture</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXEV4CPT</name>
+              <description>External Event 4 Capture</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXEV3CPT</name>
+              <description>External Event 3 Capture</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXEV2CPT</name>
+              <description>External Event 2 Capture</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXEV1CPT</name>
+              <description>External Event 1 Capture</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>UDPCPT</name>
+              <description>Update Capture</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWCPT</name>
+              <description>Software Capture</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPT2CCR</name>
+          <displayName>CPT2CCR</displayName>
+          <description>CPT2xCR</description>
+          <addressOffset>0x60</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>TECMP2</name>
+              <description>Timer E Compare 2</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TECMP1</name>
+              <description>Timer E Compare 1</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TE1RST</name>
+              <description>Timer E output 1 Reset</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TE1SET</name>
+              <description>Timer E output 1 Set</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TDCMP2</name>
+              <description>Timer D Compare 2</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TDCMP1</name>
+              <description>Timer D Compare 1</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TD1RST</name>
+              <description>Timer D output 1 Reset</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TD1SET</name>
+              <description>Timer D output 1 Set</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TBCMP2</name>
+              <description>Timer B Compare 2</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TBCMP1</name>
+              <description>Timer B Compare 1</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TB1RST</name>
+              <description>Timer B output 1 Reset</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TB1SET</name>
+              <description>Timer B output 1 Set</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TACMP2</name>
+              <description>Timer A Compare 2</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TACMP1</name>
+              <description>Timer A Compare 1</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TA1RST</name>
+              <description>Timer A output 1 Reset</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TA1SET</name>
+              <description>Timer A output 1 Set</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXEV10CPT</name>
+              <description>External Event 10 Capture</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXEV9CPT</name>
+              <description>External Event 9 Capture</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXEV8CPT</name>
+              <description>External Event 8 Capture</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXEV7CPT</name>
+              <description>External Event 7 Capture</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXEV6CPT</name>
+              <description>External Event 6 Capture</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXEV5CPT</name>
+              <description>External Event 5 Capture</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXEV4CPT</name>
+              <description>External Event 4 Capture</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXEV3CPT</name>
+              <description>External Event 3 Capture</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXEV2CPT</name>
+              <description>External Event 2 Capture</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXEV1CPT</name>
+              <description>External Event 1 Capture</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>UDPCPT</name>
+              <description>Update Capture</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWCPT</name>
+              <description>Software Capture</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>OUTCR</name>
+          <displayName>OUTCR</displayName>
+          <description>Timerx Output Register</description>
+          <addressOffset>0x64</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DIDL2</name>
+              <description>Output 2 Deadtime upon burst mode Idle
+              entry</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHP2</name>
+              <description>Output 2 Chopper enable</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FAULT2</name>
+              <description>Output 2 Fault state</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>IDLES2</name>
+              <description>Output 2 Idle State</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IDLEM2</name>
+              <description>Output 2 Idle mode</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>POL2</name>
+              <description>Output 2 polarity</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DLYPRT</name>
+              <description>Delayed Protection</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>DLYPRTEN</name>
+              <description>Delayed Protection Enable</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DTEN</name>
+              <description>Deadtime enable</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DIDL1</name>
+              <description>Output 1 Deadtime upon burst mode Idle
+              entry</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHP1</name>
+              <description>Output 1 Chopper enable</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FAULT1</name>
+              <description>Output 1 Fault state</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>IDLES1</name>
+              <description>Output 1 Idle State</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IDLEM1</name>
+              <description>Output 1 Idle mode</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>POL1</name>
+              <description>Output 1 polarity</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>FLTCR</name>
+          <displayName>FLTCR</displayName>
+          <description>Timerx Fault Register</description>
+          <addressOffset>0x68</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>FLTLCK</name>
+              <description>Fault sources Lock</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FLT5EN</name>
+              <description>Fault 5 enable</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FLT4EN</name>
+              <description>Fault 4 enable</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FLT3EN</name>
+              <description>Fault 3 enable</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FLT2EN</name>
+              <description>Fault 2 enable</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FLT1EN</name>
+              <description>Fault 1 enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

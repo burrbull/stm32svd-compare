@@ -1,0 +1,832 @@
+<registers>
+        <register>
+          <name>IMR</name>
+          <displayName>IMR</displayName>
+          <description>Interrupt mask register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>IM18</name>
+              <description>Interrupt Mask on line 18</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM17</name>
+              <description>Interrupt Mask on line 17</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM16</name>
+              <description>Interrupt Mask on line 16</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM15</name>
+              <description>Interrupt Mask on line 15</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM14</name>
+              <description>Interrupt Mask on line 14</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM13</name>
+              <description>Interrupt Mask on line 13</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM12</name>
+              <description>Interrupt Mask on line 12</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM11</name>
+              <description>Interrupt Mask on line 11</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM10</name>
+              <description>Interrupt Mask on line 10</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM9</name>
+              <description>Interrupt Mask on line 9</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM8</name>
+              <description>Interrupt Mask on line 8</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM7</name>
+              <description>Interrupt Mask on line 7</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM6</name>
+              <description>Interrupt Mask on line 6</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM5</name>
+              <description>Interrupt Mask on line 5</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM4</name>
+              <description>Interrupt Mask on line 4</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM3</name>
+              <description>Interrupt Mask on line 3</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM2</name>
+              <description>Interrupt Mask on line 2</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM1</name>
+              <description>Interrupt Mask on line 1</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM0</name>
+              <description>Interrupt Mask on line 0</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>EMR</name>
+          <displayName>EMR</displayName>
+          <description>Event mask register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>EM18</name>
+              <description>Event Mask on line 18</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM17</name>
+              <description>Event Mask on line 17</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM16</name>
+              <description>Event Mask on line 16</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM15</name>
+              <description>Event Mask on line 15</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM14</name>
+              <description>Event Mask on line 14</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM13</name>
+              <description>Event Mask on line 13</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM12</name>
+              <description>Event Mask on line 12</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM11</name>
+              <description>Event Mask on line 11</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM10</name>
+              <description>Event Mask on line 10</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM9</name>
+              <description>Event Mask on line 9</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM8</name>
+              <description>Event Mask on line 8</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM7</name>
+              <description>Event Mask on line 7</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM6</name>
+              <description>Event Mask on line 6</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM5</name>
+              <description>Event Mask on line 5</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM4</name>
+              <description>Event Mask on line 4</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM3</name>
+              <description>Event Mask on line 3</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM2</name>
+              <description>Event Mask on line 2</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM1</name>
+              <description>Event Mask on line 1</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM0</name>
+              <description>Event Mask on line 0</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>RTSR</name>
+          <displayName>RTSR</displayName>
+          <description>Rising Trigger selection
+          register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>RT18</name>
+              <description>Rising trigger event configuration of
+              line 18</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT17</name>
+              <description>Rising trigger event configuration of
+              line 17</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT16</name>
+              <description>Rising trigger event configuration of
+              line 16</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT15</name>
+              <description>Rising trigger event configuration of
+              line 15</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT14</name>
+              <description>Rising trigger event configuration of
+              line 14</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT13</name>
+              <description>Rising trigger event configuration of
+              line 13</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT12</name>
+              <description>Rising trigger event configuration of
+              line 12</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT11</name>
+              <description>Rising trigger event configuration of
+              line 11</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT10</name>
+              <description>Rising trigger event configuration of
+              line 10</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT9</name>
+              <description>Rising trigger event configuration of
+              line 9</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT8</name>
+              <description>Rising trigger event configuration of
+              line 8</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT7</name>
+              <description>Rising trigger event configuration of
+              line 7</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT6</name>
+              <description>Rising trigger event configuration of
+              line 6</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT5</name>
+              <description>Rising trigger event configuration of
+              line 5</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT4</name>
+              <description>Rising trigger event configuration of
+              line 4</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT3</name>
+              <description>Rising trigger event configuration of
+              line 3</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT2</name>
+              <description>Rising trigger event configuration of
+              line 2</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT1</name>
+              <description>Rising trigger event configuration of
+              line 1</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT0</name>
+              <description>Rising trigger event configuration of
+              line 0</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>FTSR</name>
+          <displayName>FTSR</displayName>
+          <description>Falling Trigger selection
+          register</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>FT18</name>
+              <description>Falling trigger event configuration of
+              line 18</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT17</name>
+              <description>Falling trigger event configuration of
+              line 17</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT16</name>
+              <description>Falling trigger event configuration of
+              line 16</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT15</name>
+              <description>Falling trigger event configuration of
+              line 15</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT14</name>
+              <description>Falling trigger event configuration of
+              line 14</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT13</name>
+              <description>Falling trigger event configuration of
+              line 13</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT12</name>
+              <description>Falling trigger event configuration of
+              line 12</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT11</name>
+              <description>Falling trigger event configuration of
+              line 11</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT10</name>
+              <description>Falling trigger event configuration of
+              line 10</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT9</name>
+              <description>Falling trigger event configuration of
+              line 9</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT8</name>
+              <description>Falling trigger event configuration of
+              line 8</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT7</name>
+              <description>Falling trigger event configuration of
+              line 7</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT6</name>
+              <description>Falling trigger event configuration of
+              line 6</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT5</name>
+              <description>Falling trigger event configuration of
+              line 5</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT4</name>
+              <description>Falling trigger event configuration of
+              line 4</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT3</name>
+              <description>Falling trigger event configuration of
+              line 3</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT2</name>
+              <description>Falling trigger event configuration of
+              line 2</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT1</name>
+              <description>Falling trigger event configuration of
+              line 1</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT0</name>
+              <description>Falling trigger event configuration of
+              line 0</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SWIER</name>
+          <displayName>SWIER</displayName>
+          <description>Software interrupt event
+          register</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>SWI18</name>
+              <description>Software Interrupt on line
+              18</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI17</name>
+              <description>Software Interrupt on line
+              17</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI16</name>
+              <description>Software Interrupt on line
+              16</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI15</name>
+              <description>Software Interrupt on line
+              15</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI14</name>
+              <description>Software Interrupt on line
+              14</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI13</name>
+              <description>Software Interrupt on line
+              13</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI12</name>
+              <description>Software Interrupt on line
+              12</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI11</name>
+              <description>Software Interrupt on line
+              11</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI10</name>
+              <description>Software Interrupt on line
+              10</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI9</name>
+              <description>Software Interrupt on line
+              9</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI8</name>
+              <description>Software Interrupt on line
+              8</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI7</name>
+              <description>Software Interrupt on line
+              7</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI6</name>
+              <description>Software Interrupt on line
+              6</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI5</name>
+              <description>Software Interrupt on line
+              5</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI4</name>
+              <description>Software Interrupt on line
+              4</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI3</name>
+              <description>Software Interrupt on line
+              3</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI2</name>
+              <description>Software Interrupt on line
+              2</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI1</name>
+              <description>Software Interrupt on line
+              1</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI0</name>
+              <description>Software Interrupt on line
+              0</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PR</name>
+          <displayName>PR</displayName>
+          <description>Pending register</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PIF18</name>
+              <description>Pending interrupt flag on line
+              18</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PIF17</name>
+              <description>Pending interrupt flag on line
+              17</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PIF16</name>
+              <description>Pending interrupt flag on line
+              16</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PIF15</name>
+              <description>Pending interrupt flag on line
+              15</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PIF14</name>
+              <description>Pending interrupt flag on line
+              14</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PIF13</name>
+              <description>Pending interrupt flag on line
+              13</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PIF12</name>
+              <description>Pending interrupt flag on line
+              12</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PIF11</name>
+              <description>Pending interrupt flag on line
+              11</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PIF10</name>
+              <description>Pending interrupt flag on line
+              10</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PIF9</name>
+              <description>Pending interrupt flag on line
+              9</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PIF8</name>
+              <description>Pending interrupt flag on line
+              8</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PIF7</name>
+              <description>Pending interrupt flag on line
+              7</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PIF6</name>
+              <description>Pending interrupt flag on line
+              6</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PIF5</name>
+              <description>Pending interrupt flag on line
+              5</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PIF4</name>
+              <description>Pending interrupt flag on line
+              4</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PIF3</name>
+              <description>Pending interrupt flag on line
+              3</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PIF2</name>
+              <description>Pending interrupt flag on line
+              2</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PIF1</name>
+              <description>Pending interrupt flag on line
+              1</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PIF0</name>
+              <description>Pending interrupt flag on line
+              0</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

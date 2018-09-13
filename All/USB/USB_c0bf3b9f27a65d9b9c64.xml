@@ -1,0 +1,481 @@
+<registers>
+        <register>
+          <name>EP%sR</name>
+          <displayName>EPxR</displayName>
+          <dim>8</dim>
+          <dimIndex>0-7</dimIndex>
+          <dimIncrement>0x4</dimIncrement>
+          <description>endpoint X register array</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CTR_RX</name>
+              <description>Correct transfer for
+              reception</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DTOG_RX</name>
+              <description>Data Toggle, for reception
+              transfers</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>STAT_RX</name>
+              <description>Status bits, for reception
+              transfers</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>SETUP</name>
+              <description>Setup transaction
+              completed</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EP_TYPE</name>
+              <description>Endpoint type</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>EP_KIND</name>
+              <description>Endpoint kind</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CTR_TX</name>
+              <description>Correct Transfer for
+              transmission</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DTOG_TX</name>
+              <description>Data Toggle, for transmission
+              transfers</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>STAT_TX</name>
+              <description>Status bits, for transmission
+              transfers</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>EA</name>
+              <description>Endpoint address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CNTR</name>
+          <displayName>CNTR</displayName>
+          <description>control register</description>
+          <addressOffset>0x40</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000003</resetValue>
+          <fields>
+            <field>
+              <name>CTRM</name>
+              <description>Correct transfer interrupt
+              mask</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PMAOVRM</name>
+              <description>Packet memory area over / underrun
+              interrupt mask</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ERRM</name>
+              <description>Error interrupt mask</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WKUPM</name>
+              <description>Wakeup interrupt mask</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SUSPM</name>
+              <description>Suspend mode interrupt
+              mask</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RESETM</name>
+              <description>USB reset interrupt mask</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SOFM</name>
+              <description>Start of frame interrupt
+              mask</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ESOFM</name>
+              <description>Expected start of frame interrupt
+              mask</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>L1REQM</name>
+              <description>LPM L1 state request interrupt
+              mask</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>L1RESUME</name>
+              <description>LPM L1 Resume request</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RESUME</name>
+              <description>Resume request</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FSUSP</name>
+              <description>Force suspend</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LPMODE</name>
+              <description>Low-power mode</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PDWN</name>
+              <description>Power down</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FRES</name>
+              <description>Force USB Reset</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ISTR</name>
+          <displayName>ISTR</displayName>
+          <description>interrupt status register</description>
+          <addressOffset>0x44</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CTR</name>
+              <description>Correct transfer</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>PMAOVR</name>
+              <description>Packet memory area over /
+              underrun</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ERR</name>
+              <description>Error</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>WKUP</name>
+              <description>Wakeup</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SUSP</name>
+              <description>Suspend mode request</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RESET</name>
+              <description>reset request</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SOF</name>
+              <description>start of frame</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ESOF</name>
+              <description>Expected start frame</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>L1REQ</name>
+              <description>LPM L1 state request</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DIR</name>
+              <description>Direction of transaction</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>EP_ID</name>
+              <description>Endpoint Identifier</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>FNR</name>
+          <displayName>FNR</displayName>
+          <description>frame number register</description>
+          <addressOffset>0x48</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>RXDP</name>
+              <description>Receive data + line status</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RXDM</name>
+              <description>Receive data - line status</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCK</name>
+              <description>Locked</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LSOF</name>
+              <description>Lost SOF</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>FN</name>
+              <description>Frame number</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>11</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DADDR</name>
+          <displayName>DADDR</displayName>
+          <description>device address</description>
+          <addressOffset>0x4C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>EF</name>
+              <description>Enable function</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ADD</name>
+              <description>Device address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>7</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BTABLE</name>
+          <displayName>BTABLE</displayName>
+          <description>Buffer table address</description>
+          <addressOffset>0x50</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>BTABLE</name>
+              <description>Buffer table</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>13</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>LPMCSR</name>
+          <displayName>LPMCSR</displayName>
+          <description>LPM control and status
+          register</description>
+          <addressOffset>0x54</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>BESL</name>
+              <description>BESL value</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>REMWAKE</name>
+              <description>bRemoteWake value</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>LPMACK</name>
+              <description>LPM Token acknowledge
+              enable</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>LPMEN</name>
+              <description>LPM support enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BCDR</name>
+          <displayName>BCDR</displayName>
+          <description>Battery charging detector</description>
+          <addressOffset>0x58</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DPPU</name>
+              <description>DP pull-up control</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PS2DET</name>
+              <description>DM pull-up detection
+              status</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>SDET</name>
+              <description>Secondary detection (SD)
+              status</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>PDET</name>
+              <description>Primary detection (PD)
+              status</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>DCDET</name>
+              <description>Data contact detection (DCD)
+              status</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>SDEN</name>
+              <description>Secondary detection (SD) mode
+              enable</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PDEN</name>
+              <description>Primary detection (PD) mode
+              enable</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DCDEN</name>
+              <description>Data contact detection (DCD) mode
+              enable</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BCDEN</name>
+              <description>Battery charging detector (BCD)
+              enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

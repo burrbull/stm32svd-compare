@@ -1,0 +1,1182 @@
+<registers>
+        <register>
+          <name>CR</name>
+          <displayName>CR</displayName>
+          <description>control register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CTPH</name>
+              <description>Charge transfer pulse high</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>CTPL</name>
+              <description>Charge transfer pulse low</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>SSD</name>
+              <description>Spread spectrum deviation</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>7</bitWidth>
+            </field>
+            <field>
+              <name>SSE</name>
+              <description>Spread spectrum enable</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SSPSC</name>
+              <description>Spread spectrum prescaler</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PGPSC</name>
+              <description>pulse generator prescaler</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>MCV</name>
+              <description>Max count value</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>IODEF</name>
+              <description>I/O Default mode</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SYNCPOL</name>
+              <description>Synchronization pin
+              polarity</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>AM</name>
+              <description>Acquisition mode</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>START</name>
+              <description>Start a new acquisition</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TSCE</name>
+              <description>Touch sensing controller
+              enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>IER</name>
+          <displayName>IER</displayName>
+          <description>interrupt enable register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>MCEIE</name>
+              <description>Max count error interrupt
+              enable</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EOAIE</name>
+              <description>End of acquisition interrupt
+              enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ICR</name>
+          <displayName>ICR</displayName>
+          <description>interrupt clear register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>MCEIC</name>
+              <description>Max count error interrupt
+              clear</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EOAIC</name>
+              <description>End of acquisition interrupt
+              clear</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ISR</name>
+          <displayName>ISR</displayName>
+          <description>interrupt status register</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>MCEF</name>
+              <description>Max count error flag</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EOAF</name>
+              <description>End of acquisition flag</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>IOHCR</name>
+          <displayName>IOHCR</displayName>
+          <description>I/O hysteresis control
+          register</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0xFFFFFFFF</resetValue>
+          <fields>
+            <field>
+              <name>G8_IO4</name>
+              <description>G8_IO4 Schmitt trigger hysteresis
+              mode</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G8_IO3</name>
+              <description>G8_IO3 Schmitt trigger hysteresis
+              mode</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G8_IO2</name>
+              <description>G8_IO2 Schmitt trigger hysteresis
+              mode</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G8_IO1</name>
+              <description>G8_IO1 Schmitt trigger hysteresis
+              mode</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G7_IO4</name>
+              <description>G7_IO4 Schmitt trigger hysteresis
+              mode</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G7_IO3</name>
+              <description>G7_IO3 Schmitt trigger hysteresis
+              mode</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G7_IO2</name>
+              <description>G7_IO2 Schmitt trigger hysteresis
+              mode</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G7_IO1</name>
+              <description>G7_IO1 Schmitt trigger hysteresis
+              mode</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G6_IO4</name>
+              <description>G6_IO4 Schmitt trigger hysteresis
+              mode</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G6_IO3</name>
+              <description>G6_IO3 Schmitt trigger hysteresis
+              mode</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G6_IO2</name>
+              <description>G6_IO2 Schmitt trigger hysteresis
+              mode</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G6_IO1</name>
+              <description>G6_IO1 Schmitt trigger hysteresis
+              mode</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G5_IO4</name>
+              <description>G5_IO4 Schmitt trigger hysteresis
+              mode</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G5_IO3</name>
+              <description>G5_IO3 Schmitt trigger hysteresis
+              mode</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G5_IO2</name>
+              <description>G5_IO2 Schmitt trigger hysteresis
+              mode</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G5_IO1</name>
+              <description>G5_IO1 Schmitt trigger hysteresis
+              mode</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G4_IO4</name>
+              <description>G4_IO4 Schmitt trigger hysteresis
+              mode</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G4_IO3</name>
+              <description>G4_IO3 Schmitt trigger hysteresis
+              mode</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G4_IO2</name>
+              <description>G4_IO2 Schmitt trigger hysteresis
+              mode</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G4_IO1</name>
+              <description>G4_IO1 Schmitt trigger hysteresis
+              mode</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G3_IO4</name>
+              <description>G3_IO4 Schmitt trigger hysteresis
+              mode</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G3_IO3</name>
+              <description>G3_IO3 Schmitt trigger hysteresis
+              mode</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G3_IO2</name>
+              <description>G3_IO2 Schmitt trigger hysteresis
+              mode</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G3_IO1</name>
+              <description>G3_IO1 Schmitt trigger hysteresis
+              mode</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G2_IO4</name>
+              <description>G2_IO4 Schmitt trigger hysteresis
+              mode</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G2_IO3</name>
+              <description>G2_IO3 Schmitt trigger hysteresis
+              mode</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G2_IO2</name>
+              <description>G2_IO2 Schmitt trigger hysteresis
+              mode</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G2_IO1</name>
+              <description>G2_IO1 Schmitt trigger hysteresis
+              mode</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G1_IO4</name>
+              <description>G1_IO4 Schmitt trigger hysteresis
+              mode</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G1_IO3</name>
+              <description>G1_IO3 Schmitt trigger hysteresis
+              mode</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G1_IO2</name>
+              <description>G1_IO2 Schmitt trigger hysteresis
+              mode</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G1_IO1</name>
+              <description>G1_IO1 Schmitt trigger hysteresis
+              mode</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>IOASCR</name>
+          <displayName>IOASCR</displayName>
+          <description>I/O analog switch control
+          register</description>
+          <addressOffset>0x18</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>G8_IO4</name>
+              <description>G8_IO4 analog switch
+              enable</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G8_IO3</name>
+              <description>G8_IO3 analog switch
+              enable</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G8_IO2</name>
+              <description>G8_IO2 analog switch
+              enable</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G8_IO1</name>
+              <description>G8_IO1 analog switch
+              enable</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G7_IO4</name>
+              <description>G7_IO4 analog switch
+              enable</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G7_IO3</name>
+              <description>G7_IO3 analog switch
+              enable</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G7_IO2</name>
+              <description>G7_IO2 analog switch
+              enable</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G7_IO1</name>
+              <description>G7_IO1 analog switch
+              enable</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G6_IO4</name>
+              <description>G6_IO4 analog switch
+              enable</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G6_IO3</name>
+              <description>G6_IO3 analog switch
+              enable</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G6_IO2</name>
+              <description>G6_IO2 analog switch
+              enable</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G6_IO1</name>
+              <description>G6_IO1 analog switch
+              enable</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G5_IO4</name>
+              <description>G5_IO4 analog switch
+              enable</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G5_IO3</name>
+              <description>G5_IO3 analog switch
+              enable</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G5_IO2</name>
+              <description>G5_IO2 analog switch
+              enable</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G5_IO1</name>
+              <description>G5_IO1 analog switch
+              enable</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G4_IO4</name>
+              <description>G4_IO4 analog switch
+              enable</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G4_IO3</name>
+              <description>G4_IO3 analog switch
+              enable</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G4_IO2</name>
+              <description>G4_IO2 analog switch
+              enable</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G4_IO1</name>
+              <description>G4_IO1 analog switch
+              enable</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G3_IO4</name>
+              <description>G3_IO4 analog switch
+              enable</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G3_IO3</name>
+              <description>G3_IO3 analog switch
+              enable</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G3_IO2</name>
+              <description>G3_IO2 analog switch
+              enable</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G3_IO1</name>
+              <description>G3_IO1 analog switch
+              enable</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G2_IO4</name>
+              <description>G2_IO4 analog switch
+              enable</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G2_IO3</name>
+              <description>G2_IO3 analog switch
+              enable</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G2_IO2</name>
+              <description>G2_IO2 analog switch
+              enable</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G2_IO1</name>
+              <description>G2_IO1 analog switch
+              enable</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G1_IO4</name>
+              <description>G1_IO4 analog switch
+              enable</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G1_IO3</name>
+              <description>G1_IO3 analog switch
+              enable</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G1_IO2</name>
+              <description>G1_IO2 analog switch
+              enable</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G1_IO1</name>
+              <description>G1_IO1 analog switch
+              enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>IOSCR</name>
+          <displayName>IOSCR</displayName>
+          <description>I/O sampling control register</description>
+          <addressOffset>0x20</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>G8_IO4</name>
+              <description>G8_IO4 sampling mode</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G8_IO3</name>
+              <description>G8_IO3 sampling mode</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G8_IO2</name>
+              <description>G8_IO2 sampling mode</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G8_IO1</name>
+              <description>G8_IO1 sampling mode</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G7_IO4</name>
+              <description>G7_IO4 sampling mode</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G7_IO3</name>
+              <description>G7_IO3 sampling mode</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G7_IO2</name>
+              <description>G7_IO2 sampling mode</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G7_IO1</name>
+              <description>G7_IO1 sampling mode</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G6_IO4</name>
+              <description>G6_IO4 sampling mode</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G6_IO3</name>
+              <description>G6_IO3 sampling mode</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G6_IO2</name>
+              <description>G6_IO2 sampling mode</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G6_IO1</name>
+              <description>G6_IO1 sampling mode</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G5_IO4</name>
+              <description>G5_IO4 sampling mode</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G5_IO3</name>
+              <description>G5_IO3 sampling mode</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G5_IO2</name>
+              <description>G5_IO2 sampling mode</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G5_IO1</name>
+              <description>G5_IO1 sampling mode</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G4_IO4</name>
+              <description>G4_IO4 sampling mode</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G4_IO3</name>
+              <description>G4_IO3 sampling mode</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G4_IO2</name>
+              <description>G4_IO2 sampling mode</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G4_IO1</name>
+              <description>G4_IO1 sampling mode</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G3_IO4</name>
+              <description>G3_IO4 sampling mode</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G3_IO3</name>
+              <description>G3_IO3 sampling mode</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G3_IO2</name>
+              <description>G3_IO2 sampling mode</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G3_IO1</name>
+              <description>G3_IO1 sampling mode</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G2_IO4</name>
+              <description>G2_IO4 sampling mode</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G2_IO3</name>
+              <description>G2_IO3 sampling mode</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G2_IO2</name>
+              <description>G2_IO2 sampling mode</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G2_IO1</name>
+              <description>G2_IO1 sampling mode</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G1_IO4</name>
+              <description>G1_IO4 sampling mode</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G1_IO3</name>
+              <description>G1_IO3 sampling mode</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G1_IO2</name>
+              <description>G1_IO2 sampling mode</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G1_IO1</name>
+              <description>G1_IO1 sampling mode</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>IOCCR</name>
+          <displayName>IOCCR</displayName>
+          <description>I/O channel control register</description>
+          <addressOffset>0x28</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>G8_IO4</name>
+              <description>G8_IO4 channel mode</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G8_IO3</name>
+              <description>G8_IO3 channel mode</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G8_IO2</name>
+              <description>G8_IO2 channel mode</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G8_IO1</name>
+              <description>G8_IO1 channel mode</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G7_IO4</name>
+              <description>G7_IO4 channel mode</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G7_IO3</name>
+              <description>G7_IO3 channel mode</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G7_IO2</name>
+              <description>G7_IO2 channel mode</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G7_IO1</name>
+              <description>G7_IO1 channel mode</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G6_IO4</name>
+              <description>G6_IO4 channel mode</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G6_IO3</name>
+              <description>G6_IO3 channel mode</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G6_IO2</name>
+              <description>G6_IO2 channel mode</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G6_IO1</name>
+              <description>G6_IO1 channel mode</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G5_IO4</name>
+              <description>G5_IO4 channel mode</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G5_IO3</name>
+              <description>G5_IO3 channel mode</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G5_IO2</name>
+              <description>G5_IO2 channel mode</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G5_IO1</name>
+              <description>G5_IO1 channel mode</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G4_IO4</name>
+              <description>G4_IO4 channel mode</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G4_IO3</name>
+              <description>G4_IO3 channel mode</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G4_IO2</name>
+              <description>G4_IO2 channel mode</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G4_IO1</name>
+              <description>G4_IO1 channel mode</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G3_IO4</name>
+              <description>G3_IO4 channel mode</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G3_IO3</name>
+              <description>G3_IO3 channel mode</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G3_IO2</name>
+              <description>G3_IO2 channel mode</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G3_IO1</name>
+              <description>G3_IO1 channel mode</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G2_IO4</name>
+              <description>G2_IO4 channel mode</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G2_IO3</name>
+              <description>G2_IO3 channel mode</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G2_IO2</name>
+              <description>G2_IO2 channel mode</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G2_IO1</name>
+              <description>G2_IO1 channel mode</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G1_IO4</name>
+              <description>G1_IO4 channel mode</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G1_IO3</name>
+              <description>G1_IO3 channel mode</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G1_IO2</name>
+              <description>G1_IO2 channel mode</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>G1_IO1</name>
+              <description>G1_IO1 channel mode</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>IOGCSR</name>
+          <displayName>IOGCSR</displayName>
+          <description>I/O group control status
+          register</description>
+          <addressOffset>0x30</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>G8S</name>
+              <description>Analog I/O group x status</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>G7S</name>
+              <description>Analog I/O group x status</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>G6S</name>
+              <description>Analog I/O group x status</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>G5S</name>
+              <description>Analog I/O group x status</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>G4S</name>
+              <description>Analog I/O group x status</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>G3S</name>
+              <description>Analog I/O group x status</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>G2S</name>
+              <description>Analog I/O group x status</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>G1S</name>
+              <description>Analog I/O group x status</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>G8E</name>
+              <description>Analog I/O group x enable</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>G7E</name>
+              <description>Analog I/O group x enable</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>G6E</name>
+              <description>Analog I/O group x enable</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>G5E</name>
+              <description>Analog I/O group x enable</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>G4E</name>
+              <description>Analog I/O group x enable</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>G3E</name>
+              <description>Analog I/O group x enable</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>G2E</name>
+              <description>Analog I/O group x enable</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>G1E</name>
+              <description>Analog I/O group x enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>IOG%sCR</name>
+          <displayName>IOGxCR</displayName>
+          <dim>8</dim>
+          <dimIndex>1-8</dimIndex>
+          <dimIncrement>0x4</dimIncrement>
+          <description>I/O group X counter register</description>
+          <addressOffset>0x34</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CNT</name>
+              <description>Counter value</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>14</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

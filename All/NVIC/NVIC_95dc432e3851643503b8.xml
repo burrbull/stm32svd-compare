@@ -1,0 +1,22 @@
+<registers>
+        <register>
+          <name>STIR</name>
+          <displayName>STIR</displayName>
+          <description>Software trigger interrupt
+          register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>INTID</name>
+              <description>Software generated interrupt
+              ID</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>9</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

@@ -1,0 +1,152 @@
+<registers>
+        <register>
+          <name>DR%s</name>
+          <displayName>DRx</displayName>
+          <dim>10</dim>
+          <dimIndex>1-10</dimIndex>
+          <dimIncrement>0x4</dimIncrement>
+          <description>Backup data register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>D</name>
+              <description>Backup data</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>RTCCR</name>
+          <displayName>RTCCR</displayName>
+          <description>RTC clock calibration register
+          (BKP_RTCCR)</description>
+          <addressOffset>0x28</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>ASOS</name>
+              <description>Alarm or second output
+              selection</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ASOE</name>
+              <description>Alarm or second output
+              enable</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CCO</name>
+              <description>Calibration Clock Output</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CAL</name>
+              <description>Calibration value</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>7</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CR</name>
+          <displayName>CR</displayName>
+          <description>Backup control register
+          (BKP_CR)</description>
+          <addressOffset>0x2C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>TPAL</name>
+              <description>Tamper pin active level</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TPE</name>
+              <description>Tamper pin enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CSR</name>
+          <displayName>CSR</displayName>
+          <description>BKP_CSR control/status register
+          (BKP_CSR)</description>
+          <addressOffset>0x30</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>TIF</name>
+              <description>Tamper Interrupt Flag</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TEF</name>
+              <description>Tamper Event Flag</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TPIE</name>
+              <description>Tamper Pin interrupt
+              enable</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CTI</name>
+              <description>Clear Tamper Interrupt</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>CTE</name>
+              <description>Clear Tamper event</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BKP_DR%s</name>
+          <displayName>DR</displayName>
+          <dim>32</dim>
+          <dimIndex>11-42</dimIndex>
+          <dimIncrement>0x4</dimIncrement>
+          <description>Backup data register</description>
+          <addressOffset>0x3C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>D</name>
+              <description>Backup data</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

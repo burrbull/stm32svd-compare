@@ -1,0 +1,252 @@
+<registers>
+        <register>
+          <name>CR</name>
+          <displayName>CR</displayName>
+          <description>control register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>ALGO1</name>
+              <description>ALGO</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>LKEY</name>
+              <description>Long key selection</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MDMAT</name>
+              <description>Multiple DMA Transfers</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DINNE</name>
+              <description>DIN not empty</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>NBW</name>
+              <description>Number of words already
+              pushed</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>ALGO0</name>
+              <description>Algorithm selection</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MODE</name>
+              <description>Mode selection</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DATATYPE</name>
+              <description>Data type selection</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DMAE</name>
+              <description>DMA enable</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>INIT</name>
+              <description>Initialize message digest
+              calculation</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DIN</name>
+          <displayName>DIN</displayName>
+          <description>data input register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DATAIN</name>
+              <description>Data input</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>STR</name>
+          <displayName>STR</displayName>
+          <description>start register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DCAL</name>
+              <description>Digest calculation</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>NBLW</name>
+              <description>Number of valid bits in the last word of
+              the message</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HR%s</name>
+          <displayName>HRx</displayName>
+          <dim>5</dim>
+          <dimIndex>0-4</dimIndex>
+          <dimIncrement>0x4</dimIncrement>
+          <description>digest registers</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>H</name>
+              <description>H</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>IMR</name>
+          <displayName>IMR</displayName>
+          <description>interrupt enable register</description>
+          <addressOffset>0x20</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DCIE</name>
+              <description>Digest calculation completion interrupt
+              enable</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DINIE</name>
+              <description>Data input interrupt
+              enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SR</name>
+          <displayName>SR</displayName>
+          <description>status register</description>
+          <addressOffset>0x24</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000001</resetValue>
+          <fields>
+            <field>
+              <name>BUSY</name>
+              <description>Busy bit</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>DMAS</name>
+              <description>DMA Status</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>DCIS</name>
+              <description>Digest calculation completion interrupt
+              status</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DINIS</name>
+              <description>Data input interrupt
+              status</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CSR%s</name>
+          <displayName>CSRx. Note CSR0 has resetValue=0x2</displayName>
+          <dim>54</dim>
+          <dimIndex>0-53</dimIndex>
+          <dimIncrement>0x4</dimIncrement>
+          <description>context swap registers</description>
+          <addressOffset>0xF8</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CSR</name>
+              <description>CSR</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HASH_HR%s</name>
+          <displayName>HASH_HRx</displayName>
+          <dim>8</dim>
+          <dimIndex>0-7</dimIndex>
+          <dimIncrement>0x4</dimIncrement>
+          <description>HASH digest register</description>
+          <addressOffset>0x310</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>H</name>
+              <description>H</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

@@ -1,0 +1,270 @@
+<registers>
+        <register>
+          <name>OPAMP1_CSR</name>
+          <displayName>OPAMP1_CSR</displayName>
+          <description>OPAMP1 control/status register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>OPA_RANGE</name>
+              <description>Operational amplifier power supply range
+              for stability</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CALOUT</name>
+              <description>Operational amplifier calibration
+              output</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>USERTRIM</name>
+              <description>allows to switch from AOP offset trimmed
+              values to AOP offset</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CALSEL</name>
+              <description>Calibration selection</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CALON</name>
+              <description>Calibration mode enabled</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>VP_SEL</name>
+              <description>Non inverted input
+              selection</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>VM_SEL</name>
+              <description>Inverting input selection</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>PGA_GAIN</name>
+              <description>Operational amplifier Programmable
+              amplifier gain value</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>OPAMODE</name>
+              <description>Operational amplifier PGA
+              mode</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>OPALPM</name>
+              <description>Operational amplifier Low Power
+              Mode</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OPAEN</name>
+              <description>Operational amplifier
+              Enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>OPAMP1_OTR</name>
+          <displayName>OPAMP1_OTR</displayName>
+          <description>OPAMP1 offset trimming register in normal
+          mode</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>TRIMOFFSETP</name>
+              <description>Trim for PMOS differential
+              pairs</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+            <field>
+              <name>TRIMOFFSETN</name>
+              <description>Trim for NMOS differential
+              pairs</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>OPAMP1_LPOTR</name>
+          <displayName>OPAMP1_LPOTR</displayName>
+          <description>OPAMP1 offset trimming register in low-power
+          mode</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>TRIMLPOFFSETP</name>
+              <description>Trim for PMOS differential
+              pairs</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+            <field>
+              <name>TRIMLPOFFSETN</name>
+              <description>Trim for NMOS differential
+              pairs</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>OPAMP2_CSR</name>
+          <displayName>OPAMP2_CSR</displayName>
+          <description>OPAMP2 control/status register</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CALOUT</name>
+              <description>Operational amplifier calibration
+              output</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>USERTRIM</name>
+              <description>allows to switch from AOP offset trimmed
+              values to AOP offset</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CALSEL</name>
+              <description>Calibration selection</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CALON</name>
+              <description>Calibration mode enabled</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>VP_SEL</name>
+              <description>Non inverted input
+              selection</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>VM_SEL</name>
+              <description>Inverting input selection</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>PGA_GAIN</name>
+              <description>Operational amplifier Programmable
+              amplifier gain value</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>OPAMODE</name>
+              <description>Operational amplifier PGA
+              mode</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>OPALPM</name>
+              <description>Operational amplifier Low Power
+              Mode</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OPAEN</name>
+              <description>Operational amplifier
+              Enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>OPAMP2_OTR</name>
+          <displayName>OPAMP2_OTR</displayName>
+          <description>OPAMP2 offset trimming register in normal
+          mode</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>TRIMOFFSETP</name>
+              <description>Trim for PMOS differential
+              pairs</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+            <field>
+              <name>TRIMOFFSETN</name>
+              <description>Trim for NMOS differential
+              pairs</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>OPAMP2_LPOTR</name>
+          <displayName>OPAMP2_LPOTR</displayName>
+          <description>OPAMP2 offset trimming register in low-power
+          mode</description>
+          <addressOffset>0x18</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>TRIMLPOFFSETP</name>
+              <description>Trim for PMOS differential
+              pairs</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+            <field>
+              <name>TRIMLPOFFSETN</name>
+              <description>Trim for NMOS differential
+              pairs</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

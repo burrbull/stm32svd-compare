@@ -1,0 +1,330 @@
+<registers>
+        <register>
+          <name>CEC_CR</name>
+          <displayName>CEC_CR</displayName>
+          <description>CEC control register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0X20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>TXEOM</name>
+              <description>Tx End Of Message</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TXSOM</name>
+              <description>Tx Start Of Message</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>CECEN</name>
+              <description>CEC Enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CEC_CFGR</name>
+          <displayName>CEC_CFGR</displayName>
+          <description>CEC configuration register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0X20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>LSTN</name>
+              <description>Listen mode</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OAR</name>
+              <description>Own addresses
+              configuration</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>15</bitWidth>
+            </field>
+            <field>
+              <name>SFTOP</name>
+              <description>SFT Option Bit</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>BRDNOGEN</name>
+              <description>Avoid Error-Bit Generation in
+              Broadcast</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LBPEGEN</name>
+              <description>Generate Error-Bit on Long Bit Period
+              Error</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>BREGEN</name>
+              <description>Generate Error-Bit on Bit Rising
+              Error</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>BRESTP</name>
+              <description>Rx-Stop on Bit Rising
+              Error</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RXTOL</name>
+              <description>Rx-Tolerance</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SFT</name>
+              <description>Signal Free Time</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CEC_TXDR</name>
+          <displayName>CEC_TXDR</displayName>
+          <description>CEC Tx data register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0X20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>TXD</name>
+              <description>Tx Data register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CEC_RXDR</name>
+          <displayName>CEC_RXDR</displayName>
+          <description>CEC Rx Data Register</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0X20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>RXD</name>
+              <description>Rx Data register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CEC_ISR</name>
+          <displayName>CEC_ISR</displayName>
+          <description>CEC Interrupt and Status
+          Register</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0X20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>TXACKE</name>
+              <description>Tx-Missing Acknowledge
+              Error</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TXERR</name>
+              <description>Tx-Error</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TXUDR</name>
+              <description>Tx-Buffer Underrun</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TXEND</name>
+              <description>End of Transmission</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TXBR</name>
+              <description>Tx-Byte Request</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ARBLST</name>
+              <description>Arbitration Lost</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RXACKE</name>
+              <description>Rx-Missing Acknowledge</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LBPE</name>
+              <description>Rx-Long Bit Period Error</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SBPE</name>
+              <description>Rx-Short Bit Period Error</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>BRE</name>
+              <description>Rx-Bit Rising Error</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RXOVR</name>
+              <description>Rx-Overrun</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RXEND</name>
+              <description>End Of Reception</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RXBR</name>
+              <description>Rx-Byte Received</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CEC_IER</name>
+          <displayName>CEC_IER</displayName>
+          <description>CEC interrupt enable register</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0X20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>TXACKIE</name>
+              <description>Tx-Missing Acknowledge Error Interrupt
+              Enable</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TXERRIE</name>
+              <description>Tx-Error Interrupt Enable</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TXUDRIE</name>
+              <description>Tx-Underrun Interrupt
+              Enable</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TXENDIE</name>
+              <description>Tx-End Of Message Interrupt
+              Enable</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TXBRIE</name>
+              <description>Tx-Byte Request Interrupt
+              Enable</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ARBLSTIE</name>
+              <description>Arbitration Lost Interrupt
+              Enable</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RXACKIE</name>
+              <description>Rx-Missing Acknowledge Error Interrupt
+              Enable</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LBPEIE</name>
+              <description>Long Bit Period Error Interrupt
+              Enable</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SBPEIE</name>
+              <description>Short Bit Period Error Interrupt
+              Enable</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>BREIE</name>
+              <description>Bit Rising Error Interrupt
+              Enable</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RXOVRIE</name>
+              <description>Rx-Buffer Overrun Interrupt
+              Enable</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RXENDIE</name>
+              <description>End Of Reception Interrupt
+              Enable</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RXBRIE</name>
+              <description>Rx-Byte Received Interrupt
+              Enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

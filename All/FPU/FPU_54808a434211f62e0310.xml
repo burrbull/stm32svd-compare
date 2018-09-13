@@ -1,0 +1,21 @@
+<registers>
+        <register>
+          <name>CPACR</name>
+          <displayName>CPACR</displayName>
+          <description>Coprocessor access control
+          register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x0000000</resetValue>
+          <fields>
+            <field>
+              <name>CP</name>
+              <description>CP</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

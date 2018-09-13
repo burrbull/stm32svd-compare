@@ -1,0 +1,109 @@
+<registers>
+        <register>
+          <name>DR</name>
+          <displayName>DR</displayName>
+          <description>Data register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0xFFFFFFFF</resetValue>
+          <fields>
+            <field>
+              <name>DR</name>
+              <description>Data register bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>IDR</name>
+          <displayName>IDR</displayName>
+          <description>Independent data register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>IDR</name>
+              <description>General-purpose 8-bit data register
+              bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CR</name>
+          <displayName>CR</displayName>
+          <description>Control register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REV_OUT</name>
+              <description>Reverse output data</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>REV_IN</name>
+              <description>Reverse input data</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>POLYSIZE</name>
+              <description>Polynomial size</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>RESET</name>
+              <description>reset bit</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <modifiedWriteValues>set</modifiedWriteValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>INIT</name>
+          <displayName>INIT</displayName>
+          <description>Initial CRC value</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0xFFFFFFFF</resetValue>
+          <fields>
+            <field>
+              <name>INIT</name>
+              <description>Programmable initial CRC
+              value</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>POL</name>
+          <displayName>POL</displayName>
+          <description>CRC polynomial</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x04C11DB7</resetValue>
+          <fields>
+            <field>
+              <name>POL</name>
+              <description>Programmable polynomial</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

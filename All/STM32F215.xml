@@ -1,0 +1,1200 @@
+<device xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.1" xsi:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+  <name>STM32F215</name>
+  <version>1.1</version>
+  <description>STM32F215</description>
+  <cpu>
+    <name>CM3</name>
+    <revision>r1p1</revision>
+    <endian>little</endian>
+    <mpuPresent>false</mpuPresent>
+    <fpuPresent>false</fpuPresent>
+    <nvicPrioBits>4</nvicPrioBits>
+    <vendorSystickConfig>false</vendorSystickConfig>
+  </cpu>
+  <addressUnitBits>8</addressUnitBits>
+  <width>32</width>
+  <size>0x20</size>
+  <resetValue>0x00000000</resetValue>
+  <resetMask>0xFFFFFFFF</resetMask>
+  <peripherals>
+    <peripheral>
+      <name>RNG</name>
+      <description>Random number generator</description>
+      <groupName>RNG</groupName>
+      <baseAddress>0x50060800</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>HASH_RNG</name>
+        <description>Hash and Rng global interrupt</description>
+        <value>80</value>
+      </interrupt>
+      <hash>a220dff374339a9cf909</hash></peripheral>
+    <peripheral>
+      <name>CRC</name>
+      <description>cyclic redundancy check calculation
+      unit</description>
+      <groupName>CRC</groupName>
+      <baseAddress>0x40023000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <hash>60e9bf18c4ff5db2dee2</hash></peripheral>
+    <peripheral>
+      <name>DCMI</name>
+      <description>Digital camera interface</description>
+      <groupName>DCMI</groupName>
+      <baseAddress>0x50050000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>DCMI</name>
+        <description>DCMI global interrupt</description>
+        <value>78</value>
+      </interrupt>
+      <hash>7ac69717ce5e2a96e125</hash></peripheral>
+    <peripheral>
+      <name>FSMC</name>
+      <description>Flexible static memory controller</description>
+      <groupName>FSMC</groupName>
+      <baseAddress>0xA0000000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x1000</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>FSMC</name>
+        <description>FSMC global interrupt</description>
+        <value>48</value>
+      </interrupt>
+      <hash>182f26311c311fdb7f9e</hash></peripheral>
+    <peripheral>
+      <name>DBG</name>
+      <description>Debug support</description>
+      <groupName>DBG</groupName>
+      <baseAddress>0xE0042000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <hash>4cd9d79572ddc07587ff</hash></peripheral>
+    <peripheral>
+      <name>DMA2</name>
+      <description>DMA controller</description>
+      <groupName>DMA</groupName>
+      <baseAddress>0x40026400</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>DMA2_Stream0</name>
+        <description>DMA2 Stream0 global interrupt</description>
+        <value>56</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA2_Stream1</name>
+        <description>DMA2 Stream1 global interrupt</description>
+        <value>57</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA2_Stream2</name>
+        <description>DMA2 Stream2 global interrupt</description>
+        <value>58</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA2_Stream3</name>
+        <description>DMA2 Stream3 global interrupt</description>
+        <value>59</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA2_Stream4</name>
+        <description>DMA2 Stream4 global interrupt</description>
+        <value>60</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA2_Stream5</name>
+        <description>DMA2 Stream5 global interrupt</description>
+        <value>68</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA2_Stream6</name>
+        <description>DMA2 Stream6 global interrupt</description>
+        <value>69</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA2_Stream7</name>
+        <description>DMA2 Stream7 global interrupt</description>
+        <value>70</value>
+      </interrupt>
+      <hash>bf33c3e8e2f60317096e</hash></peripheral>
+    <peripheral derivedFrom="DMA2">
+      <name>DMA1</name>
+      <baseAddress>0x40026000</baseAddress>
+      <interrupt>
+        <name>DMA1_Stream0</name>
+        <description>DMA1 Stream0 global interrupt</description>
+        <value>11</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA1_Stream1</name>
+        <description>DMA1 Stream1 global interrupt</description>
+        <value>12</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA1_Stream2</name>
+        <description>DMA1 Stream2 global interrupt</description>
+        <value>13</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA1_Stream3</name>
+        <description>DMA1 Stream3 global interrupt</description>
+        <value>14</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA1_Stream4</name>
+        <description>DMA1 Stream4 global interrupt</description>
+        <value>15</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA1_Stream5</name>
+        <description>DMA1 Stream5 global interrupt</description>
+        <value>16</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA1_Stream6</name>
+        <description>DMA1 Stream6 global interrupt</description>
+        <value>17</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA1_Stream7</name>
+        <description>DMA1 Stream7 global interrupt</description>
+        <value>47</value>
+      </interrupt>
+    </peripheral>
+    <peripheral>
+      <name>RCC</name>
+      <description>Reset and clock control</description>
+      <groupName>RCC</groupName>
+      <baseAddress>0x40023800</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>RCC</name>
+        <description>RCC global interrupt</description>
+        <value>5</value>
+      </interrupt>
+      <hash>b131ef1d4d8efb99909a</hash></peripheral>
+    <peripheral>
+      <name>GPIOI</name>
+      <description>General-purpose I/Os</description>
+      <groupName>GPIO</groupName>
+      <baseAddress>0x40022000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <hash>8809bc5dbe133922bc8a</hash></peripheral>
+    <peripheral derivedFrom="GPIOI">
+      <name>GPIOH</name>
+      <baseAddress>0x40021C00</baseAddress>
+    </peripheral>
+    <peripheral derivedFrom="GPIOI">
+      <name>GPIOG</name>
+      <baseAddress>0x40021800</baseAddress>
+    </peripheral>
+    <peripheral derivedFrom="GPIOI">
+      <name>GPIOF</name>
+      <baseAddress>0x40021400</baseAddress>
+    </peripheral>
+    <peripheral derivedFrom="GPIOI">
+      <name>GPIOE</name>
+      <baseAddress>0x40021000</baseAddress>
+    </peripheral>
+    <peripheral derivedFrom="GPIOI">
+      <name>GPIOD</name>
+      <baseAddress>0X40020C00</baseAddress>
+    </peripheral>
+    <peripheral derivedFrom="GPIOI">
+      <name>GPIOC</name>
+      <baseAddress>0x40020800</baseAddress>
+    </peripheral>
+    <peripheral>
+      <name>GPIOB</name>
+      <description>General-purpose I/Os</description>
+      <groupName>GPIO</groupName>
+      <baseAddress>0x40020400</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <hash>537c6d43f3f57c960a8d</hash></peripheral>
+    <peripheral>
+      <name>GPIOA</name>
+      <description>General-purpose I/Os</description>
+      <groupName>GPIO</groupName>
+      <baseAddress>0x40020000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <hash>0b485267bfdda62001bb</hash></peripheral>
+    <peripheral>
+      <name>SYSCFG</name>
+      <description>System configuration controller</description>
+      <groupName>SYSCFG</groupName>
+      <baseAddress>0x40013800</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <hash>78c6c2246c04349dbc66</hash></peripheral>
+    <peripheral>
+      <name>SPI1</name>
+      <description>Serial peripheral interface</description>
+      <groupName>SPI</groupName>
+      <baseAddress>0x40013000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>SPI1</name>
+        <description>SPI1 global interrupt</description>
+        <value>35</value>
+      </interrupt>
+      <hash>b4c4bf3bd526a526cbff</hash></peripheral>
+    <peripheral derivedFrom="SPI1">
+      <name>SPI3</name>
+      <baseAddress>0x40003C00</baseAddress>
+      <interrupt>
+        <name>SPI3</name>
+        <description>SPI3 global interrupt</description>
+        <value>51</value>
+      </interrupt>
+    </peripheral>
+    <peripheral derivedFrom="SPI1">
+      <name>SPI2</name>
+      <baseAddress>0x40003800</baseAddress>
+      <interrupt>
+        <name>SPI2</name>
+        <description>SPI2 global interrupt</description>
+        <value>36</value>
+      </interrupt>
+    </peripheral>
+    <peripheral>
+      <name>SDIO</name>
+      <description>Secure digital input/output
+      interface</description>
+      <groupName>SDIO</groupName>
+      <baseAddress>0x40012C00</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>SDIO</name>
+        <description>SDIO global interrupt</description>
+        <value>49</value>
+      </interrupt>
+      <hash>08f6bb26e348909dab66</hash></peripheral>
+    <peripheral>
+      <name>ADC1</name>
+      <description>Analog-to-digital converter</description>
+      <groupName>ADC</groupName>
+      <baseAddress>0x40012000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x51</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>ADC</name>
+        <description>ADC1 global interrupt</description>
+        <value>18</value>
+      </interrupt>
+      <hash>1cfa70080ae2c4286d08</hash></peripheral>
+    <peripheral derivedFrom="ADC1">
+      <name>ADC2</name>
+      <baseAddress>0x40012100</baseAddress>
+      <interrupt>
+        <name>ADC</name>
+        <description>ADC2 global interrupts</description>
+        <value>18</value>
+      </interrupt>
+    </peripheral>
+    <peripheral derivedFrom="ADC1">
+      <name>ADC3</name>
+      <baseAddress>0x40012200</baseAddress>
+      <interrupt>
+        <name>ADC</name>
+        <description>ADC3 global interrupts</description>
+        <value>18</value>
+      </interrupt>
+    </peripheral>
+    <peripheral>
+      <name>USART6</name>
+      <description>Universal synchronous asynchronous receiver
+      transmitter</description>
+      <groupName>USART</groupName>
+      <baseAddress>0x40011400</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>USART6</name>
+        <description>USART6 global interrupt</description>
+        <value>71</value>
+      </interrupt>
+      <hash>45c069c973212883c285</hash></peripheral>
+    <peripheral derivedFrom="USART6">
+      <name>USART1</name>
+      <baseAddress>0x40011000</baseAddress>
+      <interrupt>
+        <name>USART1</name>
+        <description>USART1 global interrupt</description>
+        <value>37</value>
+      </interrupt>
+    </peripheral>
+    <peripheral derivedFrom="USART6">
+      <name>USART2</name>
+      <baseAddress>0x40004400</baseAddress>
+      <interrupt>
+        <name>USART2</name>
+        <description>USART2 global interrupt</description>
+        <value>38</value>
+      </interrupt>
+    </peripheral>
+    <peripheral derivedFrom="USART6">
+      <name>USART3</name>
+      <baseAddress>0x40004800</baseAddress>
+      <interrupt>
+        <name>USART3</name>
+        <description>USART3 global interrupt</description>
+        <value>39</value>
+      </interrupt>
+    </peripheral>
+    <peripheral>
+      <name>DAC</name>
+      <description>Digital-to-analog converter</description>
+      <groupName>DAC</groupName>
+      <baseAddress>0x40007400</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>TIM6_DAC</name>
+        <description>TIM6 global interrupt, DAC1 and DAC2 underrun
+        error interrupt</description>
+        <value>54</value>
+      </interrupt>
+      <hash>e859e5395ab12eae811d</hash></peripheral>
+    <peripheral>
+      <name>PWR</name>
+      <description>Power control</description>
+      <groupName>PWR</groupName>
+      <baseAddress>0x40007000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>PVD</name>
+        <description>PVD through EXTI line detection
+        interrupt</description>
+        <value>1</value>
+      </interrupt>
+      <hash>40e53fa3604a0e3e97a0</hash></peripheral>
+    <peripheral>
+      <name>CAN2</name>
+      <description>Controller area network</description>
+      <groupName>CAN</groupName>
+      <baseAddress>0x40006800</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>CAN2_TX</name>
+        <description>CAN2 TX interrupts</description>
+        <value>63</value>
+      </interrupt>
+      <interrupt>
+        <name>CAN2_RX0</name>
+        <description>CAN2 RX0 interrupts</description>
+        <value>64</value>
+      </interrupt>
+      <interrupt>
+        <name>CAN2_RX1</name>
+        <description>CAN2 RX1 interrupts</description>
+        <value>65</value>
+      </interrupt>
+      <interrupt>
+        <name>CAN2_SCE</name>
+        <description>CAN2 SCE interrupt</description>
+        <value>66</value>
+      </interrupt>
+      <hash>e927a4ef6c86987ba9db</hash></peripheral>
+    <peripheral derivedFrom="CAN2">
+      <name>CAN1</name>
+      <baseAddress>0x40006400</baseAddress>
+      <interrupt>
+        <name>CAN1_TX</name>
+        <description>CAN1 TX interrupts</description>
+        <value>19</value>
+      </interrupt>
+      <interrupt>
+        <name>CAN1_RX0</name>
+        <description>CAN1 RX0 interrupts</description>
+        <value>20</value>
+      </interrupt>
+      <interrupt>
+        <name>CAN1_RX1</name>
+        <description>CAN1 RX1 interrupts</description>
+        <value>21</value>
+      </interrupt>
+      <interrupt>
+        <name>CAN1_SCE</name>
+        <description>CAN1 SCE interrupt</description>
+        <value>22</value>
+      </interrupt>
+    </peripheral>
+    <peripheral>
+      <name>I2C3</name>
+      <description>Inter-integrated circuit</description>
+      <groupName>I2C</groupName>
+      <baseAddress>0x40005C00</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>I2C3_EV</name>
+        <description>I2C3 event interrupt</description>
+        <value>72</value>
+      </interrupt>
+      <interrupt>
+        <name>I2C3_ER</name>
+        <description>I2C3 error interrupt</description>
+        <value>73</value>
+      </interrupt>
+      <hash>ed08132e3256c89e4d4c</hash></peripheral>
+    <peripheral derivedFrom="I2C3">
+      <name>I2C2</name>
+      <baseAddress>0x40005800</baseAddress>
+      <interrupt>
+        <name>I2C2_EV</name>
+        <description>I2C2 event interrupt</description>
+        <value>33</value>
+      </interrupt>
+      <interrupt>
+        <name>I2C2_ER</name>
+        <description>I2C2 error interrupt</description>
+        <value>34</value>
+      </interrupt>
+    </peripheral>
+    <peripheral derivedFrom="I2C3">
+      <name>I2C1</name>
+      <baseAddress>0x40005400</baseAddress>
+      <interrupt>
+        <name>I2C1_EV</name>
+        <description>I2C1 event interrupt</description>
+        <value>31</value>
+      </interrupt>
+      <interrupt>
+        <name>I2C1_ER</name>
+        <description>I2C1 error interrupt</description>
+        <value>32</value>
+      </interrupt>
+    </peripheral>
+    <peripheral>
+      <name>IWDG</name>
+      <description>Independent watchdog</description>
+      <groupName>IWDG</groupName>
+      <baseAddress>0x40003000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <hash>fd6995864fdf2cd74d82</hash></peripheral>
+    <peripheral>
+      <name>WWDG</name>
+      <description>Window watchdog</description>
+      <groupName>WWDG</groupName>
+      <baseAddress>0x40002C00</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>WWDG</name>
+        <description>Window Watchdog interrupt</description>
+        <value>0</value>
+      </interrupt>
+      <hash>93c2cdb5b3e51d23148d</hash></peripheral>
+    <peripheral>
+      <name>RTC</name>
+      <description>Real-time clock</description>
+      <groupName>RTC</groupName>
+      <baseAddress>0x40002800</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>RTC_WKUP</name>
+        <description>RTC Wakeup interrupt through the EXTI
+        line</description>
+        <value>3</value>
+      </interrupt>
+      <interrupt>
+        <name>RTC_Alarm</name>
+        <description>RTC Alarms (A and B) through EXTI line
+        interrupt</description>
+        <value>41</value>
+      </interrupt>
+      <hash>7277a25d9bb2d9cd3414</hash></peripheral>
+    <peripheral>
+      <name>UART4</name>
+      <description>Universal synchronous asynchronous receiver
+      transmitter</description>
+      <groupName>USART</groupName>
+      <baseAddress>0x40004C00</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>UART4</name>
+        <description>UART4 global interrupt</description>
+        <value>52</value>
+      </interrupt>
+      <hash>90e8c5a3594c54649fd1</hash></peripheral>
+    <peripheral>
+      <name>UART5</name>
+      <description>Universal synchronous asynchronous receiver
+      transmitter</description>
+      <groupName>USART</groupName>
+      <baseAddress>0x40005000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>UART5</name>
+        <description>UART5 global interrupt</description>
+        <value>53</value>
+      </interrupt>
+      <hash>482cd0e47c43522980f7</hash></peripheral>
+    <peripheral>
+      <name>ADC_Common</name>
+      <description>Common ADC registers</description>
+      <groupName>ADC</groupName>
+      <baseAddress>0x40012300</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <hash>6d01a9ee1303df3c5ad3</hash></peripheral>
+    <peripheral>
+      <name>TIM1</name>
+      <description>Advanced-timers</description>
+      <groupName>TIM</groupName>
+      <baseAddress>0x40010000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>TIM1_BRK_TIM9</name>
+        <description>TIM1 Break interrupt and TIM9 global
+        interrupt</description>
+        <value>24</value>
+      </interrupt>
+      <interrupt>
+        <name>TIM1_UP_TIM10</name>
+        <description>TIM1 Update interrupt and TIM10 global
+        interrupt</description>
+        <value>25</value>
+      </interrupt>
+      <interrupt>
+        <name>TIM1_TRG_COM_TIM11</name>
+        <description>TIM1 Trigger and Commutation interrupts and
+        TIM11 global interrupt</description>
+        <value>26</value>
+      </interrupt>
+      <interrupt>
+        <name>TIM1_CC</name>
+        <description>TIM1 Capture Compare interrupt</description>
+        <value>27</value>
+      </interrupt>
+      <hash>653be1220569a41f32ca</hash></peripheral>
+    <peripheral derivedFrom="TIM1">
+      <name>TIM8</name>
+      <baseAddress>0x40010400</baseAddress>
+      <interrupt>
+        <name>TIM8_BRK_TIM12</name>
+        <description>TIM8 Break interrupt and TIM12 global
+        interrupt</description>
+        <value>43</value>
+      </interrupt>
+      <interrupt>
+        <name>TIM8_UP_TIM13</name>
+        <description>TIM8 Update interrupt and TIM13 global
+        interrupt</description>
+        <value>44</value>
+      </interrupt>
+      <interrupt>
+        <name>TIM8_TRG_COM_TIM14</name>
+        <description>TIM8 Trigger and Commutation interrupts and
+        TIM14 global interrupt</description>
+        <value>45</value>
+      </interrupt>
+      <interrupt>
+        <name>TIM8_CC</name>
+        <description>TIM8 Capture Compare interrupt</description>
+        <value>46</value>
+      </interrupt>
+    </peripheral>
+    <peripheral>
+      <name>TIM2</name>
+      <description>General-purpose-timers</description>
+      <groupName>TIM</groupName>
+      <baseAddress>0x40000000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>TIM2</name>
+        <description>TIM2 global interrupt</description>
+        <value>28</value>
+      </interrupt>
+      <hash>a26df0f8a335f8d54b23</hash></peripheral>
+    <peripheral>
+      <name>TIM3</name>
+      <description>General-purpose-timers</description>
+      <groupName>TIM</groupName>
+      <baseAddress>0x40000400</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>TIM3</name>
+        <description>TIM3 global interrupt</description>
+        <value>29</value>
+      </interrupt>
+      <hash>53eadb7caf1462a90661</hash></peripheral>
+    <peripheral derivedFrom="TIM3">
+      <name>TIM4</name>
+      <baseAddress>0x40000800</baseAddress>
+      <interrupt>
+        <name>TIM4</name>
+        <description>TIM4 global interrupt</description>
+        <value>30</value>
+      </interrupt>
+    </peripheral>
+    <peripheral>
+      <name>TIM5</name>
+      <description>General-purpose-timers</description>
+      <groupName>TIM</groupName>
+      <baseAddress>0x40000C00</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>TIM5</name>
+        <description>TIM5 global interrupt</description>
+        <value>50</value>
+      </interrupt>
+      <hash>a26df0f8a335f8d54b23</hash></peripheral>
+    <peripheral>
+      <name>TIM9</name>
+      <description>General-purpose-timers</description>
+      <groupName>TIM</groupName>
+      <baseAddress>0x40014000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>TIM1_BRK_TIM9</name>
+        <description>TIM1 Break interrupt and TIM9 global
+        interrupt</description>
+        <value>24</value>
+      </interrupt>
+      <hash>fd0d1566e06ef4c41602</hash></peripheral>
+    <peripheral derivedFrom="TIM9">
+      <name>TIM12</name>
+      <baseAddress>0x40001800</baseAddress>
+      <interrupt>
+        <name>TIM8_BRK_TIM12</name>
+        <description>TIM8 Break interrupt and TIM12 global
+        interrupt</description>
+        <value>43</value>
+      </interrupt>
+    </peripheral>
+    <peripheral>
+      <name>TIM10</name>
+      <description>General-purpose-timers</description>
+      <groupName>TIM</groupName>
+      <baseAddress>0x40014400</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>TIM1_UP_TIM10</name>
+        <description>TIM1 Update interrupt and TIM10 global
+        interrupt</description>
+        <value>25</value>
+      </interrupt>
+      <hash>e17a47a9ecbfa1ac7aec</hash></peripheral>
+    <peripheral derivedFrom="TIM10">
+      <name>TIM11</name>
+      <baseAddress>0x40014800</baseAddress>
+      <interrupt>
+        <name>TIM1_TRG_COM_TIM11</name>
+        <description>TIM1 Trigger and Commutation interrupts and
+        TIM11 global interrupt</description>
+        <value>26</value>
+      </interrupt>
+    </peripheral>
+    <peripheral derivedFrom="TIM10">
+      <name>TIM13</name>
+      <baseAddress>0x40001C00</baseAddress>
+      <interrupt>
+        <name>TIM8_UP_TIM13</name>
+        <description>TIM8 Update interrupt and TIM13 global
+        interrupt</description>
+        <value>44</value>
+      </interrupt>
+    </peripheral>
+    <peripheral derivedFrom="TIM10">
+      <name>TIM14</name>
+      <baseAddress>0x40002000</baseAddress>
+      <interrupt>
+        <name>TIM8_TRG_COM_TIM14</name>
+        <description>TIM8 Trigger and Commutation interrupts and
+        TIM14 global interrupt</description>
+        <value>45</value>
+      </interrupt>
+    </peripheral>
+    <peripheral>
+      <name>TIM6</name>
+      <description>Basic-timers</description>
+      <groupName>TIM</groupName>
+      <baseAddress>0x40001000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>TIM6_DAC</name>
+        <description>TIM6 global interrupt, DAC1 and DAC2 underrun
+        error interrupt</description>
+        <value>54</value>
+      </interrupt>
+      <hash>b7e00b0fa84f09dcd0b8</hash></peripheral>
+    <peripheral derivedFrom="TIM6">
+      <name>TIM7</name>
+      <baseAddress>0x40001400</baseAddress>
+      <interrupt>
+        <name>TIM7</name>
+        <description>TIM7 global interrupt</description>
+        <value>55</value>
+      </interrupt>
+    </peripheral>
+    <peripheral>
+      <name>Ethernet_MAC</name>
+      <description>Ethernet: media access control
+      (MAC)</description>
+      <groupName>Ethernet</groupName>
+      <baseAddress>0x40028000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x61</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>ETH</name>
+        <description>Ethernet global interrupt</description>
+        <value>61</value>
+      </interrupt>
+      <interrupt>
+        <name>ETH_WKUP</name>
+        <description>Ethernet Wakeup through EXTI line
+        interrupt</description>
+        <value>62</value>
+      </interrupt>
+      <hash>006fa6c34b557e8d9b2c</hash></peripheral>
+    <peripheral>
+      <name>Ethernet_MMC</name>
+      <description>Ethernet: MAC management counters</description>
+      <groupName>Ethernet</groupName>
+      <baseAddress>0x40028100</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0xC9</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <hash>bb65b2fa384e13bf6174</hash></peripheral>
+    <peripheral>
+      <name>Ethernet_PTP</name>
+      <description>Ethernet: Precision time protocol</description>
+      <groupName>Ethernet</groupName>
+      <baseAddress>0x40028700</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x31</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <hash>4a90a6a392afefa7fe1e</hash></peripheral>
+    <peripheral>
+      <name>Ethernet_DMA</name>
+      <description>Ethernet: DMA controller operation</description>
+      <groupName>Ethernet</groupName>
+      <baseAddress>0x40029000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <hash>71852faeedcd374f674a</hash></peripheral>
+    <peripheral>
+      <name>OTG_FS_GLOBAL</name>
+      <description>USB on the go full speed</description>
+      <groupName>USB_OTG_FS</groupName>
+      <baseAddress>0x50000000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>OTG_FS_WKUP</name>
+        <description>USB On-The-Go FS Wakeup through EXTI line
+        interrupt</description>
+        <value>42</value>
+      </interrupt>
+      <interrupt>
+        <name>OTG_FS</name>
+        <description>USB On The Go FS global
+        interrupt</description>
+        <value>67</value>
+      </interrupt>
+      <hash>d50c6755014ca6975210</hash></peripheral>
+    <peripheral>
+      <name>OTG_FS_HOST</name>
+      <description>USB on the go full speed</description>
+      <groupName>USB_OTG_FS</groupName>
+      <baseAddress>0x50000400</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <hash>4940dd6b3bccb4e6a038</hash></peripheral>
+    <peripheral>
+      <name>OTG_FS_DEVICE</name>
+      <description>USB on the go full speed</description>
+      <groupName>USB_OTG_FS</groupName>
+      <baseAddress>0x50000800</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <hash>7d522cccbf6b50e920f3</hash></peripheral>
+    <peripheral>
+      <name>OTG_FS_PWRCLK</name>
+      <description>USB on the go full speed</description>
+      <groupName>USB_OTG_FS</groupName>
+      <baseAddress>0x50000E00</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <hash>b93388b52963e4ab590b</hash></peripheral>
+    <peripheral>
+      <name>EXTI</name>
+      <description>External interrupt/event
+      controller</description>
+      <groupName>EXTI</groupName>
+      <baseAddress>0x40013C00</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>TAMP_STAMP</name>
+        <description>Tamper and TimeStamp interrupts through the
+        EXTI line</description>
+        <value>2</value>
+      </interrupt>
+      <interrupt>
+        <name>EXTI0</name>
+        <description>EXTI Line0 interrupt</description>
+        <value>6</value>
+      </interrupt>
+      <interrupt>
+        <name>EXTI1</name>
+        <description>EXTI Line1 interrupt</description>
+        <value>7</value>
+      </interrupt>
+      <interrupt>
+        <name>EXTI2</name>
+        <description>EXTI Line2 interrupt</description>
+        <value>8</value>
+      </interrupt>
+      <interrupt>
+        <name>EXTI3</name>
+        <description>EXTI Line3 interrupt</description>
+        <value>9</value>
+      </interrupt>
+      <interrupt>
+        <name>EXTI4</name>
+        <description>EXTI Line4 interrupt</description>
+        <value>10</value>
+      </interrupt>
+      <interrupt>
+        <name>EXTI9_5</name>
+        <description>EXTI Line[9:5] interrupts</description>
+        <value>23</value>
+      </interrupt>
+      <interrupt>
+        <name>EXTI15_10</name>
+        <description>EXTI Line[15:10] interrupts</description>
+        <value>40</value>
+      </interrupt>
+      <hash>57e0e4c9fbf209c8f290</hash></peripheral>
+    <peripheral>
+      <name>FLASH</name>
+      <description>FLASH</description>
+      <groupName>FLASH</groupName>
+      <baseAddress>0x40023C00</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>FLASH</name>
+        <description>FlASH global interrupt</description>
+        <value>4</value>
+      </interrupt>
+      <hash>a3e4beaaa14229737772</hash></peripheral>
+    <peripheral>
+      <name>HASH</name>
+      <description>Hash processor</description>
+      <groupName>HASH</groupName>
+      <baseAddress>0x50060400</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>HASH_RNG</name>
+        <description>Hash and Rng global interrupt</description>
+        <value>80</value>
+      </interrupt>
+      <hash>f5e0bbe44d908859e9ac</hash></peripheral>
+    <peripheral>
+      <name>CRYP</name>
+      <description>Cryptographic processor</description>
+      <groupName>CRYP</groupName>
+      <baseAddress>0x50060000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>CRYP</name>
+        <description>CRYP crypto global interrupt</description>
+        <value>79</value>
+      </interrupt>
+      <hash>e548bf94ffbcc100cfa4</hash></peripheral>
+    <peripheral>
+      <name>OTG_HS_GLOBAL</name>
+      <description>USB on the go high speed</description>
+      <groupName>USB_OTG_HS</groupName>
+      <baseAddress>0x40040000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x131</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>OTG_HS_EP1_OUT</name>
+        <description>USB On The Go HS End Point 1 Out global
+        interrupt</description>
+        <value>74</value>
+      </interrupt>
+      <interrupt>
+        <name>OTG_HS_EP1_IN</name>
+        <description>USB On The Go HS End Point 1 In global
+        interrupt</description>
+        <value>75</value>
+      </interrupt>
+      <interrupt>
+        <name>OTG_HS_WKUP</name>
+        <description>USB On The Go HS Wakeup through EXTI
+        interrupt</description>
+        <value>76</value>
+      </interrupt>
+      <interrupt>
+        <name>OTG_HS</name>
+        <description>USB On The Go HS global
+        interrupt</description>
+        <value>77</value>
+      </interrupt>
+      <hash>4561e90055298c188929</hash></peripheral>
+    <peripheral>
+      <name>OTG_HS_HOST</name>
+      <description>USB on the go high speed</description>
+      <groupName>USB_OTG_HS</groupName>
+      <baseAddress>0x40040400</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <hash>9b5058f9d9e5f892443f</hash></peripheral>
+    <peripheral>
+      <name>OTG_HS_DEVICE</name>
+      <description>USB on the go high speed</description>
+      <groupName>USB_OTG_HS</groupName>
+      <baseAddress>0x40040800</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <hash>7ce9e9e73c7b7bdee50c</hash></peripheral>
+    <peripheral>
+      <name>OTG_HS_PWRCLK</name>
+      <description>USB on the go high speed</description>
+      <groupName>USB_OTG_HS</groupName>
+      <baseAddress>0x40040E00</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x3F200</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <hash>eef6024ec046cfc95e81</hash></peripheral>
+    <peripheral>
+      <name>NVIC</name>
+      <description>Nested Vectored Interrupt
+      Controller</description>
+      <groupName>NVIC</groupName>
+      <baseAddress>0xE000E100</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x355</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <hash>5b0b6b6a4f869ef3051e</hash></peripheral>
+    <peripheral>
+      <name>MPU</name>
+      <description>Memory protection unit</description>
+      <groupName>MPU</groupName>
+      <baseAddress>0xE000ED90</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x15</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <hash>785611492674ffc099aa</hash></peripheral>
+    <peripheral>
+      <name>SCB_ACTRL</name>
+      <description>System control block ACTLR</description>
+      <groupName>SCB</groupName>
+      <baseAddress>0xE000E008</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x5</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <hash>b00dd923a939c521384a</hash></peripheral>
+    <peripheral>
+      <name>NVIC_STIR</name>
+      <description>Nested vectored interrupt
+      controller</description>
+      <groupName>NVIC</groupName>
+      <baseAddress>0xE000EF00</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x5</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <hash>95dc432e3851643503b8</hash></peripheral>
+    <peripheral>
+      <name>SCB</name>
+      <description>System control block</description>
+      <groupName>SCB</groupName>
+      <baseAddress>0xE000ED00</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x41</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <hash>cad24ee8435db0162d5c</hash></peripheral>
+    <peripheral>
+      <name>STK</name>
+      <description>SysTick timer</description>
+      <groupName>STK</groupName>
+      <baseAddress>0xE000E010</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x11</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <hash>f3c6fe95825c160427d2</hash></peripheral>
+  </peripherals>
+</device>

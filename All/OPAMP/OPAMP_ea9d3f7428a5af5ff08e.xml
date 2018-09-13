@@ -1,0 +1,288 @@
+<registers>
+        <register>
+          <name>CSR</name>
+          <displayName>CSR</displayName>
+          <description>control/status register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00010101</resetValue>
+          <fields>
+            <field>
+              <name>OPA3CALOUT</name>
+              <description>OPAMP3 calibration output</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OPA2CALOUT</name>
+              <description>OPAMP2 calibration output</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OPA1CALOUT</name>
+              <description>OPAMP1 calibration output</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>AOP_RANGE</name>
+              <description>Power range selection</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>S7SEL2</name>
+              <description>Switch 7 for OPAMP2 enable</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ANAWSEL3</name>
+              <description>Switch SanA enable for
+              OPAMP3</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ANAWSEL2</name>
+              <description>Switch SanA enable for
+              OPAMP2</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ANAWSEL1</name>
+              <description>Switch SanA enable for
+              OPAMP1</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OPA3LPM</name>
+              <description>OPAMP3 low power mode</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OPA3CAL_H</name>
+              <description>OPAMP3 offset calibration for N
+              differential pair</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OPA3CAL_L</name>
+              <description>OPAMP3 offset Calibration for P
+              differential pair</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>S6SEL3</name>
+              <description>Switch 6 for OPAMP3 enable</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>S5SEL3</name>
+              <description>Switch 5 for OPAMP3 enable</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>S4SEL3</name>
+              <description>Switch 4 for OPAMP3 enable</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>S3SEL3</name>
+              <description>Switch 3 for OPAMP3 Enable</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OPA3PD</name>
+              <description>OPAMP3 power down</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OPA2LPM</name>
+              <description>OPAMP2 low power mode</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OPA2CAL_H</name>
+              <description>OPAMP2 offset calibration for N
+              differential pair</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OPA2CAL_L</name>
+              <description>OPAMP2 offset Calibration for P
+              differential pair</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>S6SEL2</name>
+              <description>Switch 6 for OPAMP2 enable</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>S5SEL2</name>
+              <description>Switch 5 for OPAMP2 enable</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>S4SEL2</name>
+              <description>Switch 4 for OPAMP2 enable</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>S3SEL2</name>
+              <description>Switch 3 for OPAMP2 enable</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OPA2PD</name>
+              <description>OPAMP2 power down</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OPA1LPM</name>
+              <description>OPAMP1 low power mode</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OPA1CAL_H</name>
+              <description>OPAMP1 offset calibration for N
+              differential pair</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OPA1CAL_L</name>
+              <description>OPAMP1 offset calibration for P
+              differential pair</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>S6SEL1</name>
+              <description>Switch 6 for OPAMP1 enable</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>S5SEL1</name>
+              <description>Switch 5 for OPAMP1 enable</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>S4SEL1</name>
+              <description>Switch 4 for OPAMP1 enable</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>S3SEL1</name>
+              <description>Switch 3 for OPAMP1 enable</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OPA1PD</name>
+              <description>OPAMP1 power down</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>OTR</name>
+          <displayName>OTR</displayName>
+          <description>offset trimming register for normal
+          mode</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>OT_USER</name>
+              <description>Select user or factory trimming
+              value</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>AO3_OPT_OFFSET_TRIM</name>
+              <description>OPAMP3, 10-bit offset trim value for
+              normal mode</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>10</bitWidth>
+            </field>
+            <field>
+              <name>AO2_OPT_OFFSET_TRIM</name>
+              <description>OPAMP2, 10-bit offset trim value for
+              normal mode</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>10</bitWidth>
+            </field>
+            <field>
+              <name>AO1_OPT_OFFSET_TRIM</name>
+              <description>OPAMP1, 10-bit offset trim value for
+              normal mode</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>10</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>LPOTR</name>
+          <displayName>LPOTR</displayName>
+          <description>OPAMP offset trimming register for low power
+          mode</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>AO3_OPT_OFFSET_TRIM_LP</name>
+              <description>OPAMP3, 10-bit offset trim value for low
+              power mode</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>10</bitWidth>
+            </field>
+            <field>
+              <name>AO2_OPT_OFFSET_TRIM_LP</name>
+              <description>OPAMP2, 10-bit offset trim value for low
+              power mode</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>10</bitWidth>
+            </field>
+            <field>
+              <name>AO1_OPT_OFFSET_TRIM_LP</name>
+              <description>OPAMP1, 10-bit offset trim value for low
+              power mode</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>10</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

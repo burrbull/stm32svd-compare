@@ -1,0 +1,649 @@
+<registers>
+        <register>
+          <name>ACR</name>
+          <displayName>ACR</displayName>
+          <description>Flash access control register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000600</resetValue>
+          <fields>
+            <field>
+              <name>SLEEP_PD</name>
+              <description>Flash Power-down mode during Low-power
+              sleep mode</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RUN_PD</name>
+              <description>Flash Power-down mode during Low-power
+              run mode</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DCRST</name>
+              <description>Data cache reset</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ICRST</name>
+              <description>Instruction cache reset</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DCEN</name>
+              <description>Data cache enable</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ICEN</name>
+              <description>Instruction cache enable</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRFTEN</name>
+              <description>Prefetch enable</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LATENCY</name>
+              <description>Latency</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PDKEYR</name>
+          <displayName>PDKEYR</displayName>
+          <description>Power down key register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PDKEYR</name>
+              <description>RUN_PD in FLASH_ACR key</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>KEYR</name>
+          <displayName>KEYR</displayName>
+          <description>Flash key register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>KEY</name>
+              <description>FPEC key</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>OPTKEYR</name>
+          <displayName>OPTKEYR</displayName>
+          <description>Flash option key register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>OPTKEY</name>
+              <description>Option byte key</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SR</name>
+          <displayName>SR</displayName>
+          <description>Flash status register</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>BSY</name>
+              <description>Busy</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>OPTVERR</name>
+              <description>Option validity error</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RDERR</name>
+              <description>PCROP read error</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FASTERR</name>
+              <description>Fast programming error</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MISERR</name>
+              <description>Fast programming data miss
+              error</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PGSERR</name>
+              <description>Programming sequence error</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SIZERR</name>
+              <description>Size error</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PGAERR</name>
+              <description>Programming alignment
+              error</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>WRPERR</name>
+              <description>Write protection error</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PROGERR</name>
+              <description>Programming error</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OPERR</name>
+              <description>Operation error</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EOP</name>
+              <description>End of operation</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CR</name>
+          <displayName>CR</displayName>
+          <description>Flash control register</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0xC0000000</resetValue>
+          <fields>
+            <field>
+              <name>LOCK</name>
+              <description>FLASH_CR Lock</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OPTLOCK</name>
+              <description>Options Lock</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OBL_LAUNCH</name>
+              <description>Force the option byte
+              loading</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RDERRIE</name>
+              <description>PCROP read error interrupt
+              enable</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ERRIE</name>
+              <description>Error interrupt enable</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EOPIE</name>
+              <description>End of operation interrupt
+              enable</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FSTPG</name>
+              <description>Fast programming</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OPTSTRT</name>
+              <description>Options modification start</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>START</name>
+              <description>Start</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MER2</name>
+              <description>Bank 2 Mass erase</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>BKER</name>
+              <description>Bank erase</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PNB</name>
+              <description>Page number</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>MER1</name>
+              <description>Bank 1 Mass erase</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PER</name>
+              <description>Page Erase</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PG</name>
+              <description>Programming</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ECCR</name>
+          <displayName>ECCR</displayName>
+          <description>Flash ECC register</description>
+          <addressOffset>0x18</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>ECCD</name>
+              <description>ECC detection</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ECCC</name>
+              <description>ECC correction</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ECCIE</name>
+              <description>ECC correction interrupt
+              enable</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SYSF_ECC</name>
+              <description>System Flash ECC fail</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>BK_ECC</name>
+              <description>ECC fail bank</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>ADDR_ECC</name>
+              <description>ECC fail address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>19</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>OPTR</name>
+          <displayName>OPTR</displayName>
+          <description>Flash option register</description>
+          <addressOffset>0x20</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0xF0000000</resetValue>
+          <fields>
+            <field>
+              <name>SRAM2_RST</name>
+              <description>SRAM2 Erase when system
+              reset</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SRAM2_PE</name>
+              <description>SRAM2 parity check enable</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>nBOOT1</name>
+              <description>Boot configuration</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DUALBANK</name>
+              <description>Dual-Bank on 512 KB or 256 KB Flash
+              memory devices</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>BFB2</name>
+              <description>Dual-bank boot</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WWDG_SW</name>
+              <description>Window watchdog selection</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IWDG_STDBY</name>
+              <description>Independent watchdog counter freeze in
+              Standby mode</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IWDG_STOP</name>
+              <description>Independent watchdog counter freeze in
+              Stop mode</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IDWG_SW</name>
+              <description>Independent watchdog
+              selection</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>nRST_STDBY</name>
+              <description>nRST_STDBY</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>nRST_STOP</name>
+              <description>nRST_STOP</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>BOR_LEV</name>
+              <description>BOR reset Level</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>RDP</name>
+              <description>Read protection level</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PCROP1SR</name>
+          <displayName>PCROP1SR</displayName>
+          <description>Flash Bank 1 PCROP Start address
+          register</description>
+          <addressOffset>0x24</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0xFFFF0000</resetValue>
+          <fields>
+            <field>
+              <name>PCROP1_STRT</name>
+              <description>Bank 1 PCROP area start
+              offset</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PCROP1ER</name>
+          <displayName>PCROP1ER</displayName>
+          <description>Flash Bank 1 PCROP End address
+          register</description>
+          <addressOffset>0x28</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x0FFF0000</resetValue>
+          <fields>
+            <field>
+              <name>PCROP_RDP</name>
+              <description>PCROP area preserved when RDP level
+              decreased</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PCROP1_END</name>
+              <description>Bank 1 PCROP area end
+              offset</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>WRP1AR</name>
+          <displayName>WRP1AR</displayName>
+          <description>Flash Bank 1 WRP area A address
+          register</description>
+          <addressOffset>0x2C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0xFF00FF00</resetValue>
+          <fields>
+            <field>
+              <name>WRP1A_END</name>
+              <description>Bank 1 WRP first area A end
+              offset</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>WRP1A_STRT</name>
+              <description>Bank 1 WRP first area start
+              offset</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>WRP1BR</name>
+          <displayName>WRP1BR</displayName>
+          <description>Flash Bank 1 WRP area B address
+          register</description>
+          <addressOffset>0x30</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0xFF00FF00</resetValue>
+          <fields>
+            <field>
+              <name>WRP1B_STRT</name>
+              <description>Bank 1 WRP second area B end
+              offset</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>WRP1B_END</name>
+              <description>Bank 1 WRP second area B start
+              offset</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PCROP2SR</name>
+          <displayName>PCROP2SR</displayName>
+          <description>Flash Bank 2 PCROP Start address
+          register</description>
+          <addressOffset>0x44</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0xFFFF0000</resetValue>
+          <fields>
+            <field>
+              <name>PCROP2_STRT</name>
+              <description>Bank 2 PCROP area start
+              offset</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PCROP2ER</name>
+          <displayName>PCROP2ER</displayName>
+          <description>Flash Bank 2 PCROP End address
+          register</description>
+          <addressOffset>0x48</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0xFFFF0000</resetValue>
+          <fields>
+            <field>
+              <name>PCROP2_END</name>
+              <description>Bank 2 PCROP area end
+              offset</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>WRP2AR</name>
+          <displayName>WRP2AR</displayName>
+          <description>Flash Bank 2 WRP area A address
+          register</description>
+          <addressOffset>0x4C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0xFF00FF00</resetValue>
+          <fields>
+            <field>
+              <name>WRP2A_END</name>
+              <description>Bank 2 WRP first area A end
+              offset</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>WRP2A_STRT</name>
+              <description>Bank 2 WRP first area A start
+              offset</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>WRP2BR</name>
+          <displayName>WRP2BR</displayName>
+          <description>Flash Bank 2 WRP area B address
+          register</description>
+          <addressOffset>0x50</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0xFF00FF00</resetValue>
+          <fields>
+            <field>
+              <name>WRP2B_END</name>
+              <description>Bank 2 WRP second area B end
+              offset</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>WRP2B_STRT</name>
+              <description>Bank 2 WRP second area B start
+              offset</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

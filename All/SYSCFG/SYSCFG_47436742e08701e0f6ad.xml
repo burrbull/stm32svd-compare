@@ -1,0 +1,844 @@
+<registers>
+        <register>
+          <name>SYSCFG_CFGR1</name>
+          <displayName>SYSCFG_CFGR1</displayName>
+          <description>configuration register 1</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>FPU_IT</name>
+              <description>Interrupt enable bits from
+              FPU</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>6</bitWidth>
+            </field>
+            <field>
+              <name>ENCODER_MODE</name>
+              <description>Encoder mode</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>I2C2_FM</name>
+              <description>I2C2 Fast Mode Plus</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>I2C1_FM</name>
+              <description>I2C1 Fast Mode Plus</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>I2C_PB9_FM</name>
+              <description>Fast Mode Plus (FM+) driving capability
+              activation bits.</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>I2C_PB8_FM</name>
+              <description>Fast Mode Plus (FM+) driving capability
+              activation bits.</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>I2C_PB7_FM</name>
+              <description>Fast Mode Plus (FM+) driving capability
+              activation bits.</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>I2C_PB6_FM</name>
+              <description>Fast Mode Plus (FM+) driving capability
+              activation bits.</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIM7_DAC2_DMA_RMP</name>
+              <description>TIM7 and DAC2 DMA request remapping
+              bit</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIM6_DAC1_DMA_RMP</name>
+              <description>TIM6 and DAC1 DMA request remapping
+              bit</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIM17_DMA_RMP</name>
+              <description>TIM17 DMA request remapping
+              bit</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIM16_DMA_RMP</name>
+              <description>TIM16 DMA request remapping
+              bit</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ADC24_DMA_RMP</name>
+              <description>ADC24 DMA remapping bit</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DAC_TRIG_RMP</name>
+              <description>DAC trigger remap (when TSEL =
+              001)</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIM1_ITR_RMP</name>
+              <description>Timer 1 ITR3 selection</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>USB_IT_RMP</name>
+              <description>USB interrupt remap</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MEM_MODE</name>
+              <description>Memory mapping selection
+              bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SYSCFG_RCR</name>
+          <displayName>SYSCFG_RCR</displayName>
+          <description>CCM SRAM protection register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PAGE7_WP</name>
+              <description>CCM SRAM page write protection
+              bit</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PAGE6_WP</name>
+              <description>CCM SRAM page write protection
+              bit</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PAGE5_WP</name>
+              <description>CCM SRAM page write protection
+              bit</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PAGE4_WP</name>
+              <description>CCM SRAM page write protection
+              bit</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PAGE3_WP</name>
+              <description>CCM SRAM page write protection
+              bit</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PAGE2_WP</name>
+              <description>CCM SRAM page write protection
+              bit</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PAGE1_WP</name>
+              <description>CCM SRAM page write protection
+              bit</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PAGE0_WP</name>
+              <description>CCM SRAM page write protection
+              bit</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SYSCFG_EXTICR1</name>
+          <displayName>SYSCFG_EXTICR1</displayName>
+          <description>external interrupt configuration register
+          1</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>EXTI3</name>
+              <description>EXTI 3 configuration bits</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI2</name>
+              <description>EXTI 2 configuration bits</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI1</name>
+              <description>EXTI 1 configuration bits</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI0</name>
+              <description>EXTI 0 configuration bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SYSCFG_EXTICR2</name>
+          <displayName>SYSCFG_EXTICR2</displayName>
+          <description>external interrupt configuration register
+          2</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>EXTI7</name>
+              <description>EXTI 7 configuration bits</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI6</name>
+              <description>EXTI 6 configuration bits</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI5</name>
+              <description>EXTI 5 configuration bits</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI4</name>
+              <description>EXTI 4 configuration bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SYSCFG_EXTICR3</name>
+          <displayName>SYSCFG_EXTICR3</displayName>
+          <description>external interrupt configuration register
+          3</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>EXTI11</name>
+              <description>EXTI 11 configuration bits</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI10</name>
+              <description>EXTI 10 configuration bits</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI9</name>
+              <description>EXTI 9 configuration bits</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI8</name>
+              <description>EXTI 8 configuration bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SYSCFG_EXTICR4</name>
+          <displayName>SYSCFG_EXTICR4</displayName>
+          <description>external interrupt configuration register
+          4</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>EXTI15</name>
+              <description>EXTI 15 configuration bits</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI14</name>
+              <description>EXTI 14 configuration bits</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI13</name>
+              <description>EXTI 13 configuration bits</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI12</name>
+              <description>EXTI 12 configuration bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SYSCFG_CFGR2</name>
+          <displayName>SYSCFG_CFGR2</displayName>
+          <description>configuration register 2</description>
+          <addressOffset>0x18</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>SRAM_PEF</name>
+              <description>SRAM parity flag</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>BYP_ADD_PAR</name>
+              <description>Bypass address bit 29 in parity
+              calculation</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PVD_LOCK</name>
+              <description>PVD lock enable bit</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SRAM_PARITY_LOCK</name>
+              <description>SRAM parity lock bit</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LOCUP_LOCK</name>
+              <description>Cortex-M0 LOCKUP bit enable
+              bit</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>COMP2_CSR</name>
+          <displayName>COMP2_CSR</displayName>
+          <description>control and status register</description>
+          <addressOffset>0x20</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>COMP2LOCK</name>
+              <description>Comparator 2 lock</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP2OUT</name>
+              <description>Comparator 2 output</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>COMP2_BLANKING</name>
+              <description>Comparator 2 blanking
+              source</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP2HYST</name>
+              <description>Comparator 2 hysteresis</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP2POL</name>
+              <description>Comparator 2 output
+              polarity</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP2_OUT_SEL</name>
+              <description>Comparator 2 output
+              selection</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP2INMSEL</name>
+              <description>Comparator 1inverting input
+              selection</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP2INPSEL</name>
+              <description>Comparator 2 non inverted input
+              selection</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP2INSEL</name>
+              <description>Comparator 2 inverting input
+              selection</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP2MODE</name>
+              <description>Comparator 2 mode</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP2EN</name>
+              <description>Comparator 2 enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>COMP4_CSR</name>
+          <displayName>COMP4_CSR</displayName>
+          <description>control and status register</description>
+          <addressOffset>0x28</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>COMP4LOCK</name>
+              <description>Comparator 4 lock</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP4OUT</name>
+              <description>Comparator 4 output</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>COMP4_BLANKING</name>
+              <description>Comparator 4 blanking
+              source</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP4HYST</name>
+              <description>Comparator 4 hysteresis</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP4POL</name>
+              <description>Comparator 4 output
+              polarity</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP4_OUT_SEL</name>
+              <description>Comparator 4 output
+              selection</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COM4WINMODE</name>
+              <description>Comparator 4 window mode</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP4INPSEL</name>
+              <description>Comparator 4 non inverted input
+              selection</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP4INSEL</name>
+              <description>Comparator 4 inverting input
+              selection</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP4MODE</name>
+              <description>Comparator 4 mode</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP4EN</name>
+              <description>Comparator 4 enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>COMP6_CSR</name>
+          <displayName>COMP6_CSR</displayName>
+          <description>control and status register</description>
+          <addressOffset>0x30</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>COMP6LOCK</name>
+              <description>Comparator 6 lock</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP6OUT</name>
+              <description>Comparator 6 output</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>COMP6_BLANKING</name>
+              <description>Comparator 6 blanking
+              source</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP6HYST</name>
+              <description>Comparator 6 hysteresis</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP6POL</name>
+              <description>Comparator 6 output
+              polarity</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP6_OUT_SEL</name>
+              <description>Comparator 6 output
+              selection</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COM6WINMODE</name>
+              <description>Comparator 6 window mode</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP6INPSEL</name>
+              <description>Comparator 6 non inverted input
+              selection</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP6INSEL</name>
+              <description>Comparator 6 inverting input
+              selection</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP6MODE</name>
+              <description>Comparator 6 mode</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COMP6EN</name>
+              <description>Comparator 6 enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>OPAMP2_CSR</name>
+          <displayName>OPAMP2_CSR</displayName>
+          <description>OPAMP2 control register</description>
+          <addressOffset>0x3C</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>LOCK</name>
+              <description>OPAMP 2 lock</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OUTCAL</name>
+              <description>OPAMP 2 ouput status flag</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TSTREF</name>
+              <description>TSTREF</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TRIMOFFSETN</name>
+              <description>Offset trimming value
+              (NMOS)</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TRIMOFFSETP</name>
+              <description>Offset trimming value
+              (PMOS)</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>USER_TRIM</name>
+              <description>User trimming enable</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PGA_GAIN</name>
+              <description>Gain in PGA mode</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CAL_SEL</name>
+              <description>Calibration selection</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CALON</name>
+              <description>Calibration mode enable</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>VPS_SEL</name>
+              <description>OPAMP2 Non inverting input secondary
+              selection</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>VMS_SEL</name>
+              <description>OPAMP2 inverting input secondary
+              selection</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TCM_EN</name>
+              <description>Timer controlled Mux mode
+              enable</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>VM_SEL</name>
+              <description>OPAMP2 inverting input
+              selection</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>VP_SEL</name>
+              <description>OPAMP2 Non inverting input
+              selection</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FORCE_VP</name>
+              <description>FORCE_VP</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OPAMP2EN</name>
+              <description>OPAMP2 enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SYSCFG_CFGR3</name>
+          <displayName>SYSCFG_CFGR3</displayName>
+          <description>configuration register 3</description>
+          <addressOffset>0x50</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DAC1_TRIG5_RMP</name>
+              <description>DAC1_CH1 / DAC1_CH2 Trigger
+              remap</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DAC1_TRIG3_RMP</name>
+              <description>DAC1_CH1 / DAC1_CH2 Trigger
+              remap</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ADC2_DMA_RMP_1</name>
+              <description>ADC2 DMA controller remapping
+              bit</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ADC2_DMA_RMP_0</name>
+              <description>ADC2 DMA channel remapping
+              bit</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>I2C1_RX_DMA_RMP</name>
+              <description>I2C1_RX DMA remapping bit</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>SPI1_TX_DMA_RMP</name>
+              <description>SPI1_TX DMA remapping bit</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>SPI1_RX_DMA_RMP</name>
+              <description>SPI1_RX DMA remapping bit</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

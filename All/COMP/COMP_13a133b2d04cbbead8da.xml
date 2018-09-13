@@ -1,0 +1,153 @@
+<registers>
+        <register>
+          <name>CSR</name>
+          <displayName>CSR</displayName>
+          <description>comparator control and status
+          register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>TSUSP</name>
+              <description>Suspend Timer Mode</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CAIF</name>
+              <description>Channel acquisition interrupt
+              flag</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>CAIE</name>
+              <description>Channel Acquisition Interrupt Enable /
+              Clear</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RCH13</name>
+              <description>Select GPIO port PC3 as re-routed ADC
+              input channel CH13.</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FCH8</name>
+              <description>Select GPIO port PB0 as fast ADC input
+              channel CH8.</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FCH3</name>
+              <description>Select GPIO port PA3 as fast ADC input
+              channel CH3.</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OUTSEL</name>
+              <description>Comparator 2 output
+              selection</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>INSEL</name>
+              <description>Inverted input selection</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>WNDWE</name>
+              <description>Window mode enable</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>VREFOUTEN</name>
+              <description>VREFINT output enable</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CMP2OUT</name>
+              <description>Comparator 2 output</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>SPEED</name>
+              <description>Comparator 2 speed mode</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CMP1OUT</name>
+              <description>Comparator 1 output</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>SW1</name>
+              <description>SW1 analog switch enable</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CMP1EN</name>
+              <description>Comparator 1 enable</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PD400K</name>
+              <description>400 kO pull-down resistor</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PD10K</name>
+              <description>10 kO pull-down resistor</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PU400K</name>
+              <description>400 kO pull-up resistor</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PU10K</name>
+              <description>10 kO pull-up resistor</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

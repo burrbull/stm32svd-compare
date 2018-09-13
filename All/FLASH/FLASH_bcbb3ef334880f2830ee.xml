@@ -1,0 +1,252 @@
+<registers>
+        <register>
+          <name>ACR</name>
+          <displayName>ACR</displayName>
+          <description>Flash access control register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>HLFCYA</name>
+              <description>Flash half cycle access
+              enable</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>KEYR</name>
+          <displayName>KEYR</displayName>
+          <description>Flash key register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>KEY</name>
+              <description>FPEC key</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>OPTKEYR</name>
+          <displayName>OPTKEYR</displayName>
+          <description>Flash option key register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>OPTKEY</name>
+              <description>Option byte key</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SR</name>
+          <displayName>SR</displayName>
+          <description>Flash status register</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>EOP</name>
+              <description>End of operation</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>WRPRTERR</name>
+              <description>Write protection error</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PGERR</name>
+              <description>Programming error</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BSY</name>
+              <description>Busy</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CR</name>
+          <displayName>CR</displayName>
+          <description>Flash control register</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000080</resetValue>
+          <fields>
+            <field>
+              <name>EOPIE</name>
+              <description>End of operation interrupt
+              enable</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ERRIE</name>
+              <description>Error interrupt enable</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OPTWRE</name>
+              <description>Option bytes write enable</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LOCK</name>
+              <description>Lock</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>STRT</name>
+              <description>Start</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OPTER</name>
+              <description>Option byte erase</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OPTPG</name>
+              <description>Option byte programming</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MER</name>
+              <description>Mass Erase</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PER</name>
+              <description>Page Erase</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PG</name>
+              <description>Programming</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>AR</name>
+          <displayName>AR</displayName>
+          <description>Flash address register</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>FAR</name>
+              <description>Flash Address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>OBR</name>
+          <displayName>OBR</displayName>
+          <description>Option byte register</description>
+          <addressOffset>0x1C</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x03FFFFFC</resetValue>
+          <fields>
+            <field>
+              <name>Data1</name>
+              <description>Data1</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>Data0</name>
+              <description>Data0</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>nRST_STDBY</name>
+              <description>nRST_STDBY</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>nRST_STOP</name>
+              <description>nRST_STOP</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WDG_SW</name>
+              <description>WDG_SW</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RDPRT</name>
+              <description>Read protection</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OPTERR</name>
+              <description>Option byte error</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>WRPR</name>
+          <displayName>WRPR</displayName>
+          <description>Write protection register</description>
+          <addressOffset>0x20</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0xFFFFFFFF</resetValue>
+          <fields>
+            <field>
+              <name>WRP</name>
+              <description>Write protect</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

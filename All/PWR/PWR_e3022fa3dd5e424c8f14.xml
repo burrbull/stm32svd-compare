@@ -1,0 +1,388 @@
+<registers>
+        <register>
+          <name>CR1</name>
+          <displayName>CR1</displayName>
+          <description>power control register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x0000C000</resetValue>
+          <fields>
+            <field>
+              <name>UDEN</name>
+              <description>Under-drive enable in stop
+              mode</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>ODSWEN</name>
+              <description>Over-drive switching
+              enabled</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ODEN</name>
+              <description>Over-drive enable</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>VOS</name>
+              <description>Regulator voltage scaling output
+              selection</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>ADCDC1</name>
+              <description>ADCDC1</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MRUDS</name>
+              <description>Main regulator in deepsleep under-drive
+              mode</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LPUDS</name>
+              <description>Low-power regulator in deepsleep
+              under-drive mode</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FPDS</name>
+              <description>Flash power down in Stop
+              mode</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DBP</name>
+              <description>Disable backup domain write
+              protection</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PLS</name>
+              <description>PVD level selection</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>PVDE</name>
+              <description>Power voltage detector
+              enable</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CSBF</name>
+              <description>Clear standby flag</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PDDS</name>
+              <description>Power down deepsleep</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LPDS</name>
+              <description>Low-power deep sleep</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CSR1</name>
+          <displayName>CSR1</displayName>
+          <description>power control/status register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>UDRDY</name>
+              <description>Under-drive ready flag</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ODSWRDY</name>
+              <description>Over-drive mode switching
+              ready</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ODRDY</name>
+              <description>Over-drive mode ready</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>VOSRDY</name>
+              <description>Regulator voltage scaling output
+              selection ready bit</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BRE</name>
+              <description>Backup regulator enable</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EIWUP</name>
+              <description>Enable internal wakeup</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BRR</name>
+              <description>Backup regulator ready</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>PVDO</name>
+              <description>PVD output</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>SBF</name>
+              <description>Standby flag</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>WUIF</name>
+              <description>Wakeup internal flag</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CR2</name>
+          <displayName>CR2</displayName>
+          <description>power control register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>WUPP6</name>
+              <description>Wakeup pin polarity bit for
+              PI11</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>WUPP5</name>
+              <description>Wakeup pin polarity bit for
+              PI8</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>WUPP4</name>
+              <description>Wakeup pin polarity bit for
+              PC13</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>WUPP3</name>
+              <description>Wakeup pin polarity bit for
+              PC1</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>WUPP2</name>
+              <description>Wakeup pin polarity bit for
+              PA2</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>WUPP1</name>
+              <description>Wakeup pin polarity bit for
+              PA0</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CWUPF6</name>
+              <description>Clear Wakeup Pin flag for
+              PI11</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>CWUPF5</name>
+              <description>Clear Wakeup Pin flag for
+              PI8</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>CWUPF4</name>
+              <description>Clear Wakeup Pin flag for
+              PC13</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>CWUPF3</name>
+              <description>Clear Wakeup Pin flag for
+              PC1</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>CWUPF2</name>
+              <description>Clear Wakeup Pin flag for
+              PA2</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>CWUPF1</name>
+              <description>Clear Wakeup Pin flag for
+              PA0</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CSR2</name>
+          <displayName>CSR2</displayName>
+          <description>power control/status register</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>EWUP6</name>
+              <description>Enable Wakeup pin for PI11</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EWUP5</name>
+              <description>Enable Wakeup pin for PI8</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EWUP4</name>
+              <description>Enable Wakeup pin for PC13</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EWUP3</name>
+              <description>Enable Wakeup pin for PC1</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EWUP2</name>
+              <description>Enable Wakeup pin for PA2</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EWUP1</name>
+              <description>Enable Wakeup pin for PA0</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>WUPF6</name>
+              <description>Wakeup Pin flag for PI11</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>WUPF5</name>
+              <description>Wakeup Pin flag for PI8</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>WUPF4</name>
+              <description>Wakeup Pin flag for PC13</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>WUPF3</name>
+              <description>Wakeup Pin flag for PC1</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>WUPF2</name>
+              <description>Wakeup Pin flag for PA2</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>WUPF1</name>
+              <description>Wakeup Pin flag for PA0</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

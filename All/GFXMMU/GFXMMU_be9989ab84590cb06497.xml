@@ -1,0 +1,304 @@
+<registers>
+        <register>
+          <name>CR</name>
+          <displayName>CR</displayName>
+          <description>Graphic MMU configuration
+          register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>BM192</name>
+              <description>192 Block mode</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>AMEIE</name>
+              <description>AHB master error interrupt
+              enable</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>B3OIE</name>
+              <description>Buffer 3 overflow interrupt
+              enable</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>B2OIE</name>
+              <description>Buffer 2 overflow interrupt
+              enable</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>B1OIE</name>
+              <description>Buffer 1 overflow interrupt
+              enable</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>B0OIE</name>
+              <description>Buffer 0 overflow interrupt
+              enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SR</name>
+          <displayName>SR</displayName>
+          <description>Graphic MMU status register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>AMEF</name>
+              <description>AHB master error flag</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>B3OF</name>
+              <description>Buffer 3 overflow flag</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>B2OF</name>
+              <description>Buffer 2 overflow flag</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>B1OF</name>
+              <description>Buffer 1 overflow flag</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>B0OF</name>
+              <description>Buffer 0 overflow flag</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>FCR</name>
+          <displayName>FCR</displayName>
+          <description>Graphic MMU flag clear
+          register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CAMEF</name>
+              <description>Clear AHB master error
+              flag</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CB3OF</name>
+              <description>Clear buffer 3 overflow
+              flag</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CB2OF</name>
+              <description>Clear buffer 2 overflow
+              flag</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CB1OF</name>
+              <description>Clear buffer 1 overflow
+              flag</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CB0OF</name>
+              <description>Clear buffer 0 overflow
+              flag</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DVR</name>
+          <displayName>DVR</displayName>
+          <description>Graphic MMU default value
+          register</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DV</name>
+              <description>Default value</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BCR%s</name>
+          <displayName>BxCR</displayName>
+          <dim>4</dim>
+          <dimIndex>0-3</dimIndex>
+          <dimIncrement>0x4</dimIncrement>
+          <description>Graphic MMU buffer X configuration
+          register</description>
+          <addressOffset>0x20</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PBBA</name>
+              <description>Physical buffer base
+              address</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>9</bitWidth>
+            </field>
+            <field>
+              <name>PBO</name>
+              <description>Physical buffer offset</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>19</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>VERR</name>
+          <displayName>VERR</displayName>
+          <description>Graphic MMU version register</description>
+          <addressOffset>0xFF4</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000010</resetValue>
+          <fields>
+            <field>
+              <name>MAJREV</name>
+              <description>Major revision</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>MINREV</name>
+              <description>Minor revision</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>IPIDR</name>
+          <displayName>IPIDR</displayName>
+          <description>Graphic MMU identification
+          register</description>
+          <addressOffset>0xFF8</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00160061</resetValue>
+          <fields>
+            <field>
+              <name>ID</name>
+              <description>Identification Code</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SIDR</name>
+          <displayName>SIDR</displayName>
+          <description>Graphic MMU size identification
+          register</description>
+          <addressOffset>0xFFC</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0xA3C5DD04</resetValue>
+          <fields>
+            <field>
+              <name>SID</name>
+              <description>Size and ID</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <cluster>
+          <name>LUTC%s</name>
+          <displayName>LUTCx</displayName>
+          <dim>1024</dim>
+          <dimIndex>0-1023</dimIndex>
+          <dimIncrement>0x8</dimIncrement>
+          <description>LUT cluster X: LUTxL, LUTxH</description>
+          <addressOffset>0x1000</addressOffset>
+          <register>
+            <name>LUTL</name>
+            <displayName>LUTxL</displayName>
+            <description>Graphic MMU LUT entry X low</description>
+            <addressOffset>0x0</addressOffset>
+            <size>0x20</size>
+            <access>read-write</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>LVB</name>
+                <description>Last Valid Block</description>
+                <bitOffset>16</bitOffset>
+                <bitWidth>8</bitWidth>
+              </field>
+              <field>
+                <name>FVB</name>
+                <description>First Valid Block</description>
+                <bitOffset>8</bitOffset>
+                <bitWidth>8</bitWidth>
+              </field>
+              <field>
+                <name>EN</name>
+                <description>Enable</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>LUTH</name>
+            <displayName>LUTxH</displayName>
+            <description>Graphic MMU LUT entry X high</description>
+            <addressOffset>0x4</addressOffset>
+            <size>0x20</size>
+            <access>read-write</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>LO</name>
+                <description>Line offset</description>
+                <bitOffset>4</bitOffset>
+                <bitWidth>18</bitWidth>
+              </field>
+            </fields>
+          </register>
+        </cluster>
+      </registers>
+    

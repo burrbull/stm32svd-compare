@@ -1,0 +1,866 @@
+<registers>
+        <register>
+          <name>LISR</name>
+          <displayName>LISR</displayName>
+          <description>low interrupt status register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>TCIF3</name>
+              <description>Stream x transfer complete interrupt
+              flag (x = 3..0)</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>HTIF3</name>
+              <description>Stream x half transfer interrupt flag
+              (x=3..0)</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TEIF3</name>
+              <description>Stream x transfer error interrupt flag
+              (x=3..0)</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DMEIF3</name>
+              <description>Stream x direct mode error interrupt
+              flag (x=3..0)</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FEIF3</name>
+              <description>Stream x FIFO error interrupt flag
+              (x=3..0)</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TCIF2</name>
+              <description>Stream x transfer complete interrupt
+              flag (x = 3..0)</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>HTIF2</name>
+              <description>Stream x half transfer interrupt flag
+              (x=3..0)</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TEIF2</name>
+              <description>Stream x transfer error interrupt flag
+              (x=3..0)</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DMEIF2</name>
+              <description>Stream x direct mode error interrupt
+              flag (x=3..0)</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FEIF2</name>
+              <description>Stream x FIFO error interrupt flag
+              (x=3..0)</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TCIF1</name>
+              <description>Stream x transfer complete interrupt
+              flag (x = 3..0)</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>HTIF1</name>
+              <description>Stream x half transfer interrupt flag
+              (x=3..0)</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TEIF1</name>
+              <description>Stream x transfer error interrupt flag
+              (x=3..0)</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DMEIF1</name>
+              <description>Stream x direct mode error interrupt
+              flag (x=3..0)</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FEIF1</name>
+              <description>Stream x FIFO error interrupt flag
+              (x=3..0)</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TCIF0</name>
+              <description>Stream x transfer complete interrupt
+              flag (x = 3..0)</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>HTIF0</name>
+              <description>Stream x half transfer interrupt flag
+              (x=3..0)</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TEIF0</name>
+              <description>Stream x transfer error interrupt flag
+              (x=3..0)</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DMEIF0</name>
+              <description>Stream x direct mode error interrupt
+              flag (x=3..0)</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FEIF0</name>
+              <description>Stream x FIFO error interrupt flag
+              (x=3..0)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HISR</name>
+          <displayName>HISR</displayName>
+          <description>high interrupt status register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>TCIF7</name>
+              <description>Stream x transfer complete interrupt
+              flag (x=7..4)</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>HTIF7</name>
+              <description>Stream x half transfer interrupt flag
+              (x=7..4)</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TEIF7</name>
+              <description>Stream x transfer error interrupt flag
+              (x=7..4)</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DMEIF7</name>
+              <description>Stream x direct mode error interrupt
+              flag (x=7..4)</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FEIF7</name>
+              <description>Stream x FIFO error interrupt flag
+              (x=7..4)</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TCIF6</name>
+              <description>Stream x transfer complete interrupt
+              flag (x=7..4)</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>HTIF6</name>
+              <description>Stream x half transfer interrupt flag
+              (x=7..4)</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TEIF6</name>
+              <description>Stream x transfer error interrupt flag
+              (x=7..4)</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DMEIF6</name>
+              <description>Stream x direct mode error interrupt
+              flag (x=7..4)</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FEIF6</name>
+              <description>Stream x FIFO error interrupt flag
+              (x=7..4)</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TCIF5</name>
+              <description>Stream x transfer complete interrupt
+              flag (x=7..4)</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>HTIF5</name>
+              <description>Stream x half transfer interrupt flag
+              (x=7..4)</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TEIF5</name>
+              <description>Stream x transfer error interrupt flag
+              (x=7..4)</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DMEIF5</name>
+              <description>Stream x direct mode error interrupt
+              flag (x=7..4)</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FEIF5</name>
+              <description>Stream x FIFO error interrupt flag
+              (x=7..4)</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TCIF4</name>
+              <description>Stream x transfer complete interrupt
+              flag (x=7..4)</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>HTIF4</name>
+              <description>Stream x half transfer interrupt flag
+              (x=7..4)</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TEIF4</name>
+              <description>Stream x transfer error interrupt flag
+              (x=7..4)</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DMEIF4</name>
+              <description>Stream x direct mode error interrupt
+              flag (x=7..4)</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FEIF4</name>
+              <description>Stream x FIFO error interrupt flag
+              (x=7..4)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>LIFCR</name>
+          <displayName>LIFCR</displayName>
+          <description>low interrupt flag clear
+          register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CTCIF3</name>
+              <description>Stream x clear transfer complete
+              interrupt flag (x = 3..0)</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHTIF3</name>
+              <description>Stream x clear half transfer interrupt
+              flag (x = 3..0)</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CTEIF3</name>
+              <description>Stream x clear transfer error interrupt
+              flag (x = 3..0)</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CDMEIF3</name>
+              <description>Stream x clear direct mode error
+              interrupt flag (x = 3..0)</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CFEIF3</name>
+              <description>Stream x clear FIFO error interrupt flag
+              (x = 3..0)</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CTCIF2</name>
+              <description>Stream x clear transfer complete
+              interrupt flag (x = 3..0)</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHTIF2</name>
+              <description>Stream x clear half transfer interrupt
+              flag (x = 3..0)</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CTEIF2</name>
+              <description>Stream x clear transfer error interrupt
+              flag (x = 3..0)</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CDMEIF2</name>
+              <description>Stream x clear direct mode error
+              interrupt flag (x = 3..0)</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CFEIF2</name>
+              <description>Stream x clear FIFO error interrupt flag
+              (x = 3..0)</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CTCIF1</name>
+              <description>Stream x clear transfer complete
+              interrupt flag (x = 3..0)</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHTIF1</name>
+              <description>Stream x clear half transfer interrupt
+              flag (x = 3..0)</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CTEIF1</name>
+              <description>Stream x clear transfer error interrupt
+              flag (x = 3..0)</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CDMEIF1</name>
+              <description>Stream x clear direct mode error
+              interrupt flag (x = 3..0)</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CFEIF1</name>
+              <description>Stream x clear FIFO error interrupt flag
+              (x = 3..0)</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CTCIF0</name>
+              <description>Stream x clear transfer complete
+              interrupt flag (x = 3..0)</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHTIF0</name>
+              <description>Stream x clear half transfer interrupt
+              flag (x = 3..0)</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CTEIF0</name>
+              <description>Stream x clear transfer error interrupt
+              flag (x = 3..0)</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CDMEIF0</name>
+              <description>Stream x clear direct mode error
+              interrupt flag (x = 3..0)</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CFEIF0</name>
+              <description>Stream x clear FIFO error interrupt flag
+              (x = 3..0)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HIFCR</name>
+          <displayName>HIFCR</displayName>
+          <description>high interrupt flag clear
+          register</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CTCIF7</name>
+              <description>Stream x clear transfer complete
+              interrupt flag (x = 7..4)</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHTIF7</name>
+              <description>Stream x clear half transfer interrupt
+              flag (x = 7..4)</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CTEIF7</name>
+              <description>Stream x clear transfer error interrupt
+              flag (x = 7..4)</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CDMEIF7</name>
+              <description>Stream x clear direct mode error
+              interrupt flag (x = 7..4)</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CFEIF7</name>
+              <description>Stream x clear FIFO error interrupt flag
+              (x = 7..4)</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CTCIF6</name>
+              <description>Stream x clear transfer complete
+              interrupt flag (x = 7..4)</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHTIF6</name>
+              <description>Stream x clear half transfer interrupt
+              flag (x = 7..4)</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CTEIF6</name>
+              <description>Stream x clear transfer error interrupt
+              flag (x = 7..4)</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CDMEIF6</name>
+              <description>Stream x clear direct mode error
+              interrupt flag (x = 7..4)</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CFEIF6</name>
+              <description>Stream x clear FIFO error interrupt flag
+              (x = 7..4)</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CTCIF5</name>
+              <description>Stream x clear transfer complete
+              interrupt flag (x = 7..4)</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHTIF5</name>
+              <description>Stream x clear half transfer interrupt
+              flag (x = 7..4)</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CTEIF5</name>
+              <description>Stream x clear transfer error interrupt
+              flag (x = 7..4)</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CDMEIF5</name>
+              <description>Stream x clear direct mode error
+              interrupt flag (x = 7..4)</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CFEIF5</name>
+              <description>Stream x clear FIFO error interrupt flag
+              (x = 7..4)</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CTCIF4</name>
+              <description>Stream x clear transfer complete
+              interrupt flag (x = 7..4)</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHTIF4</name>
+              <description>Stream x clear half transfer interrupt
+              flag (x = 7..4)</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CTEIF4</name>
+              <description>Stream x clear transfer error interrupt
+              flag (x = 7..4)</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CDMEIF4</name>
+              <description>Stream x clear direct mode error
+              interrupt flag (x = 7..4)</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CFEIF4</name>
+              <description>Stream x clear FIFO error interrupt flag
+              (x = 7..4)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <cluster>
+          <name>ST%s</name>
+          <displayName>STx</displayName>
+          <dim>8</dim>
+          <dimIndex>0-7</dimIndex>
+          <dimIncrement>0x18</dimIncrement>
+          <description>DMA Stream X: SxCR, SxNDTR, SxPAR, SxM0AR, SxM1AR, SxFCR</description>
+          <addressOffset>0x10</addressOffset>
+          <register>
+            <name>SCR</name>
+            <displayName>SxCR</displayName>
+            <description>DMA Stream X configuration
+            register</description>
+            <addressOffset>0x0</addressOffset>
+            <size>0x20</size>
+            <access>read-write</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>CHSEL</name>
+                <description>Channel selection</description>
+                <bitOffset>25</bitOffset>
+                <bitWidth>3</bitWidth>
+              </field>
+              <field>
+                <name>MBURST</name>
+                <description>Memory burst transfer
+                configuration</description>
+                <bitOffset>23</bitOffset>
+                <bitWidth>2</bitWidth>
+              </field>
+              <field>
+                <name>PBURST</name>
+                <description>Peripheral burst transfer
+                configuration</description>
+                <bitOffset>21</bitOffset>
+                <bitWidth>2</bitWidth>
+              </field>
+              <field>
+                <name>CT</name>
+                <description>Current target (only in double buffer
+                mode)</description>
+                <bitOffset>19</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>DBM</name>
+                <description>Double buffer mode</description>
+                <bitOffset>18</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>PL</name>
+                <description>Priority level</description>
+                <bitOffset>16</bitOffset>
+                <bitWidth>2</bitWidth>
+              </field>
+              <field>
+                <name>PINCOS</name>
+                <description>Peripheral increment offset
+                size</description>
+                <bitOffset>15</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>MSIZE</name>
+                <description>Memory data size</description>
+                <bitOffset>13</bitOffset>
+                <bitWidth>2</bitWidth>
+              </field>
+              <field>
+                <name>PSIZE</name>
+                <description>Peripheral data size</description>
+                <bitOffset>11</bitOffset>
+                <bitWidth>2</bitWidth>
+              </field>
+              <field>
+                <name>MINC</name>
+                <description>Memory increment mode</description>
+                <bitOffset>10</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>PINC</name>
+                <description>Peripheral increment mode</description>
+                <bitOffset>9</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>CIRC</name>
+                <description>Circular mode</description>
+                <bitOffset>8</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>DIR</name>
+                <description>Data transfer direction</description>
+                <bitOffset>6</bitOffset>
+                <bitWidth>2</bitWidth>
+              </field>
+              <field>
+                <name>PFCTRL</name>
+                <description>Peripheral flow controller</description>
+                <bitOffset>5</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>TCIE</name>
+                <description>Transfer complete interrupt
+                enable</description>
+                <bitOffset>4</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>HTIE</name>
+                <description>Half transfer interrupt
+                enable</description>
+                <bitOffset>3</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>TEIE</name>
+                <description>Transfer error interrupt
+                enable</description>
+                <bitOffset>2</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>DMEIE</name>
+                <description>Direct mode error interrupt
+                enable</description>
+                <bitOffset>1</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>EN</name>
+                <description>Stream enable / flag stream ready when
+                read low</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>SNDTR</name>
+            <displayName>SxNDTR</displayName>
+            <description>DMA Stream X number of data
+            register</description>
+            <addressOffset>0x4</addressOffset>
+            <size>0x20</size>
+            <access>read-write</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>NDT</name>
+                <description>Number of data items to
+                transfer</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>16</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>SPAR</name>
+            <displayName>SxPAR</displayName>
+            <description>DMA Stream X peripheral address
+            register</description>
+            <addressOffset>0x8</addressOffset>
+            <size>0x20</size>
+            <access>read-write</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>PA</name>
+                <description>Peripheral address</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>32</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>SM0AR</name>
+            <displayName>SxM0AR</displayName>
+            <description>DMA Stream X memory 0 address
+            register</description>
+            <addressOffset>0xC</addressOffset>
+            <size>0x20</size>
+            <access>read-write</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>M0A</name>
+                <description>Memory 0 address</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>32</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>SM1AR</name>
+            <displayName>SxM1AR</displayName>
+            <description>DMA Stream X memory 1 address
+            register</description>
+            <addressOffset>0x10</addressOffset>
+            <size>0x20</size>
+            <access>read-write</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>M1A</name>
+                <description>Memory 1 address (used in case of Double
+                buffer mode)</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>32</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>SFCR</name>
+            <displayName>SxFCR</displayName>
+            <description>DMA Stream X FIFO control register</description>
+            <addressOffset>0x14</addressOffset>
+            <size>0x20</size>
+            <resetValue>0x00000021</resetValue>
+            <fields>
+              <field>
+                <name>FEIE</name>
+                <description>FIFO error interrupt
+                enable</description>
+                <bitOffset>7</bitOffset>
+                <bitWidth>1</bitWidth>
+                <access>read-write</access>
+              </field>
+              <field>
+                <name>FS</name>
+                <description>FIFO status</description>
+                <bitOffset>3</bitOffset>
+                <bitWidth>3</bitWidth>
+                <access>read-only</access>
+              </field>
+              <field>
+                <name>DMDIS</name>
+                <description>Direct mode disable</description>
+                <bitOffset>2</bitOffset>
+                <bitWidth>1</bitWidth>
+                <access>read-write</access>
+              </field>
+              <field>
+                <name>FTH</name>
+                <description>FIFO threshold selection</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>2</bitWidth>
+                <access>read-write</access>
+              </field>
+            </fields>
+          </register>
+        </cluster>
+      </registers>
+    

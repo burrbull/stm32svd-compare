@@ -1,0 +1,489 @@
+<registers>
+        <register>
+          <name>CFGR1</name>
+          <displayName>CFGR1</displayName>
+          <description>SYSCFG configuration register
+          1</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>BOOT_MODE</name>
+              <description>Boot mode selected by the boot pins
+              status bits</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>MEM_MODE</name>
+              <description>Memory mapping selection
+              bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CFGR2</name>
+          <displayName>CFGR2</displayName>
+          <description>SYSCFG configuration register
+          2</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>I2C2_FMP</name>
+              <description>I2C2 Fm+ drive capability enable
+              bit</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>I2C1_FMP</name>
+              <description>I2C1 Fm+ drive capability enable
+              bit</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>I2C_PB9_FMP</name>
+              <description>Fm+ drive capability on PB9 enable
+              bit</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>I2C_PB8_FMP</name>
+              <description>Fm+ drive capability on PB8 enable
+              bit</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>I2C_PB7_FMP</name>
+              <description>Fm+ drive capability on PB7 enable
+              bit</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>I2C_PB6_FMP</name>
+              <description>Fm+ drive capability on PB6 enable
+              bit</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CAPA</name>
+              <description>Configuration of internal VLCD rail
+              connection to optional external
+              capacitor</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>FWDISEN</name>
+              <description>Firewall disable bit</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>EXTICR1</name>
+          <displayName>EXTICR1</displayName>
+          <description>external interrupt configuration register
+          1</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>EXTI3</name>
+              <description>EXTI x configuration (x = 0 to
+              3)</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI2</name>
+              <description>EXTI x configuration (x = 0 to
+              3)</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI1</name>
+              <description>EXTI x configuration (x = 0 to
+              3)</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI0</name>
+              <description>EXTI x configuration (x = 0 to
+              3)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>EXTICR2</name>
+          <displayName>EXTICR2</displayName>
+          <description>external interrupt configuration register
+          2</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>EXTI7</name>
+              <description>EXTI x configuration (x = 4 to
+              7)</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI6</name>
+              <description>EXTI x configuration (x = 4 to
+              7)</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI5</name>
+              <description>EXTI x configuration (x = 4 to
+              7)</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI4</name>
+              <description>EXTI x configuration (x = 4 to
+              7)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>EXTICR3</name>
+          <displayName>EXTICR3</displayName>
+          <description>external interrupt configuration register
+          3</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>EXTI11</name>
+              <description>EXTI x configuration (x = 8 to
+              11)</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI10</name>
+              <description>EXTI10</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI9</name>
+              <description>EXTI x configuration (x = 8 to
+              11)</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI8</name>
+              <description>EXTI x configuration (x = 8 to
+              11)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>EXTICR4</name>
+          <displayName>EXTICR4</displayName>
+          <description>external interrupt configuration register
+          4</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>EXTI15</name>
+              <description>EXTI x configuration (x = 12 to
+              15)</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI14</name>
+              <description>EXTI14</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI13</name>
+              <description>EXTI13</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI12</name>
+              <description>EXTI12</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>COMP1_CTRL</name>
+          <displayName>COMP1_CTRL</displayName>
+          <description>Comparator 1 control and status
+          register</description>
+          <addressOffset>0x18</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>COMP1LOCK</name>
+              <description>COMP1_CSR register lock
+              bit</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>COMP1VALUE</name>
+              <description>Comparator 1 output status
+              bit</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>COMP1POLARITY</name>
+              <description>Comparator 1 polarity selection
+              bit</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>COMP1LPTIMIN1</name>
+              <description>Comparator 1 LPTIM input propagation
+              bit</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>COMP1WM</name>
+              <description>Comparator 1 window mode selection
+              bit</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>COMP1INNSEL</name>
+              <description>Comparator 1 Input Minus connection
+              configuration bit</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>COMP1EN</name>
+              <description>Comparator 1 enable bit</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>COMP2_CTRL</name>
+          <displayName>COMP2_CTRL</displayName>
+          <description>Comparator 2 control and status
+          register</description>
+          <addressOffset>0x1C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>COMP2LOCK</name>
+              <description>COMP2_CSR register lock
+              bit</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>COMP2VALUE</name>
+              <description>Comparator 2 output status
+              bit</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>COMP2POLARITY</name>
+              <description>Comparator 2 polarity selection
+              bit</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>COMP2LPTIMIN1</name>
+              <description>Comparator 2 LPTIM input 1 propagation
+              bit</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>COMP2LPTIMIN2</name>
+              <description>Comparator 2 LPTIM input 2 propagation
+              bit</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>COMP2INPSEL</name>
+              <description>Comparator 2 Input Plus connection
+              configuration bit</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>COMP2INNSEL</name>
+              <description>Comparator 2 Input Minus connection
+              configuration bit</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>COMP2SPEED</name>
+              <description>Comparator 2 power mode selection
+              bit</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>COMP2EN</name>
+              <description>Comparator 2 enable bit</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CFGR3</name>
+          <displayName>CFGR3</displayName>
+          <description>SYSCFG configuration register
+          3</description>
+          <addressOffset>0x20</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REF_LOCK</name>
+              <description>REF_CTRL lock bit</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>VREFINT_RDYF</name>
+              <description>VREFINT ready flag</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>VREFINT_COMP_RDYF</name>
+              <description>VREFINT for comparator ready
+              flag</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>VREFINT_ADC_RDYF</name>
+              <description>VREFINT for ADC ready flag</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>SENSOR_ADC_RDYF</name>
+              <description>Sensor for ADC ready flag</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>REF_RC48MHz_RDYF</name>
+              <description>VREFINT for 48 MHz RC oscillator ready
+              flag</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>ENREF_RC48MHz</name>
+              <description>VREFINT reference for 48 MHz RC
+              oscillator enable bit</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ENBUF_VREFINT_COMP</name>
+              <description>VREFINT reference for comparator 2
+              enable bit</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ENBUF_SENSOR_ADC</name>
+              <description>Sensor reference for ADC enable
+              bit</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ENBUF_BGAP_ADC</name>
+              <description>VREFINT reference for ADC enable
+              bit</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SEL_VREF_OUT</name>
+              <description>BGAP_ADC connection bit</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EN_BGAP</name>
+              <description>Vref Enable bit</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

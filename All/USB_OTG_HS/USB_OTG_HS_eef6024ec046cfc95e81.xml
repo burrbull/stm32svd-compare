@@ -1,0 +1,33 @@
+<registers>
+        <register>
+          <name>OTG_HS_PCGCR</name>
+          <displayName>OTG_HS_PCGCR</displayName>
+          <description>Power and clock gating control
+          register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PHYSUSP</name>
+              <description>PHY suspended</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>GATEHCLK</name>
+              <description>Gate HCLK</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>STPPCLK</name>
+              <description>Stop PHY clock</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

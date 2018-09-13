@@ -1,0 +1,343 @@
+<registers>
+        <register>
+          <name>CR</name>
+          <displayName>CR</displayName>
+          <description>SWPMI Configuration/Control
+          register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DEACT</name>
+              <description>Single wire protocol master interface
+              deactivate</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWPME</name>
+              <description>Single wire protocol master interface
+              enable</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LPBK</name>
+              <description>Loopback mode enable</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TXMODE</name>
+              <description>Transmission buffering
+              mode</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RXMODE</name>
+              <description>Reception buffering mode</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TXDMA</name>
+              <description>Transmission DMA enable</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RXDMA</name>
+              <description>Reception DMA enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BRR</name>
+          <displayName>BRR</displayName>
+          <description>SWPMI Bitrate register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000001</resetValue>
+          <fields>
+            <field>
+              <name>BR</name>
+              <description>Bitrate prescaler</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ISR</name>
+          <displayName>ISR</displayName>
+          <description>SWPMI Interrupt and Status
+          register</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x000002C2</resetValue>
+          <fields>
+            <field>
+              <name>DEACTF</name>
+              <description>DEACTIVATED flag</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SUSP</name>
+              <description>SUSPEND flag</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SRF</name>
+              <description>Slave resume flag</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TCF</name>
+              <description>Transfer complete flag</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TXE</name>
+              <description>Transmit data register
+              empty</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RXNE</name>
+              <description>Receive data register not
+              empty</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TXUNRF</name>
+              <description>Transmit underrun error
+              flag</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RXOVRF</name>
+              <description>Receive overrun error flag</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RXBERF</name>
+              <description>Receive CRC error flag</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TXBEF</name>
+              <description>Transmit buffer empty flag</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RXBFF</name>
+              <description>Receive buffer full flag</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ICR</name>
+          <displayName>ICR</displayName>
+          <description>SWPMI Interrupt Flag Clear
+          register</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CSRF</name>
+              <description>Clear slave resume flag</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CTCF</name>
+              <description>Clear transfer complete
+              flag</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CTXUNRF</name>
+              <description>Clear transmit underrun error
+              flag</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CRXOVRF</name>
+              <description>Clear receive overrun error
+              flag</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CRXBERF</name>
+              <description>Clear receive CRC error
+              flag</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CTXBEF</name>
+              <description>Clear transmit buffer empty
+              flag</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CRXBFF</name>
+              <description>Clear receive buffer full
+              flag</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>IER</name>
+          <displayName>IER</displayName>
+          <description>SWPMI Interrupt Enable
+          register</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>SRIE</name>
+              <description>Slave resume interrupt
+              enable</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TCIE</name>
+              <description>Transmit complete interrupt
+              enable</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIE</name>
+              <description>Transmit interrupt enable</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RIE</name>
+              <description>Receive interrupt enable</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TXUNRIE</name>
+              <description>Transmit underrun error interrupt
+              enable</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RXOVRIE</name>
+              <description>Receive overrun error interrupt
+              enable</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RXBERIE</name>
+              <description>Receive CRC error interrupt
+              enable</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TXBEIE</name>
+              <description>Transmit buffer empty interrupt
+              enable</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RXBFIE</name>
+              <description>Receive buffer full interrupt
+              enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>RFL</name>
+          <displayName>RFL</displayName>
+          <description>SWPMI Receive Frame Length
+          register</description>
+          <addressOffset>0x18</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>RFL</name>
+              <description>Receive frame length</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TDR</name>
+          <displayName>TDR</displayName>
+          <description>SWPMI Transmit data register</description>
+          <addressOffset>0x1C</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>TD</name>
+              <description>Transmit data</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>RDR</name>
+          <displayName>RDR</displayName>
+          <description>SWPMI Receive data register</description>
+          <addressOffset>0x20</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>RD</name>
+              <description>received data</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

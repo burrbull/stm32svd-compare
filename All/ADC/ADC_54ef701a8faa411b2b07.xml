@@ -1,0 +1,1047 @@
+<registers>
+        <register>
+          <name>SR</name>
+          <displayName>SR</displayName>
+          <description>status register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>JCNR</name>
+              <description>Injected channel not ready</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>RCNR</name>
+              <description>Regular channel not ready</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>ADONS</name>
+              <description>ADC ON status</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>OVR</name>
+              <description>Overrun</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>STRT</name>
+              <description>Regular channel start flag</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>JSTRT</name>
+              <description>Injected channel start
+              flag</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>JEOC</name>
+              <description>Injected channel end of
+              conversion</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EOC</name>
+              <description>Regular channel end of
+              conversion</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>AWD</name>
+              <description>Analog watchdog flag</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CR1</name>
+          <displayName>CR1</displayName>
+          <description>control register 1</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>OVRIE</name>
+              <description>Overrun interrupt enable</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RES</name>
+              <description>Resolution</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>AWDEN</name>
+              <description>Analog watchdog enable on regular
+              channels</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>JAWDEN</name>
+              <description>Analog watchdog enable on injected
+              channels</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PDI</name>
+              <description>Power down during the idle
+              phase</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PDD</name>
+              <description>Power down during the delay
+              phase</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DISCNUM</name>
+              <description>Discontinuous mode channel
+              count</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>JDISCEN</name>
+              <description>Discontinuous mode on injected
+              channels</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DISCEN</name>
+              <description>Discontinuous mode on regular
+              channels</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>JAUTO</name>
+              <description>Automatic injected group
+              conversion</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>AWDSGL</name>
+              <description>Enable the watchdog on a single channel
+              in scan mode</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SCAN</name>
+              <description>Scan mode</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>JEOCIE</name>
+              <description>Interrupt enable for injected
+              channels</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>AWDIE</name>
+              <description>Analog watchdog interrupt
+              enable</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EOCIE</name>
+              <description>Interrupt enable for EOC</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>AWDCH</name>
+              <description>Analog watchdog channel select
+              bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CR2</name>
+          <displayName>CR2</displayName>
+          <description>control register 2</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>SWSTART</name>
+              <description>Start conversion of regular
+              channels</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTEN</name>
+              <description>External trigger enable for regular
+              channels</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>EXTSEL</name>
+              <description>External event select for regular
+              group</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>JSWSTART</name>
+              <description>Start conversion of injected
+              channels</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>JEXTEN</name>
+              <description>External trigger enable for injected
+              channels</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>JEXTSEL</name>
+              <description>External event select for injected
+              group</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>ALIGN</name>
+              <description>Data alignment</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EOCS</name>
+              <description>End of conversion
+              selection</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DDS</name>
+              <description>DMA disable selection (for single ADC
+              mode)</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DMA</name>
+              <description>Direct memory access mode (for single
+              ADC mode)</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DELS</name>
+              <description>Delay selection</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>ADC_CFG</name>
+              <description>ADC configuration</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CONT</name>
+              <description>Continuous conversion</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ADON</name>
+              <description>A/D Converter ON / OFF</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SMPR1</name>
+          <displayName>SMPR1</displayName>
+          <description>ADC sample time register 1</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>SMP29</name>
+              <description>Channel 29 sampling time
+              selection</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>SMP28</name>
+              <description>Channel 28 sampling time
+              selection</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>SMP27</name>
+              <description>Channel 27 sampling time
+              selection</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>SMP26</name>
+              <description>Channel 26 sampling time
+              selection</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>SMP25</name>
+              <description>Channel 25 sampling time
+              selection</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>SMP24</name>
+              <description>Channel 24 sampling time
+              selection</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>SMP23</name>
+              <description>Channel 23 sampling time
+              selection</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>SMP22</name>
+              <description>Channel 22 sampling time
+              selection</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>SMP21</name>
+              <description>Channel 21 sampling time
+              selection</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>SMP20</name>
+              <description>Channel 20 sampling time
+              selection</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SMPR2</name>
+          <displayName>SMPR2</displayName>
+          <description>sample time register 2</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>SMP19</name>
+              <description>Channel 19 sampling time
+              selection</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>SMP18</name>
+              <description>Channel 18 sampling time
+              selection</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>SMP17</name>
+              <description>Channel 17 sampling time
+              selection</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>SMP16</name>
+              <description>Channel 16 sampling time
+              selection</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>SMP15</name>
+              <description>Channel 15 sampling time
+              selection</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>SMP14</name>
+              <description>Channel 14 sampling time
+              selection</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>SMP13</name>
+              <description>Channel 13 sampling time
+              selection</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>SMP12</name>
+              <description>Channel 12 sampling time
+              selection</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>SMP11</name>
+              <description>Channel 11 sampling time
+              selection</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>SMP10</name>
+              <description>Channel 10 sampling time
+              selection</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SMPR3</name>
+          <displayName>SMPR3</displayName>
+          <description>sample time register 3</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>SMP9</name>
+              <description>Channel 9 sampling time
+              selection</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>SMP8</name>
+              <description>Channel 8 sampling time
+              selection</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>SMP7</name>
+              <description>Channel 7 sampling time
+              selection</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>SMP6</name>
+              <description>Channel 6 sampling time
+              selection</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>SMP5</name>
+              <description>Channel 5 sampling time
+              selection</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>SMP4</name>
+              <description>Channel 4 sampling time
+              selection</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>SMP3</name>
+              <description>Channel 3 sampling time
+              selection</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>SMP2</name>
+              <description>Channel 2 sampling time
+              selection</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>SMP1</name>
+              <description>Channel 1 sampling time
+              selection</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>SMP0</name>
+              <description>Channel 0 sampling time
+              selection</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>JOFR%s</name>
+          <displayName>JOFRx</displayName>
+          <dim>4</dim>
+          <dimIndex>1-4</dimIndex>
+          <dimIncrement>0x4</dimIncrement>
+          <description>injected channel data offset register
+          x</description>
+          <addressOffset>0x18</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>JOFFSET</name>
+              <description>Data offset for injected channel
+              x</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>12</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HTR</name>
+          <displayName>HTR</displayName>
+          <description>watchdog higher threshold
+          register</description>
+          <addressOffset>0x28</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000FFF</resetValue>
+          <fields>
+            <field>
+              <name>HT</name>
+              <description>Analog watchdog higher
+              threshold</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>12</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>LTR</name>
+          <displayName>LTR</displayName>
+          <description>watchdog lower threshold
+          register</description>
+          <addressOffset>0x2C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>LT</name>
+              <description>Analog watchdog lower
+              threshold</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>12</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SQR1</name>
+          <displayName>SQR1</displayName>
+          <description>ADC regular sequence register
+          1</description>
+          <addressOffset>0x30</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>L</name>
+              <description>Regular channel sequence
+              length</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>SQ28</name>
+              <description>28th conversion in regular
+              sequence</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+            <field>
+              <name>SQ27</name>
+              <description>27th conversion in regular
+              sequence</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+            <field>
+              <name>SQ26</name>
+              <description>26th conversion in regular
+              sequence</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+            <field>
+              <name>SQ25</name>
+              <description>25th conversion in regular
+              sequence</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SQR2</name>
+          <displayName>SQR2</displayName>
+          <description>regular sequence register 2</description>
+          <addressOffset>0x34</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>SQ24</name>
+              <description>24th conversion in regular
+              sequence</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+            <field>
+              <name>SQ23</name>
+              <description>23rd conversion in regular
+              sequence</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+            <field>
+              <name>SQ22</name>
+              <description>22nd conversion in regular
+              sequence</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+            <field>
+              <name>SQ21</name>
+              <description>21st conversion in regular
+              sequence</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+            <field>
+              <name>SQ20</name>
+              <description>20th conversion in regular
+              sequence</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+            <field>
+              <name>SQ19</name>
+              <description>19th conversion in regular
+              sequence</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SQR3</name>
+          <displayName>SQR3</displayName>
+          <description>regular sequence register 3</description>
+          <addressOffset>0x38</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>SQ18</name>
+              <description>18th conversion in regular
+              sequence</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+            <field>
+              <name>SQ17</name>
+              <description>17th conversion in regular
+              sequence</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+            <field>
+              <name>SQ16</name>
+              <description>16th conversion in regular
+              sequence</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+            <field>
+              <name>SQ15</name>
+              <description>15th conversion in regular
+              sequence</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+            <field>
+              <name>SQ14</name>
+              <description>14th conversion in regular
+              sequence</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+            <field>
+              <name>SQ13</name>
+              <description>13th conversion in regular
+              sequence</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SQR4</name>
+          <displayName>SQR4</displayName>
+          <description>ADC regular sequence register
+          4</description>
+          <addressOffset>0x3C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>SQ12</name>
+              <description>12th conversion in regular
+              sequence</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+            <field>
+              <name>SQ11</name>
+              <description>11th conversion in regular
+              sequence</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+            <field>
+              <name>SQ10</name>
+              <description>10th conversion in regular
+              sequence</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+            <field>
+              <name>SQ9</name>
+              <description>9th conversion in regular
+              sequence</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+            <field>
+              <name>SQ8</name>
+              <description>8th conversion in regular
+              sequence</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+            <field>
+              <name>SQ7</name>
+              <description>7th conversion in regular
+              sequence</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SQR5</name>
+          <displayName>SQR5</displayName>
+          <description>regular sequence register 5</description>
+          <addressOffset>0x40</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>SQ6</name>
+              <description>6th conversion in regular
+              sequence</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+            <field>
+              <name>SQ5</name>
+              <description>5th conversion in regular
+              sequence</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+            <field>
+              <name>SQ4</name>
+              <description>4th conversion in regular
+              sequence</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+            <field>
+              <name>SQ3</name>
+              <description>3rd conversion in regular
+              sequence</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+            <field>
+              <name>SQ2</name>
+              <description>2nd conversion in regular
+              sequence</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+            <field>
+              <name>SQ1</name>
+              <description>1st conversion in regular
+              sequence</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>JSQR</name>
+          <displayName>JSQR</displayName>
+          <description>injected sequence register</description>
+          <addressOffset>0x44</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>JL</name>
+              <description>Injected sequence length</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>JSQ4</name>
+              <description>4th conversion in injected
+              sequence</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+            <field>
+              <name>JSQ3</name>
+              <description>3rd conversion in injected
+              sequence</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+            <field>
+              <name>JSQ2</name>
+              <description>2nd conversion in injected
+              sequence</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+            <field>
+              <name>JSQ1</name>
+              <description>1st conversion in injected
+              sequence</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>JDR%s</name>
+          <displayName>JDRx</displayName>
+          <dim>4</dim>
+          <dimIndex>1-4</dimIndex>
+          <dimIncrement>0x4</dimIncrement>
+          <description>ADC injected data register x</description>
+          <addressOffset>0x48</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>JDATA</name>
+              <description>Injected data</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DR</name>
+          <displayName>DR</displayName>
+          <description>regular data register</description>
+          <addressOffset>0x58</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DATA</name>
+              <description>Regular data</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SMPR0</name>
+          <displayName>SMPR0</displayName>
+          <description>sample time register 0</description>
+          <addressOffset>0x5C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>SMP</name>
+              <description>Channel Sample time
+              selection</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CSR</name>
+          <displayName>CSR</displayName>
+          <description>ADC common status register</description>
+          <addressOffset>0x300</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>ADONS1</name>
+              <description>ADON Status of ADC1</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OVR1</name>
+              <description>Overrun flag of the ADC</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>STRT1</name>
+              <description>Regular channel Start flag of the
+              ADC</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>JSTRT1</name>
+              <description>Injected channel Start flag of the
+              ADC</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>JEOC1</name>
+              <description>Injected channel end of conversion of
+              the ADC</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EOC1</name>
+              <description>End of conversion of the
+              ADC</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>AWD1</name>
+              <description>Analog watchdog flag of the
+              ADC</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CCR</name>
+          <displayName>CCR</displayName>
+          <description>ADC common control register</description>
+          <addressOffset>0x304</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>TSVREFE</name>
+              <description>Temperature sensor and VREFINT
+              enable</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ADCPRE</name>
+              <description>ADC prescaler</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

@@ -1,0 +1,108 @@
+<registers>
+        <register>
+          <name>IMR</name>
+          <displayName>IMR</displayName>
+          <description>IMR</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>MR</name>
+              <description>Interrupt mask on line x</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>23</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>EMR</name>
+          <displayName>EMR</displayName>
+          <description>EMR</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>MR</name>
+              <description>Event mask on line x</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>23</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>RTSR</name>
+          <displayName>RTSR</displayName>
+          <description>RTSR</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>TR</name>
+              <description>Rising edge trigger event configuration
+              bit of line x</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>23</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>FTSR</name>
+          <displayName>FTSR</displayName>
+          <description>FTSR</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>TR</name>
+              <description>Falling edge trigger event configuration
+              bit of line x</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>23</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SWIER</name>
+          <displayName>SWIER</displayName>
+          <description>SWIER</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>SWIER</name>
+              <description>Software interrupt on line
+              x</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>23</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PR</name>
+          <displayName>PR</displayName>
+          <description>PR</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PR</name>
+              <description>Pending bit</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>23</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

@@ -1,0 +1,837 @@
+<registers>
+        <register>
+          <name>BCR1</name>
+          <displayName>BCR1</displayName>
+          <description>BCR1</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>WFDIS</name>
+              <description>Write FIFO Disable</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CCLKEN</name>
+              <description>Continuous Clock Enable</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CBURSTRW</name>
+              <description>Write burst enable</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CPSIZE</name>
+              <description>CRAM page size</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>ASYNCWAIT</name>
+              <description>Wait signal during asynchronous
+              transfers</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTMOD</name>
+              <description>Extended mode enable</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WAITEN</name>
+              <description>Wait enable bit</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WREN</name>
+              <description>Write enable bitWREN</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WAITCFG</name>
+              <description>Wait timing configuration</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WAITPOL</name>
+              <description>Wait signal polarity bit</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>BURSTEN</name>
+              <description>Burst enable bit</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FACCEN</name>
+              <description>Flash access enable</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MWID</name>
+              <description>Memory data bus width</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>MTYP</name>
+              <description>Memory type</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>MUXEN</name>
+              <description>Memory bank enable bit</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MBKEN</name>
+              <description>Memory bank enable bit</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BTR1</name>
+          <displayName>BTR1</displayName>
+          <description>BTR1</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>ACCMOD</name>
+              <description>Access mode</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>DATLAT</name>
+              <description>Data latency</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>CLKDIV</name>
+              <description>Clock divide ratio</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>BUSTURN</name>
+              <description>Bus turnaround phase
+              duration</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>DATAST</name>
+              <description>Data-phase duration</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>ADDHLD</name>
+              <description>Address-hold phase
+              duration</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>ADDSET</name>
+              <description>Address setup phase
+              duration</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BCR2</name>
+          <displayName>BCR2</displayName>
+          <description>BCR2</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>WFDIS</name>
+              <description>Write FIFO Disable</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CCLKEN</name>
+              <description>Continuous Clock Enable</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CBURSTRW</name>
+              <description>Write burst enable</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CPSIZE</name>
+              <description>CRAM page size</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>ASYNCWAIT</name>
+              <description>Wait signal during asynchronous
+              transfers</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTMOD</name>
+              <description>Extended mode enable</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WAITEN</name>
+              <description>Wait enable bit</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WREN</name>
+              <description>Write enable bit</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WAITCFG</name>
+              <description>Wait timing configuration</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WAITPOL</name>
+              <description>Wait signal polarity bit</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>BURSTEN</name>
+              <description>Burst enable bit</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FACCEN</name>
+              <description>Flash access enable</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MWID</name>
+              <description>Memory data bus width</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>MTYP</name>
+              <description>Memory type</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>MUXEN</name>
+              <description>Address/data multiplexing enable
+              bit</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MBKEN</name>
+              <description>Memory bank enable bit</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BTR2</name>
+          <displayName>BTR2</displayName>
+          <description>BTR2</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>ACCMOD</name>
+              <description>Access mode</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>DATLAT</name>
+              <description>Data latency</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>CLKDIV</name>
+              <description>Clock divide ratio</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>BUSTURN</name>
+              <description>Bus turnaround phase
+              duration</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>DATAST</name>
+              <description>Data-phase duration</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>ADDHLD</name>
+              <description>Address-hold phase
+              duration</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>ADDSET</name>
+              <description>Address setup phase
+              duration</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BCR3</name>
+          <displayName>BCR3</displayName>
+          <description>BCR3</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>WFDIS</name>
+              <description>Write FIFO Disable</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CCLKEN</name>
+              <description>Continuous Clock Enable</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CBURSTRW</name>
+              <description>Write burst enable</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CPSIZE</name>
+              <description>CRAM page size</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>ASYNCWAIT</name>
+              <description>Wait signal during asynchronous
+              transfers</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTMOD</name>
+              <description>Extended mode enable</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WAITEN</name>
+              <description>Write enable bit</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WREN</name>
+              <description>Write enable bit</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WAITCFG</name>
+              <description>Wait timing configuration</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WAITPOL</name>
+              <description>Wait signal polarity bit</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>BURSTEN</name>
+              <description>Burst enable bit</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FACCEN</name>
+              <description>Flash access enable</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MWID</name>
+              <description>Memory data bus width</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>MTYP</name>
+              <description>Memory type</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>MUXEN</name>
+              <description>Address/data multiplexing enable
+              bit</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MBKEN</name>
+              <description>Memory bank enable bit</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BTR3</name>
+          <displayName>BTR3</displayName>
+          <description>BTR3</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>ACCMOD</name>
+              <description>Access mode</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>DATLAT</name>
+              <description>Data latency</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>CLKDIV</name>
+              <description>Clock divide ratio</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>BUSTURN</name>
+              <description>Bus turnaround phase
+              duration</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>DATAST</name>
+              <description>Data-phase duration</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>ADDHLD</name>
+              <description>Address-hold phase
+              duration</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>ADDSET</name>
+              <description>Address setup phase
+              duration</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BCR4</name>
+          <displayName>BCR4</displayName>
+          <description>BCR4</description>
+          <addressOffset>0x18</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>WFDIS</name>
+              <description>Write FIFO Disable</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CCLKEN</name>
+              <description>Continuous Clock Enable</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CBURSTRW</name>
+              <description>Write burst enable</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CPSIZE</name>
+              <description>CRAM page size</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>ASYNCWAIT</name>
+              <description>Extended mode enable</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTMOD</name>
+              <description>Extended mode enable</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WAITEN</name>
+              <description>Wait enable bit</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WREN</name>
+              <description>Write enable bit</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WAITCFG</name>
+              <description>Wait timing configuration</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WAITPOL</name>
+              <description>Wait signal polarity bit</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>BURSTEN</name>
+              <description>Burst enable bit</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FACCEN</name>
+              <description>Flash access enable</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MWID</name>
+              <description>Memory data bus width</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>MTYP</name>
+              <description>Memory type</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>MUXEN</name>
+              <description>Address/data multiplexing enable
+              bit</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MBKEN</name>
+              <description>Memory bank enable bit</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BTR4</name>
+          <displayName>BTR4</displayName>
+          <description>BTR4</description>
+          <addressOffset>0x1C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>ACCMOD</name>
+              <description>Access mode</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>DATLAT</name>
+              <description>Data latency</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>CLKDIV</name>
+              <description>Clock divide ratio</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>BUSTURN</name>
+              <description>Bus turnaround phase
+              duration</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>DATAST</name>
+              <description>Data-phase duration</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>ADDHLD</name>
+              <description>Address-hold phase
+              duration</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>ADDSET</name>
+              <description>Address setup phase
+              duration</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BWTR1</name>
+          <displayName>BWTR1</displayName>
+          <description>BWTR1</description>
+          <addressOffset>0x104</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>ACCMOD</name>
+              <description>Access mode</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>BUSTURN</name>
+              <description>Bus turnaround phase
+              duration</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>DATAST</name>
+              <description>Data-phase duration</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>ADDHLD</name>
+              <description>Address-hold phase
+              duration</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>ADDSET</name>
+              <description>Address setup phase
+              duration</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BWTR2</name>
+          <displayName>BWTR2</displayName>
+          <description>BWTR2</description>
+          <addressOffset>0x10C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>ACCMOD</name>
+              <description>Access mode</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>BUSTURN</name>
+              <description>Bus turnaround phase
+              duration</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>DATAST</name>
+              <description>Data-phase duration</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>ADDHLD</name>
+              <description>Address-hold phase
+              duration</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>ADDSET</name>
+              <description>Address setup phase
+              duration</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BWTR3</name>
+          <displayName>BWTR3</displayName>
+          <description>BWTR3</description>
+          <addressOffset>0x114</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>ACCMOD</name>
+              <description>Access mode</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>BUSTURN</name>
+              <description>Bus turnaround phase
+              duration</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>DATAST</name>
+              <description>Data-phase duration</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>ADDHLD</name>
+              <description>Address-hold phase
+              duration</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>ADDSET</name>
+              <description>Address setup phase
+              duration</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BWTR4</name>
+          <displayName>BWTR4</displayName>
+          <description>BWTR4</description>
+          <addressOffset>0x11C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>ACCMOD</name>
+              <description>Access mode</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>BUSTURN</name>
+              <description>Bus turnaround phase
+              duration</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>DATAST</name>
+              <description>Data-phase duration</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>ADDHLD</name>
+              <description>Address-hold phase
+              duration</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>ADDSET</name>
+              <description>Address setup phase
+              duration</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

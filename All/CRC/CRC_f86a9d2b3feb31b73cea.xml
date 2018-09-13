@@ -1,0 +1,55 @@
+<registers>
+        <register>
+          <name>DR</name>
+          <displayName>DR</displayName>
+          <description>Data register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0xFFFFFFFF</resetValue>
+          <fields>
+            <field>
+              <name>DR</name>
+              <description>Data register bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>IDR</name>
+          <displayName>IDR</displayName>
+          <description>Independent data register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>IDR</name>
+              <description>Independent data register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>7</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CR</name>
+          <displayName>CR</displayName>
+          <description>Control register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>RESET</name>
+              <description>reset bit</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <modifiedWriteValues>set</modifiedWriteValues>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

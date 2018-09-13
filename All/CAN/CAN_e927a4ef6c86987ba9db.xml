@@ -1,0 +1,2029 @@
+<registers>
+        <register>
+          <name>MCR</name>
+          <displayName>MCR</displayName>
+          <description>master control register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DBF</name>
+              <description>DBF</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RESET</name>
+              <description>RESET</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TTCM</name>
+              <description>TTCM</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ABOM</name>
+              <description>ABOM</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>AWUM</name>
+              <description>AWUM</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>NART</name>
+              <description>NART</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RFLM</name>
+              <description>RFLM</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TXFP</name>
+              <description>TXFP</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SLEEP</name>
+              <description>SLEEP</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>INRQ</name>
+              <description>INRQ</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MSR</name>
+          <displayName>MSR</displayName>
+          <description>master status register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>RX</name>
+              <description>RX</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>SAMP</name>
+              <description>SAMP</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>RXM</name>
+              <description>RXM</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TXM</name>
+              <description>TXM</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>SLAKI</name>
+              <description>SLAKI</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>WKUI</name>
+              <description>WKUI</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ERRI</name>
+              <description>ERRI</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SLAK</name>
+              <description>SLAK</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>INAK</name>
+              <description>INAK</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TSR</name>
+          <displayName>TSR</displayName>
+          <description>transmit status register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>LOW2</name>
+              <description>Lowest priority flag for mailbox
+              2</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>LOW1</name>
+              <description>Lowest priority flag for mailbox
+              1</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>LOW0</name>
+              <description>Lowest priority flag for mailbox
+              0</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TME2</name>
+              <description>Lowest priority flag for mailbox
+              2</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TME1</name>
+              <description>Lowest priority flag for mailbox
+              1</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TME0</name>
+              <description>Lowest priority flag for mailbox
+              0</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>CODE</name>
+              <description>CODE</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>ABRQ2</name>
+              <description>ABRQ2</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TERR2</name>
+              <description>TERR2</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ALST2</name>
+              <description>ALST2</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TXOK2</name>
+              <description>TXOK2</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RQCP2</name>
+              <description>RQCP2</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ABRQ1</name>
+              <description>ABRQ1</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TERR1</name>
+              <description>TERR1</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ALST1</name>
+              <description>ALST1</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TXOK1</name>
+              <description>TXOK1</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RQCP1</name>
+              <description>RQCP1</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ABRQ0</name>
+              <description>ABRQ0</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TERR0</name>
+              <description>TERR0</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ALST0</name>
+              <description>ALST0</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TXOK0</name>
+              <description>TXOK0</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RQCP0</name>
+              <description>RQCP0</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>RF%sR</name>
+          <displayName>RFxR</displayName>
+          <description>receive FIFO X register</description>
+          <dim>2</dim>
+          <dimIndex>0-1</dimIndex>
+          <dimIncrement>0x4</dimIncrement>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>RFOM</name>
+              <description>RFOMx</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FOVR</name>
+              <description>FOVRx</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FULL</name>
+              <description>FULLx</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FMP</name>
+              <description>FMPx</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>IER</name>
+          <displayName>IER</displayName>
+          <description>interrupt enable register</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>SLKIE</name>
+              <description>SLKIE</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WKUIE</name>
+              <description>WKUIE</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ERRIE</name>
+              <description>ERRIE</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LECIE</name>
+              <description>LECIE</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>BOFIE</name>
+              <description>BOFIE</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EPVIE</name>
+              <description>EPVIE</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EWGIE</name>
+              <description>EWGIE</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FOVIE1</name>
+              <description>FOVIE1</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FFIE1</name>
+              <description>FFIE1</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FMPIE1</name>
+              <description>FMPIE1</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FOVIE0</name>
+              <description>FOVIE0</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FFIE0</name>
+              <description>FFIE0</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FMPIE0</name>
+              <description>FMPIE0</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TMEIE</name>
+              <description>TMEIE</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ESR</name>
+          <displayName>ESR</displayName>
+          <description>error status register</description>
+          <addressOffset>0x18</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REC</name>
+              <description>REC</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TEC</name>
+              <description>TEC</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>LEC</name>
+              <description>LEC</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BOFF</name>
+              <description>BOFF</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>EPVF</name>
+              <description>EPVF</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>EWGF</name>
+              <description>EWGF</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BTR</name>
+          <displayName>BTR</displayName>
+          <description>bit timing register</description>
+          <addressOffset>0x1C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>SILM</name>
+              <description>SILM</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LBKM</name>
+              <description>LBKM</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SJW</name>
+              <description>SJW</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>TS2</name>
+              <description>TS2</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>TS1</name>
+              <description>TS1</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>BRP</name>
+              <description>BRP</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>10</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <cluster>
+          <name>TX%s</name>
+          <displayName>TxR</displayName>
+          <dim>3</dim>
+          <dimIndex>0-2</dimIndex>
+          <dimIncrement>0x10</dimIncrement>
+          <description>TIxR, TDTxR, TDLxR, TDHxR</description>
+          <addressOffset>0x180</addressOffset>
+          <register>
+            <name>TIR</name>
+            <displayName>TIxR</displayName>
+            <description>TX mailbox identifier register</description>
+            <addressOffset>0x0</addressOffset>
+            <size>0x20</size>
+            <access>read-write</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>STID</name>
+                <description>STID</description>
+                <bitOffset>21</bitOffset>
+                <bitWidth>11</bitWidth>
+              </field>
+              <field>
+                <name>EXID</name>
+                <description>EXID</description>
+                <bitOffset>3</bitOffset>
+                <bitWidth>18</bitWidth>
+              </field>
+              <field>
+                <name>IDE</name>
+                <description>IDE</description>
+                <bitOffset>2</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>RTR</name>
+                <description>RTR</description>
+                <bitOffset>1</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>TXRQ</name>
+                <description>TXRQ</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>TDTR</name>
+            <displayName>TDTxR</displayName>
+            <description>mailbox data length control and time stamp
+          register</description>
+            <addressOffset>0x4</addressOffset>
+            <size>0x20</size>
+            <access>read-write</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>TIME</name>
+                <description>TIME</description>
+                <bitOffset>16</bitOffset>
+                <bitWidth>16</bitWidth>
+              </field>
+              <field>
+                <name>TGT</name>
+                <description>TGT</description>
+                <bitOffset>8</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>DLC</name>
+                <description>DLC</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>4</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>TDLR</name>
+            <displayName>TDLxR</displayName>
+            <description>mailbox data low register</description>
+            <addressOffset>0x8</addressOffset>
+            <size>0x20</size>
+            <access>read-write</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>DATA3</name>
+                <description>DATA3</description>
+                <bitOffset>24</bitOffset>
+                <bitWidth>8</bitWidth>
+              </field>
+              <field>
+                <name>DATA2</name>
+                <description>DATA2</description>
+                <bitOffset>16</bitOffset>
+                <bitWidth>8</bitWidth>
+              </field>
+              <field>
+                <name>DATA1</name>
+                <description>DATA1</description>
+                <bitOffset>8</bitOffset>
+                <bitWidth>8</bitWidth>
+              </field>
+              <field>
+                <name>DATA0</name>
+                <description>DATA0</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>8</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>TDHR</name>
+            <displayName>TDHxR</displayName>
+            <description>mailbox data high register</description>
+            <addressOffset>0xC</addressOffset>
+            <size>0x20</size>
+            <access>read-write</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>DATA7</name>
+                <description>DATA7</description>
+                <bitOffset>24</bitOffset>
+                <bitWidth>8</bitWidth>
+              </field>
+              <field>
+                <name>DATA6</name>
+                <description>DATA6</description>
+                <bitOffset>16</bitOffset>
+                <bitWidth>8</bitWidth>
+              </field>
+              <field>
+                <name>DATA5</name>
+                <description>DATA5</description>
+                <bitOffset>8</bitOffset>
+                <bitWidth>8</bitWidth>
+              </field>
+              <field>
+                <name>DATA4</name>
+                <description>DATA4</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>8</bitWidth>
+              </field>
+            </fields>
+          </register>
+        </cluster>
+        <cluster>
+          <name>RX%s</name>
+          <displayName>RxR</displayName>
+          <dim>2</dim>
+          <dimIndex>0-1</dimIndex>
+          <dimIncrement>0x10</dimIncrement>
+          <description>RIxR, RDTxR, RDLxR, TDHxR</description>
+          <addressOffset>0x1B0</addressOffset>
+          <register>
+            <name>RIR</name>
+            <displayName>RIxR</displayName>
+            <description>receive FIFO mailbox identifier
+          register</description>
+            <addressOffset>0x0</addressOffset>
+            <size>0x20</size>
+            <access>read-only</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>STID</name>
+                <description>STID</description>
+                <bitOffset>21</bitOffset>
+                <bitWidth>11</bitWidth>
+              </field>
+              <field>
+                <name>EXID</name>
+                <description>EXID</description>
+                <bitOffset>3</bitOffset>
+                <bitWidth>18</bitWidth>
+              </field>
+              <field>
+                <name>IDE</name>
+                <description>IDE</description>
+                <bitOffset>2</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>RTR</name>
+                <description>RTR</description>
+                <bitOffset>1</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>RDTR</name>
+            <displayName>RDTxR</displayName>
+            <description>mailbox data high register</description>
+            <addressOffset>0x4</addressOffset>
+            <size>0x20</size>
+            <access>read-only</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>TIME</name>
+                <description>TIME</description>
+                <bitOffset>16</bitOffset>
+                <bitWidth>16</bitWidth>
+              </field>
+              <field>
+                <name>FMI</name>
+                <description>FMI</description>
+                <bitOffset>8</bitOffset>
+                <bitWidth>8</bitWidth>
+              </field>
+              <field>
+                <name>DLC</name>
+                <description>DLC</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>4</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>RDLR</name>
+            <displayName>RDLxR</displayName>
+            <description>mailbox data low register</description>
+            <addressOffset>0x8</addressOffset>
+            <size>0x20</size>
+            <access>read-only</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>DATA3</name>
+                <description>DATA3</description>
+                <bitOffset>24</bitOffset>
+                <bitWidth>8</bitWidth>
+              </field>
+              <field>
+                <name>DATA2</name>
+                <description>DATA2</description>
+                <bitOffset>16</bitOffset>
+                <bitWidth>8</bitWidth>
+              </field>
+              <field>
+                <name>DATA1</name>
+                <description>DATA1</description>
+                <bitOffset>8</bitOffset>
+                <bitWidth>8</bitWidth>
+              </field>
+              <field>
+                <name>DATA0</name>
+                <description>DATA0</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>8</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>RDHR</name>
+            <displayName>RDHxR</displayName>
+            <description>mailbox data high register</description>
+            <addressOffset>0xC</addressOffset>
+            <size>0x20</size>
+            <access>read-only</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>DATA7</name>
+                <description>DATA7</description>
+                <bitOffset>24</bitOffset>
+                <bitWidth>8</bitWidth>
+              </field>
+              <field>
+                <name>DATA6</name>
+                <description>DATA6</description>
+                <bitOffset>16</bitOffset>
+                <bitWidth>8</bitWidth>
+              </field>
+              <field>
+                <name>DATA5</name>
+                <description>DATA5</description>
+                <bitOffset>8</bitOffset>
+                <bitWidth>8</bitWidth>
+              </field>
+              <field>
+                <name>DATA4</name>
+                <description>DATA4</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>8</bitWidth>
+              </field>
+            </fields>
+          </register>
+        </cluster>
+        <register>
+          <name>FMR</name>
+          <displayName>FMR</displayName>
+          <description>filter master register</description>
+          <addressOffset>0x200</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CAN2SB</name>
+              <description>CAN2 start bank</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>6</bitWidth>
+            </field>
+            <field>
+              <name>FINIT</name>
+              <description>Filter initialization mode</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>FM1R</name>
+          <displayName>FM1R</displayName>
+          <description>filter mode register</description>
+          <addressOffset>0x204</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>FBM27</name>
+              <description>Filter mode</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FBM26</name>
+              <description>Filter mode</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FBM25</name>
+              <description>Filter mode</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FBM24</name>
+              <description>Filter mode</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FBM23</name>
+              <description>Filter mode</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FBM22</name>
+              <description>Filter mode</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FBM21</name>
+              <description>Filter mode</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FBM20</name>
+              <description>Filter mode</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FBM19</name>
+              <description>Filter mode</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FBM18</name>
+              <description>Filter mode</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FBM17</name>
+              <description>Filter mode</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FBM16</name>
+              <description>Filter mode</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FBM15</name>
+              <description>Filter mode</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FBM14</name>
+              <description>Filter mode</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FBM13</name>
+              <description>Filter mode</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FBM12</name>
+              <description>Filter mode</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FBM11</name>
+              <description>Filter mode</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FBM10</name>
+              <description>Filter mode</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FBM9</name>
+              <description>Filter mode</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FBM8</name>
+              <description>Filter mode</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FBM7</name>
+              <description>Filter mode</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FBM6</name>
+              <description>Filter mode</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FBM5</name>
+              <description>Filter mode</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FBM4</name>
+              <description>Filter mode</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FBM3</name>
+              <description>Filter mode</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FBM2</name>
+              <description>Filter mode</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FBM1</name>
+              <description>Filter mode</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FBM0</name>
+              <description>Filter mode</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>FS1R</name>
+          <displayName>FS1R</displayName>
+          <description>filter scale register</description>
+          <addressOffset>0x20C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>FSC27</name>
+              <description>Filter scale configuration</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FSC26</name>
+              <description>Filter scale configuration</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FSC25</name>
+              <description>Filter scale configuration</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FSC24</name>
+              <description>Filter scale configuration</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FSC23</name>
+              <description>Filter scale configuration</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FSC22</name>
+              <description>Filter scale configuration</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FSC21</name>
+              <description>Filter scale configuration</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FSC20</name>
+              <description>Filter scale configuration</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FSC19</name>
+              <description>Filter scale configuration</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FSC18</name>
+              <description>Filter scale configuration</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FSC17</name>
+              <description>Filter scale configuration</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FSC16</name>
+              <description>Filter scale configuration</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FSC15</name>
+              <description>Filter scale configuration</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FSC14</name>
+              <description>Filter scale configuration</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FSC13</name>
+              <description>Filter scale configuration</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FSC12</name>
+              <description>Filter scale configuration</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FSC11</name>
+              <description>Filter scale configuration</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FSC10</name>
+              <description>Filter scale configuration</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FSC9</name>
+              <description>Filter scale configuration</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FSC8</name>
+              <description>Filter scale configuration</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FSC7</name>
+              <description>Filter scale configuration</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FSC6</name>
+              <description>Filter scale configuration</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FSC5</name>
+              <description>Filter scale configuration</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FSC4</name>
+              <description>Filter scale configuration</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FSC3</name>
+              <description>Filter scale configuration</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FSC2</name>
+              <description>Filter scale configuration</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FSC1</name>
+              <description>Filter scale configuration</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FSC0</name>
+              <description>Filter scale configuration</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>FFA1R</name>
+          <displayName>FFA1R</displayName>
+          <description>filter FIFO assignment
+          register</description>
+          <addressOffset>0x214</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>FFA27</name>
+              <description>Filter FIFO assignment for filter
+              27</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FFA26</name>
+              <description>Filter FIFO assignment for filter
+              26</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FFA25</name>
+              <description>Filter FIFO assignment for filter
+              25</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FFA24</name>
+              <description>Filter FIFO assignment for filter
+              24</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FFA23</name>
+              <description>Filter FIFO assignment for filter
+              23</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FFA22</name>
+              <description>Filter FIFO assignment for filter
+              22</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FFA21</name>
+              <description>Filter FIFO assignment for filter
+              21</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FFA20</name>
+              <description>Filter FIFO assignment for filter
+              20</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FFA19</name>
+              <description>Filter FIFO assignment for filter
+              19</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FFA18</name>
+              <description>Filter FIFO assignment for filter
+              18</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FFA17</name>
+              <description>Filter FIFO assignment for filter
+              17</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FFA16</name>
+              <description>Filter FIFO assignment for filter
+              16</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FFA15</name>
+              <description>Filter FIFO assignment for filter
+              15</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FFA14</name>
+              <description>Filter FIFO assignment for filter
+              14</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FFA13</name>
+              <description>Filter FIFO assignment for filter
+              13</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FFA12</name>
+              <description>Filter FIFO assignment for filter
+              12</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FFA11</name>
+              <description>Filter FIFO assignment for filter
+              11</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FFA10</name>
+              <description>Filter FIFO assignment for filter
+              10</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FFA9</name>
+              <description>Filter FIFO assignment for filter
+              9</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FFA8</name>
+              <description>Filter FIFO assignment for filter
+              8</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FFA7</name>
+              <description>Filter FIFO assignment for filter
+              7</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FFA6</name>
+              <description>Filter FIFO assignment for filter
+              6</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FFA5</name>
+              <description>Filter FIFO assignment for filter
+              5</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FFA4</name>
+              <description>Filter FIFO assignment for filter
+              4</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FFA3</name>
+              <description>Filter FIFO assignment for filter
+              3</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FFA2</name>
+              <description>Filter FIFO assignment for filter
+              2</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FFA1</name>
+              <description>Filter FIFO assignment for filter
+              1</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FFA0</name>
+              <description>Filter FIFO assignment for filter
+              0</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>FA1R</name>
+          <displayName>FA1R</displayName>
+          <description>CAN filter activation register</description>
+          <addressOffset>0x21C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>FACT27</name>
+              <description>Filter active</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FACT26</name>
+              <description>Filter active</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FACT25</name>
+              <description>Filter active</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FACT24</name>
+              <description>Filter active</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FACT23</name>
+              <description>Filter active</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FACT22</name>
+              <description>Filter active</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FACT21</name>
+              <description>Filter active</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FACT20</name>
+              <description>Filter active</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FACT19</name>
+              <description>Filter active</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FACT18</name>
+              <description>Filter active</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FACT17</name>
+              <description>Filter active</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FACT16</name>
+              <description>Filter active</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FACT15</name>
+              <description>Filter active</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FACT14</name>
+              <description>Filter active</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FACT13</name>
+              <description>Filter active</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FACT12</name>
+              <description>Filter active</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FACT11</name>
+              <description>Filter active</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FACT10</name>
+              <description>Filter active</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FACT9</name>
+              <description>Filter active</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FACT8</name>
+              <description>Filter active</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FACT7</name>
+              <description>Filter active</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FACT6</name>
+              <description>Filter active</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FACT5</name>
+              <description>Filter active</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FACT4</name>
+              <description>Filter active</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FACT3</name>
+              <description>Filter active</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FACT2</name>
+              <description>Filter active</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FACT1</name>
+              <description>Filter active</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FACT0</name>
+              <description>Filter active</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <cluster>
+          <name>FB%s</name>
+          <displayName>FxR</displayName>
+          <dim>28</dim>
+          <dimIndex>0-27</dimIndex>
+          <dimIncrement>0x8</dimIncrement>
+          <description>FxR1, FxR2</description>
+          <addressOffset>0x240</addressOffset>
+          <register>
+            <name>FR1</name>
+            <displayName>FxR1</displayName>
+            <description>Filter bank x register 1</description>
+            <addressOffset>0x0</addressOffset>
+            <size>0x20</size>
+            <access>read-write</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>FB31</name>
+                <description>Filter bits</description>
+                <bitOffset>31</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB30</name>
+                <description>Filter bits</description>
+                <bitOffset>30</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB29</name>
+                <description>Filter bits</description>
+                <bitOffset>29</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB28</name>
+                <description>Filter bits</description>
+                <bitOffset>28</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB27</name>
+                <description>Filter bits</description>
+                <bitOffset>27</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB26</name>
+                <description>Filter bits</description>
+                <bitOffset>26</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB25</name>
+                <description>Filter bits</description>
+                <bitOffset>25</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB24</name>
+                <description>Filter bits</description>
+                <bitOffset>24</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB23</name>
+                <description>Filter bits</description>
+                <bitOffset>23</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB22</name>
+                <description>Filter bits</description>
+                <bitOffset>22</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB21</name>
+                <description>Filter bits</description>
+                <bitOffset>21</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB20</name>
+                <description>Filter bits</description>
+                <bitOffset>20</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB19</name>
+                <description>Filter bits</description>
+                <bitOffset>19</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB18</name>
+                <description>Filter bits</description>
+                <bitOffset>18</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB17</name>
+                <description>Filter bits</description>
+                <bitOffset>17</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB16</name>
+                <description>Filter bits</description>
+                <bitOffset>16</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB15</name>
+                <description>Filter bits</description>
+                <bitOffset>15</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB14</name>
+                <description>Filter bits</description>
+                <bitOffset>14</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB13</name>
+                <description>Filter bits</description>
+                <bitOffset>13</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB12</name>
+                <description>Filter bits</description>
+                <bitOffset>12</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB11</name>
+                <description>Filter bits</description>
+                <bitOffset>11</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB10</name>
+                <description>Filter bits</description>
+                <bitOffset>10</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB9</name>
+                <description>Filter bits</description>
+                <bitOffset>9</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB8</name>
+                <description>Filter bits</description>
+                <bitOffset>8</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB7</name>
+                <description>Filter bits</description>
+                <bitOffset>7</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB6</name>
+                <description>Filter bits</description>
+                <bitOffset>6</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB5</name>
+                <description>Filter bits</description>
+                <bitOffset>5</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB4</name>
+                <description>Filter bits</description>
+                <bitOffset>4</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB3</name>
+                <description>Filter bits</description>
+                <bitOffset>3</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB2</name>
+                <description>Filter bits</description>
+                <bitOffset>2</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB1</name>
+                <description>Filter bits</description>
+                <bitOffset>1</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB0</name>
+                <description>Filter bits</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>FR2</name>
+            <displayName>FxR2</displayName>
+            <description>Filter bank x register 2</description>
+            <addressOffset>0x4</addressOffset>
+            <size>0x20</size>
+            <access>read-write</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+              <field>
+                <name>FB31</name>
+                <description>Filter bits</description>
+                <bitOffset>31</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB30</name>
+                <description>Filter bits</description>
+                <bitOffset>30</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB29</name>
+                <description>Filter bits</description>
+                <bitOffset>29</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB28</name>
+                <description>Filter bits</description>
+                <bitOffset>28</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB27</name>
+                <description>Filter bits</description>
+                <bitOffset>27</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB26</name>
+                <description>Filter bits</description>
+                <bitOffset>26</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB25</name>
+                <description>Filter bits</description>
+                <bitOffset>25</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB24</name>
+                <description>Filter bits</description>
+                <bitOffset>24</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB23</name>
+                <description>Filter bits</description>
+                <bitOffset>23</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB22</name>
+                <description>Filter bits</description>
+                <bitOffset>22</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB21</name>
+                <description>Filter bits</description>
+                <bitOffset>21</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB20</name>
+                <description>Filter bits</description>
+                <bitOffset>20</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB19</name>
+                <description>Filter bits</description>
+                <bitOffset>19</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB18</name>
+                <description>Filter bits</description>
+                <bitOffset>18</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB17</name>
+                <description>Filter bits</description>
+                <bitOffset>17</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB16</name>
+                <description>Filter bits</description>
+                <bitOffset>16</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB15</name>
+                <description>Filter bits</description>
+                <bitOffset>15</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB14</name>
+                <description>Filter bits</description>
+                <bitOffset>14</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB13</name>
+                <description>Filter bits</description>
+                <bitOffset>13</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB12</name>
+                <description>Filter bits</description>
+                <bitOffset>12</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB11</name>
+                <description>Filter bits</description>
+                <bitOffset>11</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB10</name>
+                <description>Filter bits</description>
+                <bitOffset>10</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB9</name>
+                <description>Filter bits</description>
+                <bitOffset>9</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB8</name>
+                <description>Filter bits</description>
+                <bitOffset>8</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB7</name>
+                <description>Filter bits</description>
+                <bitOffset>7</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB6</name>
+                <description>Filter bits</description>
+                <bitOffset>6</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB5</name>
+                <description>Filter bits</description>
+                <bitOffset>5</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB4</name>
+                <description>Filter bits</description>
+                <bitOffset>4</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB3</name>
+                <description>Filter bits</description>
+                <bitOffset>3</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB2</name>
+                <description>Filter bits</description>
+                <bitOffset>2</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB1</name>
+                <description>Filter bits</description>
+                <bitOffset>1</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>FB0</name>
+                <description>Filter bits</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+            </fields>
+          </register>
+        </cluster>
+      </registers>
+    

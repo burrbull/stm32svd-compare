@@ -1,0 +1,605 @@
+<registers>
+        <register>
+          <name>CR1</name>
+          <displayName>CR1</displayName>
+          <description>control register 1</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>INIT</name>
+              <description>Initialization mode
+              request</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RDMAEN</name>
+              <description>DMA channel enabled to read data for the
+              regular channel</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>JDMAEN</name>
+              <description>DMA channel enabled to read data for the
+              injected channel group</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RSYNC</name>
+              <description>Launch regular conversion synchronously
+              with SDADC1</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>JSYNC</name>
+              <description>Launch a injected conversion
+              synchronously with SDADC1</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PDI</name>
+              <description>Enter power down mode when
+              idle</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SBI</name>
+              <description>Enter Standby mode when
+              idle</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SLOWCK</name>
+              <description>Slow clock mode enable</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>REFV</name>
+              <description>Reference voltage
+              selection</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>ROVRIE</name>
+              <description>Regular data overrun interrupt
+              enable</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>REOCIE</name>
+              <description>Regular end of conversion interrupt
+              enable</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>JOVRIE</name>
+              <description>Injected data overrun interrupt
+              enable</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>JEOCIE</name>
+              <description>Injected end of conversion interrupt
+              enable</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EOCALIE</name>
+              <description>End of calibration interrupt
+              enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CR2</name>
+          <displayName>CR2</displayName>
+          <description>control register 2</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>FAST</name>
+              <description>Fast conversion mode
+              selection</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RSWSTART</name>
+              <description>Software start of a conversion on the
+              regular channel</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RCONT</name>
+              <description>Continuous mode selection for regular
+              conversions</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RCH</name>
+              <description>Regular channel selection</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>JSWSTART</name>
+              <description>Start a conversion of the injected group
+              of channels</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>JEXTEN</name>
+              <description>Trigger enable and trigger edge
+              selection for injected conversions</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>JEXTSEL</name>
+              <description>Trigger signal selection for launching
+              injected conversions</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>JDS</name>
+              <description>Delay start of injected
+              conversions.</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>JCONT</name>
+              <description>Continuous mode selection for injected
+              conversions</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>STARTCALIB</name>
+              <description>Start calibration</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CALIBCNT</name>
+              <description>Number of calibration sequences to be
+              performed (number of valid
+              configurations)</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>ADON</name>
+              <description>SDADC enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ISR</name>
+          <displayName>ISR</displayName>
+          <description>interrupt and status register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>INITRDY</name>
+              <description>Initialization mode is
+              ready</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>STABIP</name>
+              <description>Stabilization in progress
+              status</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RCIP</name>
+              <description>Regular conversion in progress
+              status</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>JCIP</name>
+              <description>Injected conversion in progress
+              status</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CALIBIP</name>
+              <description>Calibration in progress
+              status</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ROVRF</name>
+              <description>Regular conversion overrun
+              flag</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>REOCF</name>
+              <description>End of regular conversion
+              flag</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>JOVRF</name>
+              <description>Injected conversion overrun
+              flag</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>JEOCF</name>
+              <description>End of injected conversion
+              flag</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EOCALF</name>
+              <description>End of calibration flag</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CLRISR</name>
+          <displayName>CLRISR</displayName>
+          <description>interrupt and status clear
+          register</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CLRROVRF</name>
+              <description>Clear the regular conversion overrun
+              flag</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CLRJOVRF</name>
+              <description>Clear the injected conversion overrun
+              flag</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CLREOCALF</name>
+              <description>Clear the end of calibration
+              flag</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>JCHGR</name>
+          <displayName>JCHGR</displayName>
+          <description>injected channel group selection
+          register</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000001</resetValue>
+          <fields>
+            <field>
+              <name>JCHG</name>
+              <description>Injected channel group
+              selection</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>9</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CONF%sR</name>
+          <displayName>CONFxR</displayName>
+          <dim>3</dim>
+          <dimIndex>0-2</dimIndex>
+          <dimIncrement>0x4</dimIncrement>
+          <description>configuration X register</description>
+          <addressOffset>0x20</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>COMMON</name>
+              <description>Common mode for configuration
+              X</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>SE</name>
+              <description>Single-ended mode for configuration
+              X</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>GAIN</name>
+              <description>Gain setting for configuration
+              X</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>OFFSET</name>
+              <description>Twelve-bit calibration offset for
+              configuration 0</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>12</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CONFCHR1</name>
+          <displayName>CONFCHR1</displayName>
+          <description>channel configuration register
+          1</description>
+          <addressOffset>0x40</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CONFCH7</name>
+              <description>CONFCH7</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>CONFCH6</name>
+              <description>CONFCH6</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>CONFCH5</name>
+              <description>CONFCH5</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>CONFCH4</name>
+              <description>CONFCH4</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>CONFCH3</name>
+              <description>CONFCH3</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>CONFCH2</name>
+              <description>CONFCH2</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>CONFCH1</name>
+              <description>CONFCH1</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>CONFCH0</name>
+              <description>CONFCH0</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CONFCHR2</name>
+          <displayName>CONFCHR2</displayName>
+          <description>channel configuration register
+          2</description>
+          <addressOffset>0x44</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CONFCH8</name>
+              <description>Channel 8 configuration</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>JDATAR</name>
+          <displayName>JDATAR</displayName>
+          <description>data register for injected
+          group</description>
+          <addressOffset>0x60</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>JDATACH</name>
+              <description>Injected channel most recently
+              converted</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>JDATA</name>
+              <description>Injected group conversion
+              data</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>RDATAR</name>
+          <displayName>RDATAR</displayName>
+          <description>data register for the regular
+          channel</description>
+          <addressOffset>0x64</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>RDATA</name>
+              <description>Regular channel conversion
+              data</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>JDATA12R</name>
+          <displayName>JDATA12R</displayName>
+          <description>SDADC1 and SDADC2 injected data
+          register</description>
+          <addressOffset>0x70</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>JDATA2</name>
+              <description>Injected group conversion data for
+              SDADC2</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+            <field>
+              <name>JDATA1</name>
+              <description>Injected group conversion data for
+              SDADC1</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>RDATA12R</name>
+          <displayName>RDATA12R</displayName>
+          <description>SDADC1 and SDADC2 regular data
+          register</description>
+          <addressOffset>0x74</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>RDATA2</name>
+              <description>Regular conversion data for
+              SDADC2</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+            <field>
+              <name>RDATA1</name>
+              <description>Regular conversion data for
+              SDADC1</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>JDATA13R</name>
+          <displayName>JDATA13R</displayName>
+          <description>SDADC1 and SDADC3 injected data
+          register</description>
+          <addressOffset>0x78</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>JDATA3</name>
+              <description>Injected group conversion data for
+              SDADC3</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+            <field>
+              <name>JDATA1</name>
+              <description>Injected group conversion data for
+              SDADC1</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>RDATA13R</name>
+          <displayName>RDATA13R</displayName>
+          <description>SDADC1 and SDADC3 regular data
+          register</description>
+          <addressOffset>0x7C</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>RDATA3</name>
+              <description>Regular conversion data for
+              SDADC3</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+            <field>
+              <name>RDATA1</name>
+              <description>Regular conversion data for
+              SDADC1</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

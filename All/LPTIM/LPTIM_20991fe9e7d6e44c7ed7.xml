@@ -1,0 +1,352 @@
+<registers>
+        <register>
+          <name>ISR</name>
+          <displayName>ISR</displayName>
+          <description>Interrupt and Status Register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DOWN</name>
+              <description>Counter direction change up to
+              down</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>UP</name>
+              <description>Counter direction change down to
+              up</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ARROK</name>
+              <description>Autoreload register update
+              OK</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMPOK</name>
+              <description>Compare register update OK</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTTRIG</name>
+              <description>External trigger edge
+              event</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ARRM</name>
+              <description>Autoreload match</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMPM</name>
+              <description>Compare match</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ICR</name>
+          <displayName>ICR</displayName>
+          <description>Interrupt Clear Register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DOWNCF</name>
+              <description>Direction change to down Clear
+              Flag</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>UPCF</name>
+              <description>Direction change to UP Clear
+              Flag</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ARROKCF</name>
+              <description>Autoreload register update OK Clear
+              Flag</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMPOKCF</name>
+              <description>Compare register update OK Clear
+              Flag</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTTRIGCF</name>
+              <description>External trigger valid edge Clear
+              Flag</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ARRMCF</name>
+              <description>Autoreload match Clear
+              Flag</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMPMCF</name>
+              <description>compare match Clear Flag</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>IER</name>
+          <displayName>IER</displayName>
+          <description>Interrupt Enable Register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DOWNIE</name>
+              <description>Direction change to down Interrupt
+              Enable</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>UPIE</name>
+              <description>Direction change to UP Interrupt
+              Enable</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ARROKIE</name>
+              <description>Autoreload register update OK Interrupt
+              Enable</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMPOKIE</name>
+              <description>Compare register update OK Interrupt
+              Enable</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXTTRIGIE</name>
+              <description>External trigger valid edge Interrupt
+              Enable</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ARRMIE</name>
+              <description>Autoreload match Interrupt
+              Enable</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CMPMIE</name>
+              <description>Compare match Interrupt
+              Enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CFGR</name>
+          <displayName>CFGR</displayName>
+          <description>Configuration Register</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>ENC</name>
+              <description>Encoder mode enable</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>COUNTMODE</name>
+              <description>counter mode enabled</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRELOAD</name>
+              <description>Registers update mode</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WAVPOL</name>
+              <description>Waveform shape polarity</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WAVE</name>
+              <description>Waveform shape</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMOUT</name>
+              <description>Timeout enable</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TRIGEN</name>
+              <description>Trigger enable and
+              polarity</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>TRIGSEL</name>
+              <description>Trigger selector</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>PRESC</name>
+              <description>Clock prescaler</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>TRGFLT</name>
+              <description>Configurable digital filter for
+              trigger</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>CKFLT</name>
+              <description>Configurable digital filter for external
+              clock</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>CKPOL</name>
+              <description>Clock Polarity</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>CKSEL</name>
+              <description>Clock selector</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CR</name>
+          <displayName>CR</displayName>
+          <description>Control Register</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CNTSTRT</name>
+              <description>Timer start in continuous
+              mode</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SNGSTRT</name>
+              <description>LPTIM start in single mode</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ENABLE</name>
+              <description>LPTIM Enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CMP</name>
+          <displayName>CMP</displayName>
+          <description>Compare Register</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CMP</name>
+              <description>Compare value</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ARR</name>
+          <displayName>ARR</displayName>
+          <description>Autoreload Register</description>
+          <addressOffset>0x18</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000001</resetValue>
+          <fields>
+            <field>
+              <name>ARR</name>
+              <description>Auto reload value</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CNT</name>
+          <displayName>CNT</displayName>
+          <description>Counter Register</description>
+          <addressOffset>0x1C</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CNT</name>
+              <description>Counter value</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

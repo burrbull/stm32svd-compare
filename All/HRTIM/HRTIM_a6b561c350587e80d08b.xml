@@ -1,0 +1,477 @@
+<registers>
+        <register>
+          <name>MCR</name>
+          <displayName>MCR</displayName>
+          <description>Master Timer Control Register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>BRSTDMA</name>
+              <description>Burst DMA Update</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>MREPU</name>
+              <description>Master Timer Repetition
+              update</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PREEN</name>
+              <description>Preload enable</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DACSYNC</name>
+              <description>AC Synchronization</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>TECEN</name>
+              <description>Timer E counter enable</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TDCEN</name>
+              <description>Timer D counter enable</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TCCEN</name>
+              <description>Timer C counter enable</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TBCEN</name>
+              <description>Timer B counter enable</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TACEN</name>
+              <description>Timer A counter enable</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MCEN</name>
+              <description>Master Counter enable</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SYNC_SRC</name>
+              <description>Synchronization source</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>SYNC_OUT</name>
+              <description>Synchronization output</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>SYNCSTRTM</name>
+              <description>Synchronization Starts
+              Master</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SYNCRSTM</name>
+              <description>Synchronization Resets
+              Master</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SYNC_IN</name>
+              <description>ynchronization input</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>HALF</name>
+              <description>Half mode enable</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RETRIG</name>
+              <description>Master Re-triggerable mode</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CONT</name>
+              <description>Master Continuous mode</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CK_PSC</name>
+              <description>HRTIM Master Clock
+              prescaler</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MISR</name>
+          <displayName>MISR</displayName>
+          <description>Master Timer Interrupt Status
+          Register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>MUPD</name>
+              <description>Master Update Interrupt
+              Flag</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SYNC</name>
+              <description>Sync Input Interrupt Flag</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MREP</name>
+              <description>Master Repetition Interrupt
+              Flag</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MCMP4</name>
+              <description>Master Compare 4 Interrupt
+              Flag</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MCMP3</name>
+              <description>Master Compare 3 Interrupt
+              Flag</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MCMP2</name>
+              <description>Master Compare 2 Interrupt
+              Flag</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MCMP1</name>
+              <description>Master Compare 1 Interrupt
+              Flag</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MICR</name>
+          <displayName>MICR</displayName>
+          <description>Master Timer Interrupt Clear
+          Register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>MUPDC</name>
+              <description>Master update Interrupt flag
+              clear</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SYNCC</name>
+              <description>Sync Input Interrupt flag
+              clear</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MREPC</name>
+              <description>Repetition Interrupt flag
+              clear</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MCMP4C</name>
+              <description>Master Compare 4 Interrupt flag
+              clear</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MCMP3C</name>
+              <description>Master Compare 3 Interrupt flag
+              clear</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MCMP2C</name>
+              <description>Master Compare 2 Interrupt flag
+              clear</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MCMP1C</name>
+              <description>Master Compare 1 Interrupt flag
+              clear</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MDIER4</name>
+          <displayName>MDIER4</displayName>
+          <description>MDIER4</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>MUPDDE</name>
+              <description>MUPDDE</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SYNCDE</name>
+              <description>SYNCDE</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MREPDE</name>
+              <description>MREPDE</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MCMP4DE</name>
+              <description>MCMP4DE</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MCMP3DE</name>
+              <description>MCMP3DE</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MCMP2DE</name>
+              <description>MCMP2DE</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MCMP1DE</name>
+              <description>MCMP1DE</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MUPDIE</name>
+              <description>MUPDIE</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SYNCIE</name>
+              <description>SYNCIE</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MREPIE</name>
+              <description>MREPIE</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MCMP4IE</name>
+              <description>MCMP4IE</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MCMP3IE</name>
+              <description>MCMP3IE</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MCMP2IE</name>
+              <description>MCMP2IE</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MCMP1IE</name>
+              <description>MCMP1IE</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MCNTR</name>
+          <displayName>MCNTR</displayName>
+          <description>Master Timer Counter Register</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>MCNT</name>
+              <description>Counter value</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MPER</name>
+          <displayName>MPER</displayName>
+          <description>Master Timer Period Register</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x0000FFFF</resetValue>
+          <fields>
+            <field>
+              <name>MPER</name>
+              <description>Master Timer Period value</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MREP</name>
+          <displayName>MREP</displayName>
+          <description>Master Timer Repetition
+          Register</description>
+          <addressOffset>0x18</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>MREP</name>
+              <description>Master Timer Repetition counter
+              value</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MCMP1R</name>
+          <displayName>MCMP1R</displayName>
+          <description>Master Timer Compare 1
+          Register</description>
+          <addressOffset>0x1C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>MCMP1</name>
+              <description>Master Timer Compare 1
+              value</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MCMP2R</name>
+          <displayName>MCMP2R</displayName>
+          <description>Master Timer Compare 2
+          Register</description>
+          <addressOffset>0x24</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>MCMP2</name>
+              <description>Master Timer Compare 2
+              value</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MCMP3R</name>
+          <displayName>MCMP3R</displayName>
+          <description>Master Timer Compare 3
+          Register</description>
+          <addressOffset>0x28</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>MCMP3</name>
+              <description>Master Timer Compare 3
+              value</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MCMP4R</name>
+          <displayName>MCMP4R</displayName>
+          <description>Master Timer Compare 4
+          Register</description>
+          <addressOffset>0x2C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>MCMP4</name>
+              <description>Master Timer Compare 4
+              value</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

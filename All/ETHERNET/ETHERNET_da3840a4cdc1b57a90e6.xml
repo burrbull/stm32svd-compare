@@ -1,0 +1,216 @@
+<registers>
+        <register>
+          <name>PTPTSCR</name>
+          <displayName>PTPTSCR</displayName>
+          <description>Ethernet PTP time stamp control
+          register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>TSARU</name>
+              <description>Time stamp addend register
+              update</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TSITE</name>
+              <description>Time stamp interrupt trigger
+              enable</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TSSTU</name>
+              <description>Time stamp system time
+              update</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TSSTI</name>
+              <description>Time stamp system time
+              initialize</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TSFCU</name>
+              <description>Time stamp fine or coarse
+              update</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TSE</name>
+              <description>Time stamp enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PTPSSIR</name>
+          <displayName>PTPSSIR</displayName>
+          <description>Ethernet PTP subsecond increment
+          register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>STSSI</name>
+              <description>System time subsecond
+              increment</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PTPTSHR</name>
+          <displayName>PTPTSHR</displayName>
+          <description>Ethernet PTP time stamp high
+          register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>STS</name>
+              <description>System time second</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PTPTSLR</name>
+          <displayName>PTPTSLR</displayName>
+          <description>Ethernet PTP time stamp low
+          register</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>STPNS</name>
+              <description>System time positive or negative
+              sign</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>STSS</name>
+              <description>System time subseconds</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>31</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PTPTSHUR</name>
+          <displayName>PTPTSHUR</displayName>
+          <description>Ethernet PTP time stamp high update
+          register</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>TSUS</name>
+              <description>Time stamp update second</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PTPTSLUR</name>
+          <displayName>PTPTSLUR</displayName>
+          <description>Ethernet PTP time stamp low update
+          register</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>TSUPNS</name>
+              <description>Time stamp update positive or negative
+              sign</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TSUSS</name>
+              <description>Time stamp update
+              subseconds</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>31</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PTPTSAR</name>
+          <displayName>PTPTSAR</displayName>
+          <description>Ethernet PTP time stamp addend
+          register</description>
+          <addressOffset>0x18</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>TSA</name>
+              <description>Time stamp addend</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PTPTTHR</name>
+          <displayName>PTPTTHR</displayName>
+          <description>Ethernet PTP target time high
+          register</description>
+          <addressOffset>0x1C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>TTSH</name>
+              <description>Target time stamp high</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PTPTTLR</name>
+          <displayName>PTPTTLR</displayName>
+          <description>Ethernet PTP target time low
+          register</description>
+          <addressOffset>0x20</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>TTSL</name>
+              <description>Target time stamp low</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

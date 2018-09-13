@@ -1,0 +1,353 @@
+<registers>
+        <register>
+          <name>ISER</name>
+          <displayName>ISER</displayName>
+          <description>Interrupt Set Enable Register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>SETENA</name>
+              <description>SETENA</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ICER</name>
+          <displayName>ICER</displayName>
+          <description>Interrupt Clear Enable
+          Register</description>
+          <addressOffset>0x80</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CLRENA</name>
+              <description>CLRENA</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ISPR</name>
+          <displayName>ISPR</displayName>
+          <description>Interrupt Set-Pending Register</description>
+          <addressOffset>0x100</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>SETPEND</name>
+              <description>SETPEND</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ICPR</name>
+          <displayName>ICPR</displayName>
+          <description>Interrupt Clear-Pending
+          Register</description>
+          <addressOffset>0x180</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CLRPEND</name>
+              <description>CLRPEND</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>IPR0</name>
+          <displayName>IPR0</displayName>
+          <description>Interrupt Priority Register 0</description>
+          <addressOffset>0x300</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PRI_3</name>
+              <description>priority for interrupt 3</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>PRI_2</name>
+              <description>priority for interrupt 2</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>PRI_1</name>
+              <description>priority for interrupt 1</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>PRI_0</name>
+              <description>priority for interrupt 0</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>IPR1</name>
+          <displayName>IPR1</displayName>
+          <description>Interrupt Priority Register 1</description>
+          <addressOffset>0x304</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PRI_7</name>
+              <description>priority for interrupt n</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>PRI_6</name>
+              <description>priority for interrupt n</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>PRI_5</name>
+              <description>priority for interrupt n</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>PRI_4</name>
+              <description>priority for interrupt n</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>IPR2</name>
+          <displayName>IPR2</displayName>
+          <description>Interrupt Priority Register 2</description>
+          <addressOffset>0x308</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PRI_11</name>
+              <description>priority for interrupt n</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>PRI_10</name>
+              <description>priority for interrupt n</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>PRI_9</name>
+              <description>priority for interrupt n</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>PRI_8</name>
+              <description>priority for interrupt n</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>IPR3</name>
+          <displayName>IPR3</displayName>
+          <description>Interrupt Priority Register 3</description>
+          <addressOffset>0x30C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PRI_15</name>
+              <description>priority for interrupt n</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>PRI_14</name>
+              <description>priority for interrupt n</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>PRI_13</name>
+              <description>priority for interrupt n</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>PRI_12</name>
+              <description>priority for interrupt n</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>IPR4</name>
+          <displayName>IPR4</displayName>
+          <description>Interrupt Priority Register 4</description>
+          <addressOffset>0x310</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PRI_19</name>
+              <description>priority for interrupt n</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>PRI_18</name>
+              <description>priority for interrupt n</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>PRI_17</name>
+              <description>priority for interrupt n</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>PRI_16</name>
+              <description>priority for interrupt n</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>IPR5</name>
+          <displayName>IPR5</displayName>
+          <description>Interrupt Priority Register 5</description>
+          <addressOffset>0x314</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PRI_23</name>
+              <description>priority for interrupt n</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>PRI_22</name>
+              <description>priority for interrupt n</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>PRI_21</name>
+              <description>priority for interrupt n</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>PRI_20</name>
+              <description>priority for interrupt n</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>IPR6</name>
+          <displayName>IPR6</displayName>
+          <description>Interrupt Priority Register 6</description>
+          <addressOffset>0x318</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PRI_27</name>
+              <description>priority for interrupt n</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>PRI_26</name>
+              <description>priority for interrupt n</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>PRI_25</name>
+              <description>priority for interrupt n</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>PRI_24</name>
+              <description>priority for interrupt n</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>IPR7</name>
+          <displayName>IPR7</displayName>
+          <description>Interrupt Priority Register 7</description>
+          <addressOffset>0x31C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PRI_31</name>
+              <description>priority for interrupt n</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>PRI_30</name>
+              <description>priority for interrupt n</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>PRI_29</name>
+              <description>priority for interrupt n</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>PRI_28</name>
+              <description>priority for interrupt n</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

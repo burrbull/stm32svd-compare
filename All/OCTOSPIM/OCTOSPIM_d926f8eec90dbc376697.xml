@@ -1,0 +1,147 @@
+<registers>
+        <register>
+          <name>P1CR</name>
+          <displayName>P1CR</displayName>
+          <description>OctoSPI IO Manager Port 1 Configuration
+          Register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0X03010111</resetValue>
+          <fields>
+            <field>
+              <name>IOHSRC</name>
+              <description>Source for Port</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>IOHEN</name>
+              <description>Enable for Port n</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IOLSRC</name>
+              <description>Source for Port</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>IOLEN</name>
+              <description>Enable for Port</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>NCSSRC</name>
+              <description>CS Source for Port</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>NCSEN</name>
+              <description>CS Enable for Port</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DQSSRC</name>
+              <description>DQS Source for Port</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DQSEN</name>
+              <description>DQS Enable for Port</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CLKSRC</name>
+              <description>CLK/CLK Source for Port</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CLKEN</name>
+              <description>CLK/CLK Enable for Port</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>P2CR</name>
+          <displayName>P2CR</displayName>
+          <description>OctoSPI IO Manager Port 2 Configuration
+          Register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x07050333</resetValue>
+          <fields>
+            <field>
+              <name>IOHSRC</name>
+              <description>Source for Port</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>IOHEN</name>
+              <description>Enable for Port n</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IOLSRC</name>
+              <description>Source for Port</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>IOLEN</name>
+              <description>Enable for Port</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>NCSSRC</name>
+              <description>CS Source for Port</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>NCSEN</name>
+              <description>CS Enable for Port</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DQSSRC</name>
+              <description>DQS Source for Port</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DQSEN</name>
+              <description>DQS Enable for Port</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CLKSRC</name>
+              <description>CLK/CLK Source for Port</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CLKEN</name>
+              <description>CLK/CLK Enable for Port</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

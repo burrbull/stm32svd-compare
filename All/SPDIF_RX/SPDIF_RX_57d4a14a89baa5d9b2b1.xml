@@ -1,0 +1,368 @@
+<registers>
+        <register>
+          <name>CR</name>
+          <displayName>CR</displayName>
+          <description>Control register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>INSEL</name>
+              <description>input selection</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>WFA</name>
+              <description>Wait For Activity</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>NBTR</name>
+              <description>Maximum allowed re-tries during
+              synchronization phase</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>CHSEL</name>
+              <description>Channel Selection</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CBDMAEN</name>
+              <description>Control Buffer DMA ENable for control
+              flow</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PTMSK</name>
+              <description>Mask of Preamble Type bits</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CUMSK</name>
+              <description>Mask of channel status and user
+              bits</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>VMSK</name>
+              <description>Mask of Validity bit</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PMSK</name>
+              <description>Mask Parity error bit</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DRFMT</name>
+              <description>RX Data format</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>RXSTEO</name>
+              <description>STerEO Mode</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RXDMAEN</name>
+              <description>Receiver DMA ENable for data
+              flow</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SPDIFEN</name>
+              <description>Peripheral Block Enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>IMR</name>
+          <displayName>IMR</displayName>
+          <description>Interrupt mask register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>IFEIE</name>
+              <description>Serial Interface Error Interrupt
+              Enable</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SYNCDIE</name>
+              <description>Synchronization Done</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SBLKIE</name>
+              <description>Synchronization Block Detected Interrupt
+              Enable</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OVRIE</name>
+              <description>Overrun error Interrupt
+              Enable</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PERRIE</name>
+              <description>Parity error interrupt
+              enable</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CSRNEIE</name>
+              <description>Control Buffer Ready Interrupt
+              Enable</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RXNEIE</name>
+              <description>RXNE interrupt enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SR</name>
+          <displayName>SR</displayName>
+          <description>Status register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>WIDTH5</name>
+              <description>Duration of 5 symbols counted with
+              SPDIF_CLK</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>15</bitWidth>
+            </field>
+            <field>
+              <name>TERR</name>
+              <description>Time-out error</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SERR</name>
+              <description>Synchronization error</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FERR</name>
+              <description>Framing error</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SYNCD</name>
+              <description>Synchronization Done</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SBD</name>
+              <description>Synchronization Block
+              Detected</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OVR</name>
+              <description>Overrun error</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PERR</name>
+              <description>Parity error</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CSRNE</name>
+              <description>Control Buffer register is not
+              empty</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RXNE</name>
+              <description>Read data register not
+              empty</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>IFCR</name>
+          <displayName>IFCR</displayName>
+          <description>Interrupt Flag Clear register</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>SYNCDCF</name>
+              <description>Clears the Synchronization Done
+              flag</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SBDCF</name>
+              <description>Clears the Synchronization Block
+              Detected flag</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OVRCF</name>
+              <description>Clears the Overrun error
+              flag</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PERRCF</name>
+              <description>Clears the Parity error
+              flag</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DR</name>
+          <displayName>DR</displayName>
+          <description>Data input register</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PT</name>
+              <description>Preamble Type</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>C</name>
+              <description>Channel Status bit</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>U</name>
+              <description>User bit</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>V</name>
+              <description>Validity bit</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PE</name>
+              <description>Parity Error bit</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DR</name>
+              <description>Parity Error bit</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>24</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CSR</name>
+          <displayName>CSR</displayName>
+          <description>Channel Status register</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>SOB</name>
+              <description>Start Of Block</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CS</name>
+              <description>Channel A status
+              information</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>USR</name>
+              <description>User data information</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DIR</name>
+          <displayName>DIR</displayName>
+          <description>Debug Information register</description>
+          <addressOffset>0x18</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>TLO</name>
+              <description>Threshold LOW</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>13</bitWidth>
+            </field>
+            <field>
+              <name>THI</name>
+              <description>Threshold HIGH</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>13</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

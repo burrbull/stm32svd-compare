@@ -1,0 +1,180 @@
+<registers>
+        <register>
+          <name>CR</name>
+          <displayName>CR</displayName>
+          <description>control register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DMAOUTEN</name>
+              <description>Enable DMA management of data output
+              phase</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DMAINEN</name>
+              <description>Enable DMA management of data input
+              phase</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ERRIE</name>
+              <description>Error interrupt enable</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CCFIE</name>
+              <description>CCF flag interrupt enable</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ERRC</name>
+              <description>Error clear</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CCFC</name>
+              <description>Computation Complete Flag
+              Clear</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHMOD</name>
+              <description>AES chaining mode</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>MODE</name>
+              <description>AES operating mode</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>DATATYPE</name>
+              <description>Data type selection</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>EN</name>
+              <description>AES enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SR</name>
+          <displayName>SR</displayName>
+          <description>Status register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>WRERR</name>
+              <description>Write error flag</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RDERR</name>
+              <description>Read error flag</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CCF</name>
+              <description>Computation complete flag</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DINR</name>
+          <displayName>DINR</displayName>
+          <description>Data input register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DINR</name>
+              <description>Data input</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DOUTR</name>
+          <displayName>DOUTR</displayName>
+          <description>Data output register</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DOUTR</name>
+              <description>Data output</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>KEYR%s</name>
+          <displayName>KEYRx</displayName>
+          <dim>4</dim>
+          <dimIndex>0-3</dimIndex>
+          <dimIncrement>0x4</dimIncrement>
+          <description>AES Key register x</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>KEYR</name>
+              <description>AES key</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>IVR%s</name>
+          <displayName>IVRx</displayName>
+          <dim>4</dim>
+          <dimIndex>0-3</dimIndex>
+          <dimIncrement>0x4</dimIncrement>
+          <description>Initialization Vector register x</description>
+          <addressOffset>0x20</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>IVR</name>
+              <description>Initialization Vector</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

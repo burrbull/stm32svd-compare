@@ -1,0 +1,297 @@
+<registers>
+        <register>
+          <name>MMCCR</name>
+          <displayName>MMCCR</displayName>
+          <description>Ethernet MMC control register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>MCFHP</name>
+              <description>MMC counter Full-Half
+              preset</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MCP</name>
+              <description>MMC counter preset</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MCF</name>
+              <description>MMC counter freeze</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ROR</name>
+              <description>Reset on read</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CSR</name>
+              <description>Counter stop rollover</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CR</name>
+              <description>Counter reset</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MMCRIR</name>
+          <displayName>MMCRIR</displayName>
+          <description>Ethernet MMC receive interrupt
+          register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>RGUFS</name>
+              <description>Received Good Unicast Frames
+              Status</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RFAES</name>
+              <description>Received frames alignment error
+              status</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RFCES</name>
+              <description>Received frames CRC error
+              status</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MMCTIR</name>
+          <displayName>MMCTIR</displayName>
+          <description>Ethernet MMC transmit interrupt
+          register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>TGFS</name>
+              <description>Transmitted good frames
+              status</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TGFMSCS</name>
+              <description>Transmitted good frames more single
+              collision status</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TGFSCS</name>
+              <description>Transmitted good frames single collision
+              status</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MMCRIMR</name>
+          <displayName>MMCRIMR</displayName>
+          <description>Ethernet MMC receive interrupt mask
+          register</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>RGUFM</name>
+              <description>Received good unicast frames
+              mask</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RFAEM</name>
+              <description>Received frames alignment error
+              mask</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RFCEM</name>
+              <description>Received frame CRC error
+              mask</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MMCTIMR</name>
+          <displayName>MMCTIMR</displayName>
+          <description>Ethernet MMC transmit interrupt mask
+          register</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>TGFM</name>
+              <description>Transmitted good frames
+              mask</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TGFMSCM</name>
+              <description>Transmitted good frames more single
+              collision mask</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TGFSCM</name>
+              <description>Transmitted good frames single collision
+              mask</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MMCTGFSCCR</name>
+          <displayName>MMCTGFSCCR</displayName>
+          <description>Ethernet MMC transmitted good frames after a
+          single collision counter</description>
+          <addressOffset>0x4C</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>TGFSCC</name>
+              <description>Transmitted good frames after a single
+              collision counter</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MMCTGFMSCCR</name>
+          <displayName>MMCTGFMSCCR</displayName>
+          <description>Ethernet MMC transmitted good frames after
+          more than a single collision</description>
+          <addressOffset>0x50</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>TGFMSCC</name>
+              <description>Transmitted good frames after more than
+              a single collision counter</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MMCTGFCR</name>
+          <displayName>MMCTGFCR</displayName>
+          <description>Ethernet MMC transmitted good frames counter
+          register</description>
+          <addressOffset>0x68</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>TGFC</name>
+              <description>Transmitted good frames
+              counter</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MMCRFCECR</name>
+          <displayName>MMCRFCECR</displayName>
+          <description>Ethernet MMC received frames with CRC error
+          counter register</description>
+          <addressOffset>0x94</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>RFCFC</name>
+              <description>Received frames with CRC error
+              counter</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MMCRFAECR</name>
+          <displayName>MMCRFAECR</displayName>
+          <description>Ethernet MMC received frames with alignment
+          error counter register</description>
+          <addressOffset>0x98</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>RFAEC</name>
+              <description>Received frames with alignment error
+              counter</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MMCRGUFCR</name>
+          <displayName>MMCRGUFCR</displayName>
+          <description>MMC received good unicast frames counter
+          register</description>
+          <addressOffset>0xC4</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>RGUFC</name>
+              <description>Received good unicast frames
+              counter</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

@@ -1,0 +1,354 @@
+<registers>
+        <register>
+          <name>EVCR</name>
+          <displayName>EVCR</displayName>
+          <description>Event Control Register
+          (AFIO_EVCR)</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>EVOE</name>
+              <description>Event Output Enable</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PORT</name>
+              <description>Port selection</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>PIN</name>
+              <description>Pin selection</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MAPR</name>
+          <displayName>MAPR</displayName>
+          <description>AF remap and debug I/O configuration
+          register (AFIO_MAPR)</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>SWJ_CFG</name>
+              <description>Serial wire JTAG
+              configuration</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>TIM5CH4_IREMAP</name>
+              <description>Set and cleared by
+              software</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PD01_REMAP</name>
+              <description>Port D0/Port D1 mapping on
+              OSCIN/OSCOUT</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TIM4_REMAP</name>
+              <description>TIM4 remapping</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TIM3_REMAP</name>
+              <description>TIM3 remapping</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TIM2_REMAP</name>
+              <description>TIM2 remapping</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TIM1_REMAP</name>
+              <description>TIM1 remapping</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>USART3_REMAP</name>
+              <description>USART3 remapping</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>USART2_REMAP</name>
+              <description>USART2 remapping</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>USART1_REMAP</name>
+              <description>USART1 remapping</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C1_REMAP</name>
+              <description>I2C1 remapping</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SPI1_REMAP</name>
+              <description>SPI1 remapping</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>EXTICR1</name>
+          <displayName>EXTICR1</displayName>
+          <description>External interrupt configuration register 1
+          (AFIO_EXTICR1)</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>EXTI3</name>
+              <description>EXTI3 configuration</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI2</name>
+              <description>EXTI2 configuration</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI1</name>
+              <description>EXTI1 configuration</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI0</name>
+              <description>EXTI0 configuration</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>EXTICR2</name>
+          <displayName>EXTICR2</displayName>
+          <description>External interrupt configuration register 2
+          (AFIO_EXTICR2)</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>EXTI7</name>
+              <description>EXTI7 configuration</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI6</name>
+              <description>EXTI6 configuration</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI5</name>
+              <description>EXTI5 configuration</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI4</name>
+              <description>EXTI4 configuration</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>EXTICR3</name>
+          <displayName>EXTICR3</displayName>
+          <description>External interrupt configuration register 3
+          (AFIO_EXTICR3)</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>EXTI11</name>
+              <description>EXTI11 configuration</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI10</name>
+              <description>EXTI10 configuration</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI9</name>
+              <description>EXTI9 configuration</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI8</name>
+              <description>EXTI8 configuration</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>EXTICR4</name>
+          <displayName>EXTICR4</displayName>
+          <description>External interrupt configuration register 4
+          (AFIO_EXTICR4)</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>EXTI15</name>
+              <description>EXTI15 configuration</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI14</name>
+              <description>EXTI14 configuration</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI13</name>
+              <description>EXTI13 configuration</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>EXTI12</name>
+              <description>EXTI12 configuration</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MAPR2</name>
+          <displayName>MAPR2</displayName>
+          <description>AF remap and debug I/O configuration
+          register</description>
+          <addressOffset>0x1C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>MISC_REMAP</name>
+              <description>Miscellaneous features
+              remapping</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIM12_REMAP</name>
+              <description>TIM12 remapping</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIM67_DAC_DMA_REMAP</name>
+              <description>TIM67_DAC DMA remapping</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FSMC_NADV</name>
+              <description>NADV connect/disconnect</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIM14_REMAP</name>
+              <description>TIM14 remapping</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIM13_REMAP</name>
+              <description>TIM13 remapping</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIM1_DMA_REMAP</name>
+              <description>TIM1 DMA remapping</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CEC_REMAP</name>
+              <description>CEC remapping</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIM17_REMAP</name>
+              <description>TIM17 remapping</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIM16_REMAP</name>
+              <description>TIM16 remapping</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIM15_REMAP</name>
+              <description>TIM15 remapping</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

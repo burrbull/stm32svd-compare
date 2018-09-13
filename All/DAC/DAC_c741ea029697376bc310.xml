@@ -1,0 +1,216 @@
+<registers>
+        <register>
+          <name>CR</name>
+          <displayName>CR</displayName>
+          <description>Control register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DMAUDRIE1</name>
+              <description>DAC channel1 DMA Underrun Interrupt
+              enable</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DMAEN1</name>
+              <description>DAC channel1 DMA enable</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MAMP13</name>
+              <description>DAC channel1 mask/amplitude
+              selector</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MAMP12</name>
+              <description>MAMP12</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MAMP11</name>
+              <description>MAMP11</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MAMP10</name>
+              <description>MAMP10</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WAVE1</name>
+              <description>DAC channel1 noise/triangle wave
+              generation enable</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>WAVE2</name>
+              <description>DAC channel2 noise/triangle wave
+              generation enable</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TSEL1</name>
+              <description>DAC channel1 trigger
+              selection</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>TEN1</name>
+              <description>DAC channel1 trigger
+              enable</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>BOFF1</name>
+              <description>DAC channel1 output buffer
+              disable</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EN1</name>
+              <description>DAC channel1 enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SWTRIGR</name>
+          <displayName>SWTRIGR</displayName>
+          <description>DAC software trigger register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>SWTRIG1</name>
+              <description>DAC channel1 software
+              trigger</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DHR12R%s</name>
+          <displayName>DHR12Rx</displayName>
+          <dim>1</dim>
+          <dimIndex>1-1</dimIndex>
+          <dimIncrement>0xC</dimIncrement>
+          <description>DAC channelX 12-bit right-aligned data
+          holding register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DHR</name>
+              <description>DAC channelX 12-bit right-aligned
+              data</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>12</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DHR12L%s</name>
+          <displayName>DHR12Lx</displayName>
+          <dim>1</dim>
+          <dimIndex>1-1</dimIndex>
+          <dimIncrement>0xC</dimIncrement>
+          <description>DAC channelX 12-bit left-aligned data
+          holding register</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DHR</name>
+              <description>DAC channelX 12-bit left-aligned
+              data</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>12</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DHR8R%s</name>
+          <displayName>DHR8Rx</displayName>
+          <dim>1</dim>
+          <dimIndex>1-1</dimIndex>
+          <dimIncrement>0xC</dimIncrement>
+          <description>DAC channelX 8-bit right-aligned data
+          holding register</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DHR</name>
+              <description>DAC channelX 8-bit right-aligned
+              data</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DOR%s</name>
+          <displayName>DORx</displayName>
+          <dim>1</dim>
+          <dimIndex>1-1</dimIndex>
+          <dimIncrement>0x4</dimIncrement>
+          <description>DAC channelX data output
+          register</description>
+          <addressOffset>0x2C</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DOR</name>
+              <description>DAC channelX data output</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>12</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SR</name>
+          <displayName>SR</displayName>
+          <description>DAC status register</description>
+          <addressOffset>0x34</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DMAUDR1</name>
+              <description>DAC channel1 DMA underrun
+              flag</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    

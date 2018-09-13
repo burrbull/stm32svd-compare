@@ -1,0 +1,212 @@
+<registers>
+        <register>
+          <name>CR</name>
+          <displayName>CR</displayName>
+          <description>control register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00002000</resetValue>
+          <fields>
+            <field>
+              <name>TRIM</name>
+              <description>HSI48 oscillator smooth
+              trimming</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>6</bitWidth>
+            </field>
+            <field>
+              <name>SWSYNC</name>
+              <description>Generate software SYNC
+              event</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>AUTOTRIMEN</name>
+              <description>Automatic trimming enable</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CEN</name>
+              <description>Frequency error counter
+              enable</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ESYNCIE</name>
+              <description>Expected SYNC interrupt
+              enable</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ERRIE</name>
+              <description>Synchronization or trimming error
+              interrupt enable</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SYNCWARNIE</name>
+              <description>SYNC warning interrupt
+              enable</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SYNCOKIE</name>
+              <description>SYNC event OK interrupt
+              enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CFGR</name>
+          <displayName>CFGR</displayName>
+          <description>configuration register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x2022BB7F</resetValue>
+          <fields>
+            <field>
+              <name>SYNCPOL</name>
+              <description>SYNC polarity selection</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SYNCSRC</name>
+              <description>SYNC signal source
+              selection</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>SYNCDIV</name>
+              <description>SYNC divider</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>FELIM</name>
+              <description>Frequency error limit</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>RELOAD</name>
+              <description>Counter reload value</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ISR</name>
+          <displayName>ISR</displayName>
+          <description>interrupt and status register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>FECAP</name>
+              <description>Frequency error capture</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+            <field>
+              <name>FEDIR</name>
+              <description>Frequency error direction</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TRIMOVF</name>
+              <description>Trimming overflow or
+              underflow</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SYNCMISS</name>
+              <description>SYNC missed</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SYNCERR</name>
+              <description>SYNC error</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ESYNCF</name>
+              <description>Expected SYNC flag</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ERRF</name>
+              <description>Error flag</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SYNCWARNF</name>
+              <description>SYNC warning flag</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SYNCOKF</name>
+              <description>SYNC event OK flag</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ICR</name>
+          <displayName>ICR</displayName>
+          <description>interrupt flag clear register</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>ESYNCC</name>
+              <description>Expected SYNC clear flag</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ERRC</name>
+              <description>Error clear flag</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SYNCWARNC</name>
+              <description>SYNC warning clear flag</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SYNCOKC</name>
+              <description>SYNC event OK clear flag</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    
