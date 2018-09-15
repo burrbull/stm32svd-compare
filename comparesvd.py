@@ -202,34 +202,34 @@ def sort_svd(grname):
 	for fname in devices[grname]:
 		sort_single(pth, fpath, fname)
 		
-def sort_single(inpath, fpath, fname, down=True):
-		if not os.path.exists(fpath):
-			os.makedirs(fpath)
-		print(fname)
-		etree = ET.parse(inpath+fname+".svd")
-		
-		pp = etree.find("peripherals")
+def sort_single(inpath, outpath, fname, down=True):
+	if not os.path.exists(outpath):
+		os.makedirs(outpath)
+	print(fname)
+	etree = ET.parse(inpath+fname+".svd")
+	
+	pp = etree.find("peripherals")
 
-		for p in pp.iter("peripheral"):
-			print("\t"+p.findtext("name"))
-			if 'derivedFrom' in p.attrib:
-				continue
-			rr = p.find("registers")
-			sort_registers(rr)
-			
-			for r in rr.iter("register"):
+	for p in pp.iter("peripheral"):
+		print("\t"+p.findtext("name"))
+		if 'derivedFrom' in p.attrib:
+			continue
+		rr = p.find("registers")
+		sort_registers(rr)
+		
+		for r in rr.iter("register"):
+			ff = r.find("fields")
+			sort_fields(ff, down)
+		
+		for c in rr.iter("cluster"):
+			#sort_registers(c)
+			for r in c.iter("register"):
 				ff = r.find("fields")
 				sort_fields(ff, down)
-			
-			for c in rr.iter("cluster"):
-				#sort_registers(c)
-				for r in c.iter("register"):
-					ff = r.find("fields")
-					sort_fields(ff, down)
-		etree.write(fpath+fname+".svd", encoding="utf-8")
-		os.system('xmllint --format "{0}{1}.svd" --output "{0}{1}.svd"'.format(fpath, fname))
-		os.system('patch "{0}{1}.svd" "{0}/../patches/{1}.patch"'.format(fpath, fname))
-		os.system('unix2dos "{0}{1}.svd"'.format(fpath, fname))
+	etree.write(outpath+fname+".svd", encoding="utf-8")
+	os.system('xmllint --format "{0}{1}.svd" --output "{0}{1}.svd"'.format(outpath, fname))
+	os.system('patch "{0}{1}.svd" "{0}/../patches/{1}.patch"'.format(outpath, fname))
+	os.system('unix2dos "{0}{1}.svd"'.format(outpath, fname))
 
 
 def sort_fields(ff, down=True):
@@ -277,3 +277,105 @@ def svd_statistics(grname):
 		print(fname, len(a.findall("peripheral")))
 		#for p in a.iter("peripheral"):
 		#	print(p)
+
+def table_from_register(r):
+	s = TABLEHEADER+"<h3>{}</h3>\n".format(r.findtext("name"))
+	d = {}
+	ff = r.find("fields")
+	if not ff:
+		return s
+	for f in ff.iter("field"):
+		d[int(f.findtext("bitOffset"))] = (f.findtext("name"),int(f.findtext("bitWidth")))
+	pr_offset = 32
+	high = ""
+	low = ""
+	for offset in sorted(d, reverse = True):
+		name = d[offset][0]
+		bw = d[offset][1]
+		start = offset+bw
+		if offset > 15:
+			high += '<td class="reserved"></td>'*(pr_offset-start)
+			high += '<td colspan="{}">{}</td>'.format(bw, name)
+		elif start > 16:
+			high += '<td class="reserved"></td>'*(pr_offset-start)
+			high += '<td class="separated" colspan="{}">{}</td>'.format(start-16, name)
+			low += '<td class="separated" colspan="{}">{}</td>'.format(16-offset, name)
+		else:
+			if pr_offset>16:
+				high += '<td class="reserved"></td>'*(pr_offset-16)
+				pr_offset = 16
+			low += '<td class="reserved"></td>'*(pr_offset-start)
+			low += '<td colspan="{}">{}</td>'.format(bw, name)
+		pr_offset = offset
+	if pr_offset > 0:
+		if pr_offset>16:
+			high += '<td class="reserved"></td>'*(pr_offset-16)
+			pr_offset = 16
+		low += '<td class="reserved"></td>'*(pr_offset)
+	return s+"<tr>"+high+"""</tr>
+  <tr>
+    <td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td>
+    <td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td>
+    <td>19</td><td>18</td><td>17</td><td>16</td>
+  </tr>
+  <tr>
+    <td colspan="16"></td>
+  </tr>
+  <tr>"""+low+"""</tr>
+  <tr>
+    <td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td>
+    <td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td>
+    <td>3</td><td>2</td><td>1</td><td>0</td>
+  </tr>
+</table>"""
+
+TABLEHEADER = """<table class="tg">
+<colgroup>
+<col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col>
+</colgroup>
+"""
+
+HEADER = """<html>
+<body>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;word-wrap: break-word;}
+.tg td{font-family:Arial,sans-serif;font-size:13px;padding:10px 5px;border-style:solid;border-width:1px;border-color:black;text-align:center;vertical-align:center}
+.tg col{width: 51px}
+.tg td.reserved{font-size:11px;color:lightgrey}
+.tg td.reserved:before {content: "Res."}
+.tg td.separated{background-color:lightgrey}
+nav a{display: block;}
+</style>
+"""
+
+FOOTER = """
+</body>
+<html>
+"""
+
+def tables_from_svd(inpath, fname):
+	print(fname)
+	etree = ET.parse(inpath+fname+".svd")
+	menu = "<nav>"
+	pp = etree.find("peripherals")
+	s = ""
+	for p in pp.iter("peripheral"):
+		pername = p.findtext("name")
+		print("\t"+pername)
+		if 'derivedFrom' in p.attrib:
+			continue
+		menu += '<a href="#{0}">{0}</a>'.format(pername)
+		s += '<a name="{0}"></a><h2>{0}</h2>'.format(pername)
+		rr = p.find("registers")
+		
+		for r in rr.iter("register"):
+			s += table_from_register(r)
+		
+		for c in rr.iter("cluster"):
+			s += "<h3>{}</h3>".format(c.findtext("name"))
+			#sort_registers(c)
+			for r in c.iter("register"):
+				s += table_from_register(r)
+	menu += "</nav>"
+	with open("{}/{}.html".format(inpath,fname), "w") as f:
+		f.write(HEADER+"<h1>{}</h1>\n".format(fname)+menu+s+FOOTER)

@@ -348,15 +348,15 @@
               <bitWidth>1</bitWidth>
             </field>
             <field>
-              <name>USART1RST</name>
-              <description>USART1 reset</description>
-              <bitOffset>14</bitOffset>
+              <name>SPI4RST</name>
+              <description>SPI 4 reset</description>
+              <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
-              <name>TIM8RST</name>
-              <description>TIM8 timer reset</description>
-              <bitOffset>13</bitOffset>
+              <name>USART1RST</name>
+              <description>USART1 reset</description>
+              <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
@@ -468,12 +468,6 @@
               <bitWidth>1</bitWidth>
             </field>
             <field>
-              <name>TIM7RST</name>
-              <description>Timer 7 reset</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
               <name>TIM6RST</name>
               <description>Timer 6 reset</description>
               <bitOffset>4</bitOffset>
@@ -510,12 +504,6 @@
           <resetValue>0x00000014</resetValue>
           <fields>
             <field>
-              <name>ADC34EN</name>
-              <description>ADC3 and ADC4 clock enable</description>
-              <bitOffset>29</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
               <name>ADC12EN</name>
               <description>ADC1 and ADC2 clock enable</description>
               <bitOffset>28</bitOffset>
@@ -526,6 +514,12 @@
               <description>Touch sensing controller clock
               enable</description>
               <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IOPGEN</name>
+              <description>I/O port G clock enable</description>
+              <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
@@ -565,9 +559,21 @@
               <bitWidth>1</bitWidth>
             </field>
             <field>
+              <name>IOPHEN</name>
+              <description>I/O port H clock enable</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
               <name>CRCEN</name>
               <description>CRC clock enable</description>
               <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FMCEN</name>
+              <description>FMC clock enable</description>
+              <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
@@ -626,15 +632,15 @@
               <bitWidth>1</bitWidth>
             </field>
             <field>
-              <name>USART1EN</name>
-              <description>USART1 clock enable</description>
-              <bitOffset>14</bitOffset>
+              <name>SPI4EN</name>
+              <description>SPI 4 clock enable</description>
+              <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
-              <name>TIM8EN</name>
-              <description>TIM8 Timer clock enable</description>
-              <bitOffset>13</bitOffset>
+              <name>USART1EN</name>
+              <description>USART1 clock enable</description>
+              <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
@@ -667,6 +673,12 @@
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
           <fields>
+            <field>
+              <name>I2C3EN</name>
+              <description>I2C 3 clock enable</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
             <field>
               <name>DACEN</name>
               <description>DAC interface clock enable</description>
@@ -705,6 +717,24 @@
               <bitWidth>1</bitWidth>
             </field>
             <field>
+              <name>UART5EN</name>
+              <description>UART 5 clock enable</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>UART4EN</name>
+              <description>UART 4 clock enable</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>USART3EN</name>
+              <description>USART 3 clock enable</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
               <name>USART2EN</name>
               <description>USART 2 clock enable</description>
               <bitOffset>17</bitOffset>
@@ -727,12 +757,6 @@
               <description>Window watchdog clock
               enable</description>
               <bitOffset>11</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>TIM7EN</name>
-              <description>Timer 7 clock enable</description>
-              <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
