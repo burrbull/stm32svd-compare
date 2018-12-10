@@ -260,3 +260,69 @@ def svd_statistics(grname):
 		print(fname, len(a.findall("peripheral")))
 		#for p in a.iter("peripheral"):
 		#	print(p)
+
+
+def copy_enums(fromfile, tofile, outfile):
+	fromtree = ET.parse(fromfile)
+	outtree = ET.parse(tofile)
+	
+	pp = fromtree.find("peripherals")
+	ppout = outtree.find("peripherals")
+
+	for p in pp.iter("peripheral"):
+		pname = p.findtext("name")
+		if 'derivedFrom' in p.attrib:
+			continue
+		ppath = SvdPath.from_str(pname)
+		pout = ppout.find("peripheral[name='{}']".format(pname))
+		if not pout:
+			print("Peripheral {} not found".format(pname))
+			continue
+		
+		rr = p.find("registers")
+		rrout = pout.find("registers")
+		copy_register_enums(rr, rrout, ppath)
+		
+		for c in rr.iter("cluster"):
+			cname = c.findtext("name")
+			cout = rrout.find("cluster[name='{}']".format(cname))
+			cpath = ppath+cname
+			if not cout:
+				print("Cluster {} not found".format(cpath))
+				continue
+			copy_register_enums(c, cout, cpath)
+	outtree.write(outfile, encoding="utf-8")
+	os.system('xmllint --format "{0}" --output "{0}"'.format(outfile))
+	os.system('unix2dos "{}"'.format(outfile))
+
+def copy_register_enums(rr, rrout, rrpath):
+	for r in rr.findall("register"):
+		rname = r.findtext("name")
+		rpath = rrpath + rname
+		rout = rrout.find("register[name='{}']".format(rname))
+		if not rout:
+			print("Register {} not found".format(rpath))
+			continue
+		ff = r.find("fields")
+		ffout = rout.find("fields")
+		for f in ff.iter("field"):
+			fname = f.findtext("name")
+			fpath = rpath + fname
+			fout = ffout.find("field[name='{}']".format(fname))
+			if not fout:
+				print("Field {} not found".format(fpath))
+				continue
+			for ev in f.iter("enumeratedValues"):
+				fout.append(ev)
+			
+
+class SvdPath(list):
+	def from_str(s):
+		return SvdPath(s.split("."))
+	def __init__(self, *args, **kwargs):
+		super().__init__(*args, **kwargs)
+	def __add__(self, other):
+		return SvdPath(list(self)+[other])
+	def __str__(self):
+		return ".".join(self)
+		

@@ -121,7 +121,7 @@
               <access>read-write</access>
             </field>
             <field>
-              <name>USBPRES</name>
+              <name>USBPRE</name>
               <description>USB prescaler</description>
               <bitOffset>22</bitOffset>
               <bitWidth>1</bitWidth>
@@ -150,7 +150,7 @@
             </field>
             <field>
               <name>PPRE2</name>
-              <description>APB high speed prescaler
+              <description>APB High speed prescaler
               (APB2)</description>
               <bitOffset>11</bitOffset>
               <bitWidth>3</bitWidth>
@@ -445,7 +445,7 @@
             </field>
             <field>
               <name>USART3RST</name>
-              <description>USART3 reset</description>
+              <description>USART 3 reset</description>
               <bitOffset>18</bitOffset>
               <bitWidth>1</bitWidth>
             </field>

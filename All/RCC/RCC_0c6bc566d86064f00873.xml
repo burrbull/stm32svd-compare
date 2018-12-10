@@ -51,7 +51,7 @@
             </field>
             <field>
               <name>CSSON</name>
-              <description>Clock security system
+              <description>Clock Security System
               enable</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>
@@ -59,22 +59,24 @@
             </field>
             <field>
               <name>HSEBYP</name>
-              <description>HSE crystal oscillator
-              bypass</description>
+              <description>External High Speed clock
+              Bypass</description>
               <bitOffset>18</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>HSERDY</name>
-              <description>HSE clock ready flag</description>
+              <description>External High Speed clock ready
+              flag</description>
               <bitOffset>17</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
               <name>HSEON</name>
-              <description>HSE clock enable</description>
+              <description>External High Speed clock
+              enable</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -89,7 +91,8 @@
             </field>
             <field>
               <name>HSIRDY</name>
-              <description>HSI clock ready flag</description>
+              <description>Internal High Speed clock ready
+              flag</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
@@ -219,7 +222,7 @@
             </field>
             <field>
               <name>PPRE2</name>
-              <description>APB high-speed prescaler
+              <description>APB High speed prescaler
               (APB2)</description>
               <bitOffset>11</bitOffset>
               <bitWidth>3</bitWidth>
@@ -227,7 +230,7 @@
             </field>
             <field>
               <name>PPRE1</name>
-              <description>PB low-speed prescaler
+              <description>APB Low speed prescaler
               (APB1)</description>
               <bitOffset>8</bitOffset>
               <bitWidth>3</bitWidth>
@@ -242,14 +245,14 @@
             </field>
             <field>
               <name>SWS</name>
-              <description>System clock switch status</description>
+              <description>System Clock Switch Status</description>
               <bitOffset>2</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-only</access>
             </field>
             <field>
               <name>SW</name>
-              <description>System clock switch</description>
+              <description>System clock Switch</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
@@ -532,13 +535,13 @@
             </field>
             <field>
               <name>HSERDYIE</name>
-              <description>HSE ready interrupt enable</description>
+              <description>HSE Ready Interrupt Enable</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
               <name>HSIRDYIE</name>
-              <description>HSI ready interrupt enable</description>
+              <description>HSI Ready Interrupt Enable</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
@@ -550,13 +553,13 @@
             </field>
             <field>
               <name>LSERDYIE</name>
-              <description>LSE ready interrupt enable</description>
+              <description>LSE Ready Interrupt Enable</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
               <name>LSIRDYIE</name>
-              <description>LSI ready interrupt enable</description>
+              <description>LSI Ready Interrupt Enable</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
@@ -586,7 +589,7 @@
             </field>
             <field>
               <name>CSSF</name>
-              <description>Clock security system interrupt
+              <description>Clock Security System Interrupt
               flag</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
@@ -607,7 +610,7 @@
             </field>
             <field>
               <name>PLLRDYF</name>
-              <description>PLL ready interrupt flag</description>
+              <description>PLL Ready Interrupt flag</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
@@ -619,7 +622,7 @@
             </field>
             <field>
               <name>HSIRDYF</name>
-              <description>HSI ready interrupt flag</description>
+              <description>HSI Ready Interrupt flag</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
@@ -631,13 +634,13 @@
             </field>
             <field>
               <name>LSERDYF</name>
-              <description>LSE ready interrupt flag</description>
+              <description>LSE Ready Interrupt flag</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
               <name>LSIRDYF</name>
-              <description>LSI ready interrupt flag</description>
+              <description>LSI Ready Interrupt flag</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
@@ -993,25 +996,25 @@
             </field>
             <field>
               <name>UART5RST</name>
-              <description>UART5 reset</description>
+              <description>UART 5 reset</description>
               <bitOffset>20</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
               <name>UART4RST</name>
-              <description>UART4 reset</description>
+              <description>UART 4 reset</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
               <name>USART3RST</name>
-              <description>USART3 reset</description>
+              <description>USART 3 reset</description>
               <bitOffset>18</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
               <name>USART2RST</name>
-              <description>USART2 reset</description>
+              <description>USART 2 reset</description>
               <bitOffset>17</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
@@ -1397,7 +1400,8 @@
         <register>
           <name>APB1ENR1</name>
           <displayName>APB1ENR1</displayName>
-          <description>APB1ENR1</description>
+          <description>APB1 peripheral clock enable register
+          (RCC_APB1ENR)</description>
           <addressOffset>0x58</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -1452,49 +1456,49 @@
             </field>
             <field>
               <name>I2C2EN</name>
-              <description>I2C2 clock enable</description>
+              <description>I2C 2 clock enable</description>
               <bitOffset>22</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
               <name>I2C1EN</name>
-              <description>I2C1 clock enable</description>
+              <description>I2C 1 clock enable</description>
               <bitOffset>21</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
               <name>UART5EN</name>
-              <description>UART5 clock enable</description>
+              <description>UART 5 clock enable</description>
               <bitOffset>20</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
               <name>UART4EN</name>
-              <description>UART4 clock enable</description>
+              <description>UART 4 clock enable</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
               <name>USART3EN</name>
-              <description>USART3 clock enable</description>
+              <description>USART 3 clock enable</description>
               <bitOffset>18</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
               <name>USART2EN</name>
-              <description>USART2 clock enable</description>
+              <description>USART 2 clock enable</description>
               <bitOffset>17</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
-              <name>SP3EN</name>
-              <description>SPI3 clock enable</description>
+              <name>SPI3EN</name>
+              <description>SPI 3 clock enable</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
               <name>SPI2EN</name>
-              <description>SPI2 clock enable</description>
+              <description>SPI 2 clock enable</description>
               <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
@@ -2345,7 +2349,8 @@
         <register>
           <name>BDCR</name>
           <displayName>BDCR</displayName>
-          <description>BDCR</description>
+          <description>Backup domain control register
+          (RCC_BDCR)</description>
           <addressOffset>0x90</addressOffset>
           <size>0x20</size>
           <resetValue>0x00000000</resetValue>
@@ -2412,21 +2417,24 @@
             </field>
             <field>
               <name>LSEBYP</name>
-              <description>LSE oscillator bypass</description>
+              <description>External Low Speed oscillator
+              bypass</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>LSERDY</name>
-              <description>LSE oscillator ready</description>
+              <description>External Low Speed oscillator
+              ready</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
               <name>LSEON</name>
-              <description>LSE oscillator enable</description>
+              <description>External Low Speed oscillator
+              enable</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -2436,7 +2444,8 @@
         <register>
           <name>CSR</name>
           <displayName>CSR</displayName>
-          <description>CSR</description>
+          <description>Control/status register
+          (RCC_CSR)</description>
           <addressOffset>0x94</addressOffset>
           <size>0x20</size>
           <resetValue>0x0C000600</resetValue>
@@ -2457,7 +2466,7 @@
             </field>
             <field>
               <name>IWDGRSTF</name>
-              <description>Independent window watchdog reset
+              <description>Independent watchdog reset
               flag</description>
               <bitOffset>29</bitOffset>
               <bitWidth>1</bitWidth>
@@ -2516,14 +2525,16 @@
             </field>
             <field>
               <name>LSIRDY</name>
-              <description>LSI oscillator ready</description>
+              <description>Internal low speed oscillator
+              ready</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
               <name>LSION</name>
-              <description>LSI oscillator enable</description>
+              <description>Internal low speed oscillator
+              enable</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>

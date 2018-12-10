@@ -148,7 +148,7 @@
             </field>
             <field>
               <name>PPRE2</name>
-              <description>APB high speed prescaler
+              <description>APB High speed prescaler
               (APB2)</description>
               <bitOffset>11</bitOffset>
               <bitWidth>3</bitWidth>

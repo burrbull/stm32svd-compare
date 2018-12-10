@@ -121,7 +121,7 @@
               <access>read-write</access>
             </field>
             <field>
-              <name>USBPRES</name>
+              <name>USBPRE</name>
               <description>USB prescaler</description>
               <bitOffset>22</bitOffset>
               <bitWidth>1</bitWidth>

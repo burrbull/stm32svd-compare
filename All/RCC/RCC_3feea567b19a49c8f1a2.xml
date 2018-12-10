@@ -105,8 +105,8 @@
               <access>read-write</access>
             </field>
             <field>
-              <name>OTGFSPRE</name>
-              <description>USB OTG FS prescaler</description>
+              <name>USBPRE</name>
+              <description>USB prescaler</description>
               <bitOffset>22</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -318,7 +318,7 @@
           <addressOffset>0xC</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
-          <resetValue>0x000000000</resetValue>
+          <resetValue>0x00000000</resetValue>
           <fields>
             <field>
               <name>TIM11RST</name>
